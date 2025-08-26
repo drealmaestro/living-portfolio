@@ -1,65 +1,224 @@
 {
-  "hash": "INIT-PLACEHOLDER-CHANGE-ME",
-  "core": [
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft",
-      "sector": "Technology",
-      "weight": "3%",
-      "badge": "🟢 Engine",
-      "q": 9,
-      "notes": "Cloud + Copilot; fortress compounding",
-      "exits": "Breaks weekly 50MA on >1.5x vol or thesis break",
-      "source_url": ""
-    }
-  ],
-  "swing": [
-    {
-      "ticker": "HEI",
-      "name": "HEICO",
-      "weight": "3%",
-      "signal": "🟢 EPS beat / growth",
-      "q": 8,
-      "notes": "Aerospace secular; raised guide if applicable",
-      "exits": "Lose breakout AVWAP or 2x ATR stop",
-      "source_url": ""
-    }
-  ],
-  "spec": [
-    {
-      "ticker": "NTLA",
-      "name": "Intellia Therapeutics",
-      "weight": "1%",
-      "signal": "🟡 Spec momentum",
-      "q": 6,
-      "notes": "Insider buy / pipeline optionality",
-      "exits": "Below 50-DMA on heavy vol or trial slip",
-      "graduation": "watch",
-      "graduationCriteria": ["EPS+FCF positive 4Q", "Net margin expansion", "Institutional flow confirm"],
-      "source_url": ""
-    }
-  ],
-  "catalysts": {
-    "company": [
+  "generated_at": "2025-08-27T00:15:22.438948+02:00",
+  "universe": {
+    "dashboard_url": "https://drealmaestro.github.io/living-portfolio/dashboard-v2.html",
+    "endpoints": {
+      "LPE_DATA_ENDPOINT": "https://drealmaestro.github.io/living-portfolio/live.json",
+      "LPE_IR_VERIFY_ENDPOINT": "https://drealmaestro.github.io/living-portfolio/ir-verify.json"
+    },
+    "sources": [
+      "Gmail newsletters",
+      "Google Alerts",
+      "ETF.com Morning Exchange"
+    ],
+    "equity_and_crypto_merged": true
+  },
+  "filters": {
+    "foundational_core": {
+      "EPS_positive": true,
+      "margin_trend_3y_up": true,
+      "revenue_growth_gt_10pct_org": true,
+      "ROIC_gt_15pct_and_rising": true,
+      "FCF_positive": true
+    },
+    "watchlist_to_core_promotion": "EPS beat + raised guidance OR major contract/approval + price confirmation (close > AVWAP from event or > range high on >1.5× vol)",
+    "spec_graduation": "EPS positive + net margin expansion + credible moat signal (contract/patent/approval) ⇒ suggest Tier2 3–5%",
+    "technical_gate_optional": "Above weekly 200-SMA for Core (toggleable)"
+  },
+  "technical_gate_applied": false,
+  "top_picks": {
+    "swing_3_6M": [
       {
-        "date": "YYYY-MM-DD",
         "ticker": "NVDA",
-        "label": "Q2 earnings — AI demand & DC growth",
-        "color": "g",
-        "impact": "High",
-        "source_url": ""
+        "thesis": "Event-driven: AI leader into prints; volatility window offers R/R.",
+        "upcoming_catalyst": "Q2 FY26 earnings",
+        "catalyst_date": "2025-08-27",
+        "signal": "yellow",
+        "play_type": "Event-Driven Swing",
+        "tier": "Tier2 (<=5%)",
+        "tier_split": {
+          "swing": 0.05,
+          "long_term": 0.02
+        },
+        "exit_triggers": [
+          "Post-ER AVWAP breakdown (H4/daily)",
+          "−8% from entry",
+          "Guide/DC tone turns negative"
+        ],
+        "source_url": "https://www.earningswhispers.com/stocks/nvda"
+      },
+      {
+        "ticker": "PDD",
+        "thesis": "Post-earnings drift; upward revisions window likely.",
+        "upcoming_catalyst": "Analyst revisions & monthly data",
+        "catalyst_date": "2025-09-10",
+        "signal": "green",
+        "play_type": "Post-Earnings Momentum",
+        "tier": "Tier2 (<=5%)",
+        "exit_triggers": [
+          "Break of gap-day low",
+          "Momentum failure on daily (RSI/MACD)"
+        ],
+        "source_url": "https://www.marketwatch.com/investing/stock/pdd"
+      },
+      {
+        "ticker": "OKTA",
+        "thesis": "Set-up around earnings; watch day-1/2 reaction integrity.",
+        "upcoming_catalyst": "Q2 FY26 earnings (post-market)",
+        "catalyst_date": "2025-08-26",
+        "signal": "yellow",
+        "play_type": "Event Reaction Swing",
+        "tier": "Tier3 (<=2%)",
+        "exit_triggers": [
+          "Fails to hold day‑2 AVWAP",
+          "−7% stop"
+        ],
+        "source_url": "https://www.earningswhispers.com/stocks/okta"
+      },
+      {
+        "ticker": "VITL",
+        "thesis": "ATH breakout with tight risk box in staples niche.",
+        "upcoming_catalyst": "Technical: breakout retest window",
+        "catalyst_date": "2025-09-05",
+        "signal": "green",
+        "play_type": "Technical Breakout",
+        "tier": "Tier3 (<=2%)",
+        "exit_triggers": [
+          "Close back below pivot",
+          "2× ATR adverse move"
+        ],
+        "source_url": "https://www.barchart.com/stocks/quotes/VITL/overview"
+      },
+      {
+        "ticker": "NSSC",
+        "thesis": "Small-cap security name attempting trend resumption post-EPS beat.",
+        "upcoming_catalyst": "Follow-up filings / guidance commentary",
+        "catalyst_date": "2025-09-12",
+        "signal": "yellow",
+        "play_type": "Breakout Attempt",
+        "tier": "Tier3 (<=2%)",
+        "exit_triggers": [
+          "Fails to hold breakout level",
+          "Volume divergence on up days"
+        ],
+        "source_url": "https://www.tipranks.com/stocks/nssc/forecast"
       }
     ],
-    "macro": [
+    "long_term_12M_plus": [
       {
-        "date": "YYYY-MM-DD",
-        "label": "US Core PCE (Month) + Income/Spending",
-        "color": "y",
-        "impact": "High"
+        "ticker": "ETH-USD",
+        "thesis": "Spot ETH ETF flows improving vs BTC; network activity backs 12M view.",
+        "upcoming_catalyst": "Weekly/monthly ETF flow prints",
+        "catalyst_date": "2025-09-02",
+        "signal": "green",
+        "play_type": "Crypto Core",
+        "tier": "Tier2 (<=5%)",
+        "exit_triggers": [
+          "4+ weeks persistent ETF outflows",
+          "On‑chain activity & L2 fees contract with price"
+        ],
+        "source_url": "https://www.etf.com/"
+      },
+      {
+        "ticker": "NVDA",
+        "thesis": "Secular AI compute leader; DC cycle intact beyond near-term comps.",
+        "upcoming_catalyst": "H2 roadmap updates; hyperscaler capex prints",
+        "catalyst_date": "2025-10-01",
+        "signal": "green",
+        "play_type": "Compounder",
+        "tier": "Tier1 (<=7%)",
+        "tier_split": {
+          "swing": 0.05,
+          "long_term": 0.07
+        },
+        "exit_triggers": [
+          "Two consecutive DC misses/guide downs",
+          "Share loss vs custom silicon evidence"
+        ],
+        "source_url": "https://www.marketwatch.com/investing/stock/nvda"
+      },
+      {
+        "ticker": "VOO",
+        "thesis": "Core beta with mega-cap AI tilt; ballast for idiosyncratic risk.",
+        "upcoming_catalyst": "Macro prints (PCE/CPI) & breadth trends",
+        "catalyst_date": "2025-09-27",
+        "signal": "green",
+        "play_type": "Core",
+        "tier": "Core (size per portfolio)",
+        "exit_triggers": [
+          "Breadth/credit deteriorate with lower highs"
+        ],
+        "source_url": "https://www.etf.com/VOO"
       }
     ]
   },
-  "heatmap": null,
-  "flow": { "etf5d": 0, "basis": 0, "oiChg": 0, "skew": "neutral", "ivRank": 0, "offEx": 40 },
-  "blindspots": { "web": "OK", "jobs": "OK", "app": "OK", "darkpool": "n/a" }
+  "buckets": {
+    "core": [
+      "VOO"
+    ],
+    "swing": [
+      "NVDA",
+      "PDD",
+      "OKTA",
+      "VITL",
+      "NSSC"
+    ],
+    "spec": []
+  },
+  "catalysts": [
+    {
+      "ticker": "NVDA",
+      "event": "Q2 FY26 earnings",
+      "date": "2025-08-27",
+      "confidence": "medium",
+      "source_url": "https://www.earningswhispers.com/stocks/nvda"
+    },
+    {
+      "ticker": "OKTA",
+      "event": "Q2 FY26 earnings",
+      "date": "2025-08-26",
+      "confidence": "medium",
+      "source_url": "https://www.earningswhispers.com/stocks/okta"
+    },
+    {
+      "ticker": "ETH-USD",
+      "event": "ETF flow trend check",
+      "date": "2025-09-02",
+      "confidence": "medium",
+      "source_url": "https://www.etf.com/"
+    }
+  ],
+  "flow": {
+    "current_exposure": {
+      "sectors": {},
+      "single_names": {},
+      "crypto": {}
+    },
+    "rules": {
+      "sector_cap": 0.3,
+      "single_name_caps": {
+        "Tier1": 0.07,
+        "Tier2": 0.05,
+        "Tier3": 0.02
+      },
+      "crypto_caps": {
+        "BTC": 0.05,
+        "ETH": 0.05,
+        "SOL": 0.03,
+        "total_crypto": 0.15
+      },
+      "speculative_cap": 0.05
+    },
+    "breaches": [],
+    "proposed_rotations": [],
+    "notes": [
+      "Awaiting current positions/weights to compute breaches/rotations."
+    ]
+  },
+  "blindspots": [
+    "Positions/weights missing",
+    "Sector classifications needed",
+    "Crypto wallet weights needed"
+  ],
+  "hash": "53c7e0b836e9f79d16c881b931a2d84c87219c73e30e92a5493acc8eab08993e"
 }
