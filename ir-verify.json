@@ -1,34 +1,36 @@
 {
   "events": [
-    {
-      "ticker": "NVDA",
-      "label": "Q2 Earnings",
-      "date": "2025-08-27",
-      "impact": "High"
-    },
-    {
-      "ticker": "SNOW",
-      "label": "Q2 Earnings",
-      "date": "2025-08-27",
-      "impact": "Med"
-    },
-    {
-      "ticker": "MSCI",
-      "label": "Q3 Earnings",
-      "date": "2025-10-25",
-      "impact": "High"
-    },
-    {
-      "ticker": "TSLA",
-      "label": "Q3 Deliveries",
-      "date": "2025-10-10",
-      "impact": "High"
-    },
-    {
-      "ticker": "ETH",
-      "label": "Fusaka Upgrade",
-      "date": "2025-11-05",
-      "impact": "High"
-    }
+    /* ——— Earnings ——— */
+    { "ticker": "NVDA", "label": "Q2 Earnings", "date": "2025-08-27", "impact": "High" },
+    { "ticker": "SNOW", "label": "Q2 Earnings", "date": "2025-08-27", "impact": "Med" },
+    { "ticker": "OKTA", "label": "Q2 Earnings", "date": "2025-08-26", "impact": "Med" },
+    { "ticker": "HEI",  "label": "Q2 Earnings (beat)", "date": "2025-08-26", "impact": "Med" },
+    { "ticker": "SMTC", "label": "Q2 Earnings (beat/guide)", "date": "2025-08-26", "impact": "Med" },
+    { "ticker": "MSCI", "label": "Q3 Earnings (est.)", "date": "2025-10-25", "impact": "High" },
+
+    /* ——— Deliveries / Product ——— */
+    { "ticker": "TSLA", "label": "Q3 Deliveries", "date": "2025-10-10", "impact": "High" },
+
+    /* ——— Crypto / Protocol ——— */
+    { "ticker": "ETH",  "label": "Fusaka Upgrade (target)", "date": "2025-11-05", "impact": "High" },
+
+    /* ——— M&A Announcements ——— */
+    { "ticker": "VRNT", "label": "Thoma Bravo acquisition ($2B, cash)", "date": "2025-08-26", "impact": "High" },
+    { "ticker": "MNKD", "label": "To acquire scPharmaceuticals ($360M)", "date": "2025-08-26", "impact": "Med" },
+    { "ticker": "CRGY", "label": "To acquire Vital Energy ($3.1B, stock)", "date": "2025-08-26", "impact": "High" },
+    { "ticker": "DAY",  "label": "Thoma Bravo acquisition ($12.3B, cash)", "date": "2025-08-26", "impact": "High" },
+    { "ticker": "NXST", "label": "To acquire TEGNA ($6.2B, cash)", "date": "2025-08-26", "impact": "High" },
+
+    /* ——— Dividends / Capital Returns ——— */
+    { "ticker": "MTB",  "label": "Dividend +11% to $1.50", "date": "2025-08-26", "impact": "Med" },
+    { "ticker": "AROC", "label": "Dividend +10.5%",       "date": "2025-08-26", "impact": "Med" },
+    { "ticker": "CSL",  "label": "Dividend +10%",          "date": "2025-08-26", "impact": "Med" },
+    { "ticker": "GOLD", "label": "Dividend +50%",          "date": "2025-08-26", "impact": "High" },
+    { "ticker": "WFC",  "label": "Dividend +12.5%",        "date": "2025-08-26", "impact": "Med" },
+
+    /* ——— Insider Signals ——— */
+    { "ticker": "INR",  "label": "Insider buy (~$690k)",                 "date": "2025-08-26", "impact": "High" },
+    { "ticker": "NTLA", "label": "Insider buy (100k sh, ~$1.0M)",        "date": "2025-08-26", "impact": "High" },
+    { "ticker": "GPUS", "label": "Exec Chair + 10% owner buys (11,750)", "date": "2025-08-26", "impact": "Med" }
   ]
 }
