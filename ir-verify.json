@@ -1,0 +1,9 @@
+{
+  "updated_at": "2025-08-26T07:10:00Z",
+  "events": [
+    {"ticker":"NVDA","label":"Q2 FY26 earnings","date":"2025-08-27","session":"AMC"},
+    {"ticker":"SNOW","label":"Q2 earnings","date":"2025-08-27","session":"AMC"},
+    {"ticker":"MSCI","label":"Nov review announcement","date":"2025-11-05"},
+    {"ticker":"MSCI","label":"Nov review effective","date":"2025-11-25"}
+  ]
+}
