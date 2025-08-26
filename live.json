@@ -1,6 +1,5 @@
 {
-  "hash": "2025-08-26T10:05:00Z",
-
+  "hash": "2025-08-26T11:40:00Z",
   "core": [
     { "ticker": "MSFT", "name": "Microsoft", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 9, "notes": "Cloud + Copilot; fortress compounding", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)", "exits": "2x ATR below prior swing low; thesis break: Copilot MAU stalls" },
     { "ticker": "META", "name": "Meta", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Ads + AI infra; improving margins", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)", "exits": "RS growth < sector for 4w; 50WMA fail" },
@@ -18,44 +17,10 @@
     { "ticker": "RMBS", "name": "Rambus", "sector": "Technology", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "DDR5/IP leverage", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (1–2%)" },
     { "ticker": "REZI", "name": "Resideo", "sector": "Industrials", "weight": "3%", "badge": "🟢 NEW Core", "q": 8, "notes": "10% owner repeat buys", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
     { "ticker": "UI", "name": "Ubiquiti", "sector": "Technology", "weight": "3%", "badge": "🟢 NEW Core", "q": 8, "notes": "EPS + margin expansion", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-
     { "ticker": "SMH", "name": "VanEck Semi ETF", "sector": "Technology", "weight": "3%", "badge": "🟢 Core ETF", "q": 7, "notes": "Vol buffer", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
     { "ticker": "XLK", "name": "Tech Sector ETF", "sector": "Technology", "weight": "3%", "badge": "🟢 Core ETF", "q": 7, "notes": "Broad anchor", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
     { "ticker": "XLI", "name": "Industrial Sector ETF", "sector": "Industrials", "weight": "2%", "badge": "🟢 Core ETF", "q": 7, "notes": "Balances tech tilt", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (1–2%)" }
   ],
-
   "swing": [
-    { "ticker": "INR",  "name": "Infinity Natural Resources", "weight": "3%", "signal": "🟢", "q": 7, "notes": "Insider buy ~$690k @ ~$13.79; watch >1.5x vol", "track": "swing", "playType": "Swing", "tierSuggestion": "Tier2 (3–5%)", "exits": "Close below AVWAP from insider-day or break swing low on >1.5x vol" },
-    { "ticker": "SMTC", "name": "Semtech", "weight": "2%", "signal": "🟢", "q": 7, "notes": "EPS +2.5% beat; rev +0.6%; Q3 $266M; starter", "track": "swing", "playType": "Swing", "tierSuggestion": "Tier3 (1–2%)", "exits": "Lose breakout pivot on >1.5x vol" },
-    { "ticker": "HEI",  "name": "HEICO", "weight": "3%", "signal": "🟢", "q": 8, "notes": "Rev +15.7% YoY; EPS +10.3%; aerospace secular", "track": "swing", "playType": "Swing", "tierSuggestion": "Tier2 (3–5%)", "exits": "2x ATR stop below pivot; 3 distribution days triggers trim" }
-  ],
-
-  "spec": [
-    { "ticker": "GPUS", "name": "Hyperscale Data", "weight": "1%", "signal": "🟡", "q": 5, "notes": "Exec Chair + 10% owner buys (11,750 sh @ $0.54–0.60); microcap liquidity", "track": "spec", "playType": "Spec", "tierSuggestion": "Tier3 (≤2%)", "graduation": "watch", "graduationCriteria": ["EPS+FCF positive 4Q", "Net margin expansion", "Inst/ETF/Options flow confirm"], "exits": "Hard −20% stop or liquidity <$ daily value 10× position" },
-    { "ticker": "NTLA", "name": "Intellia Therapeutics", "weight": "3%", "signal": "🟢", "q": 7, "notes": "Insider 100k sh (~$1M) @ ~$10.03; CRISPR moat", "track": "spec", "playType": "Spec", "tierSuggestion": "Tier2 (3–5%) on graduation", "graduation": "watch", "graduationCriteria": ["EPS+FCF positive 4Q", "Net margin expansion", "Institutional flow confirm"], "exits": "Below 50-DMA on heavy vol or trial slip" }
-  ],
-
-  "catalysts": {
-    "company": [
-      { "date": "2025-08-27", "ticker": "NVDA", "label": "Q2 earnings (AI demand focus)", "color": "g", "impact": "High" },
-      { "date": "2025-08-26", "ticker": "VRNT", "label": "Thoma Bravo acquisition ($2B cash)", "color": "y", "impact": "High" },
-      { "date": "2025-08-26", "ticker": "MNKD", "label": "To acquire scPharmaceuticals ($360M)", "color": "y", "impact": "Med" },
-      { "date": "2025-08-26", "ticker": "CRGY", "label": "To acquire Vital Energy ($3.1B stock)", "color": "y", "impact": "High" },
-      { "date": "2025-08-26", "ticker": "DAY",  "label": "Thoma Bravo acquisition ($12.3B cash)", "color": "y", "impact": "High" },
-      { "date": "2025-08-26", "ticker": "NXST", "label": "To acquire TEGNA ($6.2B cash)", "color": "y", "impact": "High" },
-      { "date": "2025-08-26", "ticker": "MTB",  "label": "Dividend +11% to $1.50", "color": "g", "impact": "Med" },
-      { "date": "2025-08-26", "ticker": "AROC", "label": "Dividend +10.5%", "color": "g", "impact": "Med" },
-      { "date": "2025-08-26", "ticker": "CSL",  "label": "Dividend +10%", "color": "g", "impact": "Med" },
-      { "date": "2025-08-26", "ticker": "GOLD", "label": "Dividend +50%", "color": "g", "impact": "High" },
-      { "date": "2025-08-26", "ticker": "WFC",  "label": "Dividend +12.5%", "color": "g", "impact": "Med" },
-      { "date": "2025-08-26", "ticker": "INR",  "label": "Insider open-market buy (~$690k)", "color": "g", "impact": "High" },
-      { "date": "2025-08-26", "ticker": "NTLA", "label": "Insider buy 100k sh (~$1.0M)", "color": "g", "impact": "High" },
-      { "date": "2025-08-26", "ticker": "GPUS", "label": "Exec Chair + 10% owner buys (11,750 sh)", "color": "y", "impact": "Med" }
-    ],
-    "macro": []
-  },
-
-  "flow": { "etf5d": 0, "basis": 0, "oiChg": 0, "skew": "flat", "ivRank": 0, "offEx": 40 },
-
-  "blindspots": { "web": "—", "jobs": "—", "app": "—", "darkpool": "—" }
-}
+    { "ticker": "INR", "name": "Infinity Natural Resources", "weight": "3%", "signal": "🟢", "q": 7, "notes": "Insider buy ~$690k @ ~$13.79; watch >1.5x vol", "track": "swing", "playType": "Swing", "tierSuggestion": "Tier2 (3–5%)", "exits": "Close below AVWAP from insider-day or break swing low on >1.5x vol" },
+    { "ticker": "SMTC", "name": "Semtech", "weight": "2%", "signal": "🟢", "q": 7, "notes": "EPS +2.5% beat; rev +0.6%; Q3 $266M; starter", "track": "swing", "playType":
