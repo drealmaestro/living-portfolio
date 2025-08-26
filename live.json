@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-08-27T00:15:22.438948+02:00",
+  "generated_at": "2025-08-27T00:28:40.207521+02:00",
   "universe": {
     "dashboard_url": "https://drealmaestro.github.io/living-portfolio/dashboard-v2.html",
     "endpoints": {
@@ -25,7 +25,7 @@
     "spec_graduation": "EPS positive + net margin expansion + credible moat signal (contract/patent/approval) ⇒ suggest Tier2 3–5%",
     "technical_gate_optional": "Above weekly 200-SMA for Core (toggleable)"
   },
-  "technical_gate_applied": false,
+  "technical_gate_applied": true,
   "top_picks": {
     "swing_3_6M": [
       {
@@ -220,5 +220,5 @@
     "Sector classifications needed",
     "Crypto wallet weights needed"
   ],
-  "hash": "53c7e0b836e9f79d16c881b931a2d84c87219c73e30e92a5493acc8eab08993e"
+  "hash": "c8a0cd0db3be49f12b753066001c1b21837504333ce8fcbad4ade1781e223f71"
 }
