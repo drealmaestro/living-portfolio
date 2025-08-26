@@ -1,19 +1,65 @@
 {
-  "hash": "2025-08-26T11:40:00Z",
+  "hash": "INIT-PLACEHOLDER-CHANGE-ME",
   "core": [
-    { "ticker": "MSFT", "name": "Microsoft", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 9, "notes": "Cloud + Copilot; fortress compounding", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)", "exits": "2x ATR below prior swing low; thesis break: Copilot MAU stalls" },
-    { "ticker": "META", "name": "Meta", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Ads + AI infra; improving margins", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)", "exits": "RS growth < sector for 4w; 50WMA fail" },
-    { "ticker": "GOOGL", "name": "Alphabet A", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Ads + Cloud; ROIC rising", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "NVDA", "name": "NVIDIA", "sector": "Technology", "weight": "2%", "badge": "🟢 Engine", "q": 8, "notes": "Tier 3 cap (≤2%); AI cycle", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (≤2%)", "exits": "Post-earnings breakdown below AVWAP on >1.5x vol" },
-    { "ticker": "AMZN", "name": "Amazon", "sector": "Consumer Discretionary", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Retail + AWS; FCF expansion", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "ANET", "name": "Arista Networks", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "AI networking share gains", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "LRCX", "name": "Lam Research", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "HBM/packaging exposure", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "EME", "name": "EMCOR", "sector": "Industrials", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Data center MEP backlog", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "IESC", "name": "IES Holdings", "sector": "Industrials", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "Power enclosures", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (1–2%)" },
-    { "ticker": "FIX", "name": "Comfort Systems", "sector": "Industrials", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "HVAC DC demand", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "MNST", "name": "Monster Beverage", "sector": "Consumer Staples", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "Brand compounding", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (1–2%)" },
-    { "ticker": "COCO", "name": "Vita Coco", "sector": "Consumer Staples", "weight": "1%", "badge": "🟢 Engine", "q": 6, "notes": "Debt-free; steady growth", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (1–2%)" },
-    { "ticker": "IRMD", "name": "IRadimed", "sector": "Healthcare", "weight": "1%", "badge": "🟢 Engine", "q": 6, "notes": "Niche MRI devices", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (1–2%)" },
-    { "ticker": "RMBS", "name": "Rambus", "sector": "Technology", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "DDR5/IP leverage", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (1–2%)" },
-    { "ticker": "REZI", "name": "Resideo", "sector": "Industrials", "weight": "3%", "badge": "🟢 NEW Core", "q": 8, "notes": "10% owner repeat buys", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Technology",
+      "weight": "3%",
+      "badge": "🟢 Engine",
+      "q": 9,
+      "notes": "Cloud + Copilot; fortress compounding",
+      "exits": "Breaks weekly 50MA on >1.5x vol or thesis break",
+      "source_url": ""
+    }
+  ],
+  "swing": [
+    {
+      "ticker": "HEI",
+      "name": "HEICO",
+      "weight": "3%",
+      "signal": "🟢 EPS beat / growth",
+      "q": 8,
+      "notes": "Aerospace secular; raised guide if applicable",
+      "exits": "Lose breakout AVWAP or 2x ATR stop",
+      "source_url": ""
+    }
+  ],
+  "spec": [
+    {
+      "ticker": "NTLA",
+      "name": "Intellia Therapeutics",
+      "weight": "1%",
+      "signal": "🟡 Spec momentum",
+      "q": 6,
+      "notes": "Insider buy / pipeline optionality",
+      "exits": "Below 50-DMA on heavy vol or trial slip",
+      "graduation": "watch",
+      "graduationCriteria": ["EPS+FCF positive 4Q", "Net margin expansion", "Institutional flow confirm"],
+      "source_url": ""
+    }
+  ],
+  "catalysts": {
+    "company": [
+      {
+        "date": "YYYY-MM-DD",
+        "ticker": "NVDA",
+        "label": "Q2 earnings — AI demand & DC growth",
+        "color": "g",
+        "impact": "High",
+        "source_url": ""
+      }
+    ],
+    "macro": [
+      {
+        "date": "YYYY-MM-DD",
+        "label": "US Core PCE (Month) + Income/Spending",
+        "color": "y",
+        "impact": "High"
+      }
+    ]
+  },
+  "heatmap": null,
+  "flow": { "etf5d": 0, "basis": 0, "oiChg": 0, "skew": "neutral", "ivRank": 0, "offEx": 40 },
+  "blindspots": { "web": "OK", "jobs": "OK", "app": "OK", "darkpool": "n/a" }
+}
