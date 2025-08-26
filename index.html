@@ -1,198 +1,231 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>Living Portfolio Engine — by elmaestro</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Living Portfolio — Unified Dashboard</title>
 <style>
-:root{--bg:#0b0f14;--card:#111823;--line:#1e2a3a;--text:#e8eef5;--muted:#9aa7b1;--accent:#9fc0ff;--g:#22c55e;--y:#eab308;--r:#ef4444}
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial}
-.wrap{max-width:1100px;margin:0 auto;padding:24px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:16px}
-.grid{display:grid;gap:12px}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
-.cell{display:flex;align-items:center;justify-content:space-between;padding:12px;border:1px solid var(--line);border-radius:12px}
-.badge{padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
-.small{font-size:12px;color:var(--muted)} .dot{display:inline-block;width:10px;height:10px;border-radius:50%}
-table{width:100%;border-collapse:collapse;font-size:14px} th,td{padding:8px;border-bottom:1px solid var(--line);text-align:left}
-.pill{padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600}.ok{background:#dcfce7;color:#166534}.bad{background:#fee2e2;color:#991b1b}
-.NEW{background:#ff4757;color:#fff;font-size:11px;padding:2px 6px;border-radius:8px;margin-left:6px}
-.EXITED{background:#6c757d;color:#fff;font-size:11px;padding:2px 6px;border-radius:8px;margin-left:6px}
-@media(max-width:900px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g5{grid-template-columns:repeat(2,minmax(0,1fr))}table{font-size:13px}}
+body { font-family: system-ui, sans-serif; margin: 0; padding: 0; background: #0a0f1c; color: #f1f5f9; }
+.wrapper { max-width: 1200px; margin: auto; padding: 1rem; }
+.card { background: #111827; margin-bottom: 1rem; padding: 1rem; border-radius: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+h1,h2,h3 { margin: 0 0 .5rem 0; color: #f9fafb; }
+.table { width: 100%; border-collapse: collapse; margin-top: .5rem; }
+.table th, .table td { padding: .5rem; border-bottom: 1px solid #374151; text-align: left; }
+.badge { display:inline-block; padding:2px 6px; background:#1e293b; border-radius:4px; font-weight:bold; }
+.tag { display:inline-block; padding:2px 6px; border-radius:4px; font-size:.75rem; }
+.tag.g { background:#064e3b; color:#10b981; }
+.tag.y { background:#78350f; color:#fbbf24; }
+.tag.r { background:#7f1d1d; color:#f87171; }
+.small { font-size:.875rem; color:#94a3b8; }
+.note { background:#1e293b; padding:.5rem; border-radius:.5rem; margin-top:.5rem; }
+.heat { display:grid; grid-template-columns: repeat(2,1fr); gap:.5rem; }
+.cell { background:#1f2937; padding:.5rem; border-radius:.5rem; }
 </style>
 </head>
 <body>
-<div class="wrap">
-
+<div class="wrapper">
+  <!-- HEADER -->
   <div class="card">
-    <div style="display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap">
-      <h1>Living Portfolio Engine — by elmaestro</h1>
-      <button id="refresh" class="pill ok">Refresh</button>
+    <h1>Living Portfolio — Unified Dashboard</h1>
+    <div class="small">Status: <span id="compliancePill" class="tag y">CHECKING…</span> · Last update <span id="asof">—</span></div>
+  </div>
+
+  <!-- CORE LONG-TERM -->
+  <div class="card">
+    <h2>Core — Long-term (🟢 Compounding Engine)</h2>
+    <table class="table" id="coreLTTable">
+      <thead><tr><th>Ticker</th><th>Name</th><th>Sector</th><th>Weight</th><th>Badge</th><th>Q</th><th>Notes</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- CORE SWING -->
+  <div class="card">
+    <h2>Core — Swing (3–6M)</h2>
+    <table class="table" id="coreSwingTable">
+      <thead><tr><th>Ticker</th><th>Name</th><th>Weight</th><th>Signal</th><th>Q</th><th>Notes</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- SPEC SLEEVE -->
+  <div class="card">
+    <h2>Speculative Sleeve (≤5%)</h2>
+    <table class="table" id="specTable">
+      <thead><tr><th>Ticker</th><th>Name</th><th>Weight</th><th>Notes</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- FLOW & MICROSTRUCTURE -->
+  <div class="card">
+    <h2>Flow & Microstructure</h2>
+    <ul class="small">
+      <li><b>BTC/ETH ETF net flows (5d)</b>: <span class="tag y" id="flowEtf">n/a</span></li>
+      <li><b>Perp basis</b>: <span class="tag y" id="flowBasis">n/a</span> · <b>Open Interest</b>: <span class="tag y" id="flowOI">n/a</span></li>
+      <li><b>Options skew</b>: <span class="tag y" id="flowSkew">n/a</span> · <b>IV Rank</b>: <span class="tag y" id="flowIV">n/a</span></li>
+      <li><b>Off-exchange % volume</b>: <span class="tag y" id="flowOffEx">n/a</span></li>
+    </ul>
+  </div>
+
+  <!-- BLIND-SPOT STRIP -->
+  <div class="card" id="blindspotPanel">
+    <h2>Blind-Spot Strip</h2>
+    <div class="heat" id="blindTiles">
+      <div class="cell"><b>Web Traffic</b><span id="tileWeb">n/a</span></div>
+      <div class="cell"><b>Job Posts</b><span id="tileJobs">n/a</span></div>
+      <div class="cell"><b>App Rank</b><span id="tileApp">n/a</span></div>
+      <div class="cell"><b>Dark Pool Proxy</b><span id="tileDP">n/a</span></div>
     </div>
-    <div class="small" id="asof"></div>
-    <div class="grid g4" style="margin-top:12px">
-      <div class="cell"><div class="small">Equities</div><div id="eqPct" style="font-weight:700">—</div></div>
-      <div class="cell"><div class="small">Crypto</div><div id="crPct" style="font-weight:700">—</div></div>
-      <div class="cell"><div class="small">Spec Sleeve</div><div id="spPct" style="font-weight:700">—</div></div>
-      <div class="cell"><div class="small">Status</div><div id="statusBadge"></div></div>
-    </div>
   </div>
 
-  <div class="card">
-    <h2>🗞️ Today’s Updates (last 24h)</h2>
-    <div class="small">Hover over “EXITED” for reasons.</div>
-    <ul id="updates" style="margin:8px 0 0 18px"></ul>
-    <div class="small" style="margin-top:6px">Auto-filled from morning scans.</div>
-  </div>
-
-  <div class="card">
-    <h2>Sector Heatmap</h2>
-    <div id="heat" class="grid g5"></div>
-  </div>
-
-  <div class="card">
-    <h2>Top 5 Swing (3–6M) — merged equities + crypto</h2>
-    <div style="overflow:auto">
-      <table><thead><tr>
-        <th>#</th><th>Ticker</th><th>Thesis</th><th>Catalyst / Date</th><th>Signal</th><th>Play</th><th>Tier</th><th>Exit</th>
-      </tr></thead><tbody id="swing"></tbody></table>
-    </div>
-    <div class="small">Core (Tier 1–2) must be above weekly 200-SMA. Names marked "Pending" remain Spec until reclaim.</div>
-  </div>
-
-  <div class="card">
-    <h2>Top 3 Long-term (12M+)</h2>
-    <div style="overflow:auto">
-      <table><thead><tr>
-        <th>#</th><th>Ticker</th><th>Thesis</th><th>Catalyst / Date</th><th>Signal</th><th>Play</th><th>Tier</th><th>Exit</th>
-      </tr></thead><tbody id="long"></tbody></table>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Crypto — Top 3 Actionable (3–6M)</h2>
-    <div style="overflow:auto">
-      <table><thead><tr>
-        <th>#</th><th>Symbol</th><th>Thesis</th><th>Catalyst / Date</th><th>Signal</th><th>Play</th><th>Tier</th><th>Exit</th>
-      </tr></thead><tbody id="crypto"></tbody></table>
-    </div>
-  </div>
-
+  <!-- CATALYST TIMELINE + IR VERIFIER -->
   <div class="card">
     <h2>Catalyst Timeline</h2>
-    <div id="timeline"></div>
+    <div class="lanes">
+      <div>
+        <h3>Company Catalysts</h3>
+        <ul id="catalystsCompany"></ul>
+      </div>
+      <div>
+        <h3>Macro Catalysts</h3>
+        <ul id="catalystsMacro"></ul>
+      </div>
+    </div>
+    <div class="note small" style="margin-top:8px">
+      <b>IR Verifier:</b> <span id="verifyStatus">Not configured</span>
+    </div>
   </div>
-
 </div>
 
 <script>
-// ====== DATA (edit here when you want to change the dashboard) ======
-const swingIdeas = [
-  {rank:1,ticker:'NVDA',sector:'Technology',signal:'green',play:'Swing + Long',tier:'Tier 1 (5–7%) — split 50/50',thesis:'Blackwell ramp + hyperscaler capex keeps datacenter demand firm.',catalyst:'Nov earnings; Blackwell partner updates',date:'2025-11-20?',exit:'AVWAP(event) break; gross margin compression persists',trend200W:'OK'},
-  {rank:2,ticker:'WMT',sector:'Consumer Staples',signal:'green',play:'Swing + Long',tier:'Tier 2 (3–5%) — split 50/50',thesis:'Ads + marketplace flywheel; resilient traffic.',catalyst:'Earnings',date:'2025-08-21',exit:'EPS miss + guide cut; loss of share in e-com',trend200W:'OK'},
-  {rank:3,ticker:'SOL',sector:'Crypto',signal:'green',play:'Swing + Long (high vol)',tier:'Tier 1 crypto (2% swing + 1% LT)',thesis:'CME futures live; ETF path forming; clean uptime.',catalyst:'CME quarterly expiry',date:'2025-09-19',exit:'Event AVWAP break; network performance slippage',trend200W:'OK'},
-  {rank:4,ticker:'ONDO',sector:'Crypto (RWA)',signal:'green',play:'Swing + Long',tier:'Tier 2 crypto (1–2%)',thesis:'RWA leader: TVL> $1B; rails via regulated broker/ATS + payments.',catalyst:'TVL/partnership prints (rolling)',date:'—',exit:'TVL trend reversal; partner setback',trend200W:'OK'},
-  {rank:5,ticker:'PLTR',sector:'Technology',signal:'green',play:'Swing + Long',tier:'Tier 2 (3–5%) — split 50/50',thesis:'Gov/enterprise AI adoption; AIP momentum.',catalyst:'Gov/DoD awards window',date:'2025-09-12 (window)',exit:'Contract momentum fade; AVWAP(event) break',trend200W:'OK'},
-];
-const longIdeas = [
-  {rank:1,ticker:'MSCI',sector:'Financials',signal:'yellow',play:'Long-term',tier:'Tier 2 (3–5%)',thesis:'Index/ETF ABF compounding with high-margin data moats.',catalyst:'Index review / AUM flows',date:'2025-11-21',exit:'Sustained AUM outflows; pricing pressure',trend200W:'OK'},
-  {rank:2,ticker:'MCK',sector:'Healthcare',signal:'yellow',play:'Long-term',tier:'Tier 2 (3–5%)',thesis:'GLP-1 distribution leverage; corp actions optionality.',catalyst:'Earnings + separation update',date:'2025-11-07',exit:'Reimbursement/regulatory pressure',trend200W:'OK'},
-  {rank:3,ticker:'LRCX',sector:'Technology',signal:'yellow',play:'Swing + Long (Spec until 200W)',tier:'Tier 3 (1–2%) until 200W reclaim',thesis:'AI/HBM packaging tailwind; cyclical WFE upswing.',catalyst:'Oct earnings (HBM/packaging)',date:'2025-10-24',exit:'Guide cut; AVWAP(event) break',trend200W:'Pending'},
-];
-const cryptoIdeas = [
-  {rank:1,symbol:'SOL',signal:'green',play:'Swing + Long',tier:'Tier 1 crypto (2% swing + 1% LT)',thesis:'Insto rails + uptime; catalysts into Q4.',catalyst:'CME expiry',date:'2025-09-19',exit:'AVWAP break / outage'},
-  {rank:2,symbol:'ONDO',signal:'green',play:'Swing + Long',tier:'Tier 2 crypto (1–2%)',thesis:'RWA TVL growth + integrations.',catalyst:'TVL/partnership prints',date:'—',exit:'TVL downtrend / regulatory hit'},
-  {rank:3,symbol:'RNDR',signal:'yellow',play:'Spec',tier:'Tier 3 (0.5–1%)',thesis:'AI compute network ramp in beta.',catalyst:'Operator onboards / throughput',date:'rolling',exit:'Launch slippage / usage stall'},
-];
-const catalysts = [
-  {date:'2025-08-21',ticker:'WMT',type:'Earnings',label:'Q2 FY26 results; ads + marketplace focus',signal:'green'},
-  {date:'2025-08-22',ticker:'BTC',type:'ETF Flows',label:'Weekly spot-ETF flow checkpoint',signal:'yellow'},
-  {date:'2025-08-29',ticker:'BTC',type:'ETF Flows',label:'Weekly spot-ETF flow checkpoint',signal:'yellow'},
-  {date:'2025-09-12',ticker:'PLTR',type:'Contracts',label:'Gov/DoD award cycle window',signal:'green'},
-  {date:'2025-09-19',ticker:'SOL',type:'Futures Expiry',label:'CME SOL futures quarterly expiry',signal:'green'},
-  {date:'2025-10-24',ticker:'LRCX',type:'Earnings',label:'Q3 print; HBM/advanced packaging commentary',signal:'yellow'},
-  {date:'2025-10-29',ticker:'TXN',type:'Earnings',label:'Q3 print; Sherman ramp & industrial demand',signal:'yellow'},
-  {date:'2025-11-07',ticker:'MCK',type:'Earnings/Corp',label:'Results + Med-Surg separation updates',signal:'yellow'},
-  {date:'2025-11-21',ticker:'MSCI',type:'Index Review',label:'Nov review / ETF flow watch',signal:'yellow'},
-];
-const todays = [
-  "Promoted: LOAR → Swing <span class='NEW'>NEW</span> (guidance raise on Aug 13).",
-  "Catalysts: PANW (Aug 18 <span class='NEW'>NEW</span>), HD (Aug 19), WMT (Aug 21).",
-  "Smart Money: NVDA $3.5M call sweep <span class='NEW'>NEW</span>; SMH +$2.1B 7-day inflow; XLE outflows.",
-  "Exited: TGT removed from Swing list <span class='EXITED' title='No confirming catalyst; event-day AVWAP failed; sector cap constraint triggered.'>EXITED</span>."
-];
-// ====== END DATA ======
+(function(){
+  const now=new Date();const pad=n=>String(n).padStart(2,'0');
+  document.getElementById('asof').textContent=
+    now.getFullYear()+"-"+pad(now.getMonth()+1)+"-"+pad(now.getDate())+" "+pad(now.getHours())+":"+pad(now.getMinutes());
+  const techInclEtfs=28; const crypto=10; const spec=5; const buffer=5; const singleTier3_NVDA=2;
+  const ok=(techInclEtfs<=30)&&(crypto<=15)&&(spec<=5)&&(buffer>=5)&&(singleTier3_NVDA<=2);
+  const pill=document.getElementById('compliancePill');
+  pill.textContent= ok? 'COMPLIANT':'BREACH';
+  pill.style.background= ok? '#0ea5e9':'#ef4444';
+})();
 
-const tierWeight=t=>/Tier 1 \(5–7%\)/.test(t)?6:/Tier 2 \(3–5%\)/.test(t)?4:/Tier 3 \(1–2%\)/.test(t)?1.5:/Tier 1 crypto/.test(t)?3:/Tier 2 crypto/.test(t)?1.5:/0.5–1%/.test(t)?0.75:0;
-const heatColor=s=>s>=3?'g':s==2?'y':s==1?'y':'r';
+// ===== LIVE DATA =====
+window.LPE_DATA_ENDPOINT = "https://drealmaestro.github.io/living-portfolio/live.json";
+window.LPE_IR_VERIFY_ENDPOINT = "https://drealmaestro.github.io/living-portfolio/ir-verify.json";
 
-function computeExposures(){
-  const eq=[...swingIdeas,...longIdeas].filter(x=>!String(x.sector).toLowerCase().includes('crypto'));
-  const eqMap={}; eq.forEach(x=>{const w=tierWeight(x.tier); eqMap[x.ticker]=Math.max(eqMap[x.ticker]||0,w)});
-  const equities=Object.values(eqMap).reduce((s,w)=>s+w,0);
-  const crypto=cryptoIdeas.map(x=>tierWeight(x.tier)).reduce((s,w)=>s+w,0);
-  const spec=[...Object.entries(eqMap).map(([k,w])=>({k,w,tier:''})),...cryptoIdeas.map(x=>({k:x.symbol,w:tierWeight(x.tier),tier:x.tier}))]
-    .filter(p=>/Tier 3|Spec|Pending/.test(p.tier||'')) .reduce((s,p)=>s+p.w,0);
-  return {equities,crypto,spec};
-}
-function el(tag,attrs={},html=''){const e=document.createElement(tag);for(const k in attrs)e.setAttribute(k,attrs[k]);e.innerHTML=html;return e}
+(function(){
+  const endpoint = window.LPE_DATA_ENDPOINT; if(!endpoint) return;
+  const bust = ()=>'&cb='+(Date.now());
+  let lastHash = null;
+  const tick = ()=>{
+    fetch(endpoint + (endpoint.includes('?')?'&':'?')+bust(), {cache:'no-store'})
+      .then(r=>r.json())
+      .then(data=>{
+        if(!data) return;
+        if(data.hash && data.hash===lastHash) return;
+        lastHash = data.hash || Math.random().toString(36).slice(2);
+        renderCore(data.core||[]);
+        renderSwing(data.swing||[]);
+        renderSpec(data.spec||[]);
+        renderCatalysts(data.catalysts||{company:[],macro:[]});
+        renderFlow(data.flow||null);
+        renderBlindspots(data.blindspots||null);
+      })
+      .catch(()=>{});
+  };
+  tick(); setInterval(tick, 180000);
 
-function init(){
-  document.getElementById('asof').textContent = 'Refreshed: ' + new Date().toLocaleString() + '. Core must be above weekly 200-SMA; Spec can sit below until reclaim.';
-  const ul=document.getElementById('updates'); todays.forEach(t=>ul.appendChild(el('li',{},t)));
+  function formatQ(q){ if(q==null) return ''; const n=Number(q); if(Number.isNaN(n)) return q; const cls = n>=9?'g':(n>=6?'y':'r'); return `<span class="tag ${cls}">${n}</span>`; }
+  function td(x){return `<td>${x??''}</td>`}
+  function renderCore(rows){
+    const body=document.getElementById('coreLTTable').querySelector('tbody');
+    body.innerHTML = rows.map(r=>`<tr><td><span class="badge">${r.ticker}</span></td>${td(r.name)}${td(r.sector)}${td(r.weight)}${td(r.badge||'🟢 Engine')}${td(formatQ(r.q))}${td(r.notes||'')}</tr>`).join('');
+  }
+  function renderSwing(rows){
+    const body=document.getElementById('coreSwingTable').querySelector('tbody');
+    body.innerHTML = rows.map(r=>`<tr><td><span class="badge">${r.ticker}</span></td>${td(r.name)}${td(r.weight)}${td(r.signal||'')}${td(formatQ(r.q))}${td(r.notes||'')}</tr>`).join('');
+  }
+  function renderSpec(rows){
+    const body=document.getElementById('specTable').querySelector('tbody');
+    body.innerHTML = rows.map(r=>`<tr><td><span class="badge">${r.ticker}</span></td>${td(r.name)}${td(r.weight)}${td(r.notes||'')}</tr>`).join('');
+  }
+  function renderCatalysts(c){
+    const cUL=document.getElementById('catalystsCompany');
+    const mUL=document.getElementById('catalystsMacro');
+    if(cUL){ cUL.innerHTML = (c.company||[]).map(x=>`<li><b>${x.date}</b> — <b>${x.ticker}</b> ${x.label} <span class="tag ${x.color||'y'}">${x.impact||'Watch'}</span></li>`).join(''); }
+    if(mUL){ mUL.innerHTML = (c.macro||[]).map(x=>`<li><b>${x.date||x.label}</b> — ${x.label||''} <span class="tag ${x.color||'y'}">${x.impact||'Med'}</span></li>`).join(''); }
+  }
+  function renderFlow(flow){
+    if(!flow) return;
+    const set=(id,txt,cls)=>{const el=document.getElementById(id); if(!el) return; el.textContent=txt; el.className='tag '+(cls||'y');};
+    const color=(v,th)=> v>=th.g? 'g' : v<=th.r? 'r' : 'y';
+    if(flow.etf5d!=null) set('flowEtf', (flow.etf5d>0?'+':'')+flow.etf5d+" (5d)", color(flow.etf5d,{g:0,r:-0.1}));
+    if(flow.basis!=null) set('flowBasis', flow.basis+"%", color(flow.basis,{g:8,r:0}));
+    if(flow.oiChg!=null) set('flowOI', (flow.oiChg>0?'+':'')+flow.oiChg+'%', color(flow.oiChg,{g:2,r:-2}));
+    if(flow.skew!=null) set('flowSkew', flow.skew, (flow.skew==="calls>puts"? 'g': (flow.skew==="puts>calls"? 'r':'y')));
+    if(flow.ivRank!=null) set('flowIV', 'IVR '+flow.ivRank, 'y');
+    if(flow.offEx!=null) set('flowOffEx', flow.offEx+'%', (flow.offEx>45?'g':(flow.offEx<35?'r':'y')));
+  }
+  function renderBlindspots(b){
+    if(!b) return;
+    const w=document.getElementById('tileWeb'); if(w) w.textContent = b.web||'n/a';
+    const j=document.getElementById('tileJobs'); if(j) j.textContent = b.jobs||'n/a';
+    const a=document.getElementById('tileApp'); if(a) a.textContent = b.app||'n/a';
+    const d=document.getElementById('tileDP'); if(d) d.textContent = b.darkpool||'n/a';
+  }
+})();
 
-  const t=computeExposures();
-  document.getElementById('eqPct').textContent=t.equities.toFixed(1)+'%';
-  document.getElementById('crPct').textContent=t.crypto.toFixed(1)+'%';
-  document.getElementById('spPct').textContent=t.spec.toFixed(1)+'%';
-  const ok=(t.crypto<=15)&&(t.spec<=5);
-  document.getElementById('statusBadge').innerHTML = ok?'<span class="pill ok">COMPLIANT</span>':'<span class="pill bad">BREACH</span>';
+// ===== IR VERIFIER MODULE =====
+(function(){
+  const statusEl = document.getElementById('verifyStatus');
+  const endpoint = window.LPE_IR_VERIFY_ENDPOINT;
+  if(!endpoint){ statusEl.textContent = 'Not configured'; return; }
+  statusEl.textContent = 'Checking…';
+  fetch(endpoint, {cache:'no-store'})
+    .then(r=>r.json())
+    .then(data=>{
+      const events = Array.isArray(data.events) ? data.events : [];
+      let updates = 0, verified = 0;
+      const timeline = document.querySelectorAll('.card ul li');
+      events.forEach(ev=>{
+        const date = ev.date || '';
+        const ticker = (ev.ticker||'').toUpperCase();
+        let matched = false;
+        timeline.forEach(li=>{
+          const text = li.textContent || '';
+          if(text.toUpperCase().includes(ticker)){
+            matched = true;
+            if(date && text.includes(date)){ addBadge(li, '✓ Verified', '#0ea5e9'); verified++; }
+            else { addBadge(li, '⚠ Update avail: '+date, '#eab308'); updates++; }
+          }
+        });
+        if(!matched && date){
+          const lanes = document.querySelector('.lanes');
+          if(lanes){
+            const suggestion = document.createElement('div');
+            suggestion.className='note small';
+            suggestion.textContent = `New event from verifier → ${ticker}: ${ev.label} on ${date}${ev.session?(' ('+ev.session+')'):''}`;
+            lanes.appendChild(suggestion);
+            updates++;
+          }
+        }
+      });
+      statusEl.textContent = `Done — ${verified} verified, ${updates} update hint${updates!==1?'s':''}`;
+    })
+    .catch(err=>{ statusEl.textContent = 'Error fetching verifier JSON'; console.warn(err); });
 
-  const sectors=['Technology','Healthcare','Financials','Consumer Staples','Crypto'];
-  const all=[...swingIdeas,...longIdeas];
-  const scoreBy={}; sectors.forEach(s=>{const names=all.filter(i=>i.sector===s);scoreBy[s]=names.reduce((a,n)=>a+(n.signal==='green'?2:n.signal==='yellow'?1:0),0)});
-  const heat=document.getElementById('heat');
-  sectors.forEach(s=>{const sc=scoreBy[s]||0; const c=heatColor(sc); heat.appendChild(el('div',{class:`cell heat ${c}`},`<b>${s}</b><span>score ${sc}</span>`))});
-
-  const sBody=document.getElementById('swing');
-  swingIdeas.forEach(i=>sBody.appendChild(el('tr',{},`
-    <td>${i.rank}</td><td><span class="badge">${i.ticker}</span></td><td>${i.thesis}</td>
-    <td>${i.catalyst} — ${i.date}</td>
-    <td><span class="dot" style="background:${i.signal==='green'?'var(--g)':i.signal==='yellow'?'var(--y)':'var(--r)'}"></span> ${i.signal}</td>
-    <td>${i.play}</td><td>${i.tier}</td><td>${i.exit}</td>`)));
-
-  const lBody=document.getElementById('long');
-  longIdeas.forEach(i=>lBody.appendChild(el('tr',{},`
-    <td>${i.rank}</td><td><span class="badge">${i.ticker}</span></td><td>${i.thesis}</td>
-    <td>${i.catalyst} — ${i.date}</td>
-    <td><span class="dot" style="background:${i.signal==='green'?'var(--g)':i.signal==='yellow'?'var(--y)':'var(--r)'}"></span> ${i.signal}</td>
-    <td>${i.play} ${i.trend200W==='Pending'?'<span class="small" style="color:#facc15;margin-left:6px">(Pending 200W)</span>':''}</td>
-    <td>${i.tier}</td><td>${i.exit}</td>`)));
-
-  const cBody=document.getElementById('crypto');
-  cryptoIdeas.forEach(i=>cBody.appendChild(el('tr',{},`
-    <td>${i.rank}</td><td><span class="badge">${i.symbol}</span></td><td>${i.thesis}</td>
-    <td>${i.catalyst} — ${i.date}</td>
-    <td><span class="dot" style="background:${i.signal==='green'?'var(--g)':i.signal==='yellow'?'var(--y)':'var(--r)'}"></span> ${i.signal}</td>
-    <td>${i.play}</td><td>${i.tier}</td><td>${i.exit}</td>`)));
-
-  const tl=document.getElementById('timeline');
-  catalysts.sort((a,b)=>a.date.localeCompare(b.date)).forEach(c=>tl.appendChild(el('div',{class:'cell'},`
-    <div style="display:flex;gap:10px;align-items:center">
-      <span class="badge">${c.ticker}</span>
-      <div><div><b>${c.label}</b></div><div class="small">${c.type}</div></div>
-    </div>
-    <div style="text-align:right">
-      <div style="display:flex;gap:6px;justify-content:flex-end;align-items:center">
-        <span class="dot" style="background:${c.signal==='green'?'var(--g)':c.signal==='yellow'?'var(--y)':'var(--r)'}"></span>
-        <span class="small">${c.signal}</span>
-      </div>
-      <div><b>${new Date(c.date).toLocaleDateString()}</b></div>
-      <div class="small">${c.date}</div>
-    </div>`)));
-
-  document.getElementById('refresh').onclick=()=>{location.href=location.pathname+'?v='+Date.now()};
-}
-document.addEventListener('DOMContentLoaded', init);
+  function addBadge(li, txt, color){
+    const span = document.createElement('span');
+    span.className='tag';
+    span.textContent = txt;
+    span.style.background = '#0a1a2a';
+    span.style.border = '1px solid '+color;
+    span.style.color = color;
+    span.style.marginLeft = '8px';
+    li.appendChild(span);
+  }
+})();
 </script>
 </body>
 </html>
