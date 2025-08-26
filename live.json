@@ -16,11 +16,4 @@
     { "ticker": "IRMD", "name": "IRadimed", "sector": "Healthcare", "weight": "1%", "badge": "🟢 Engine", "q": 6, "notes": "Niche MRI devices", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (1–2%)" },
     { "ticker": "RMBS", "name": "Rambus", "sector": "Technology", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "DDR5/IP leverage", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (1–2%)" },
     { "ticker": "REZI", "name": "Resideo", "sector": "Industrials", "weight": "3%", "badge": "🟢 NEW Core", "q": 8, "notes": "10% owner repeat buys", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "UI", "name": "Ubiquiti", "sector": "Technology", "weight": "3%", "badge": "🟢 NEW Core", "q": 8, "notes": "EPS + margin expansion", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "SMH", "name": "VanEck Semi ETF", "sector": "Technology", "weight": "3%", "badge": "🟢 Core ETF", "q": 7, "notes": "Vol buffer", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "XLK", "name": "Tech Sector ETF", "sector": "Technology", "weight": "3%", "badge": "🟢 Core ETF", "q": 7, "notes": "Broad anchor", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier2 (3–5%)" },
-    { "ticker": "XLI", "name": "Industrial Sector ETF", "sector": "Industrials", "weight": "2%", "badge": "🟢 Core ETF", "q": 7, "notes": "Balances tech tilt", "track": "core", "playType": "Long-term", "tierSuggestion": "Tier3 (1–2%)" }
-  ],
-  "swing": [
-    { "ticker": "INR", "name": "Infinity Natural Resources", "weight": "3%", "signal": "🟢", "q": 7, "notes": "Insider buy ~$690k @ ~$13.79; watch >1.5x vol", "track": "swing", "playType": "Swing", "tierSuggestion": "Tier2 (3–5%)", "exits": "Close below AVWAP from insider-day or break swing low on >1.5x vol" },
-    { "ticker": "SMTC", "name": "Semtech", "weight": "2%", "signal": "🟢", "q": 7, "notes": "EPS +2.5% beat; rev +0.6%; Q3 $266M; starter", "track": "swing", "playType":
+    { "ticker": "
