@@ -1,22 +1,30 @@
 {
+  "generated_at": "2025-08-27T00:15:22.438948+02:00",
   "events": [
     {
       "ticker": "NVDA",
-      "date": "YYYY-MM-DD",
-      "label": "Q2 earnings (watch AI/DC growth, margins)",
-      "session": "AMC",
-      "source_url": ""
+      "type": "earnings",
+      "date": "2025-08-27",
+      "status": "⚠",
+      "note": "Confirm prints/guidance and reaction",
+      "source_url": "https://www.earningswhispers.com/stocks/nvda"
     },
     {
-      "ticker": "HEI",
-      "date": "YYYY-MM-DD",
-      "label": "Earnings (last beat) — verify next date",
-      "session": "",
-      "source_url": ""
+      "ticker": "OKTA",
+      "type": "earnings",
+      "date": "2025-08-26",
+      "status": "⚠",
+      "note": "Verify results vs whispers and reaction",
+      "source_url": "https://www.earningswhispers.com/stocks/okta"
+    },
+    {
+      "ticker": "ETH-USD",
+      "type": "fund_flows",
+      "date": "2025-09-02",
+      "status": "⚠",
+      "note": "Validate ETH spot ETF net flows vs BTC",
+      "source_url": "https://www.etf.com/"
     }
   ],
-  "meta": {
-    "generated_at": "INIT-PLACEHOLDER-CHANGE-ME",
-    "note": "Events with exact dates will show ✓ Verified; blank/mismatch will show ⚠ hint on the timeline."
-  }
+  "next_check": "2025-08-28"
 }
