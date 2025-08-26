@@ -1,63 +1,66 @@
 {
-  "hash": "2025-08-26T07:10Z",
+  "hash": "2025-08-26T09:00:00Z",
   "core": [
-    {"ticker":"MSFT","name":"Microsoft","sector":"Technology","weight":"3%","q":9,"notes":"Cloud + Copilot"},
-    {"ticker":"META","name":"Meta","sector":"Technology","weight":"3%","q":8,"notes":"Ads + AI infra"},
-    {"ticker":"GOOGL","name":"Alphabet A","sector":"Technology","weight":"3%","q":8,"notes":"Ads + Cloud"},
-    {"ticker":"NVDA","name":"NVIDIA","sector":"Technology","weight":"2%","q":7,"notes":"Tier 3 cap (≤2%)"},
-    {"ticker":"AMZN","name":"Amazon","sector":"Consumer Discretionary","weight":"3%","q":8,"notes":"Core Tier 2"},
-    {"ticker":"ANET","name":"Arista","sector":"Technology","weight":"3%","q":8,"notes":"AI networking"},
-    {"ticker":"LRCX","name":"Lam Research","sector":"Technology","weight":"3%","q":8,"notes":"HBM/packaging"},
-    {"ticker":"EME","name":"EMCOR","sector":"Industrials","weight":"3%","q":8,"notes":"Data center MEP"},
-    {"ticker":"IESC","name":"IES Holdings","sector":"Industrials","weight":"2%","q":7,"notes":"Power enclosures"},
-    {"ticker":"FIX","name":"Comfort Systems","sector":"Industrials","weight":"3%","q":8,"notes":"HVAC DC backlog"},
-    {"ticker":"MNST","name":"Monster Bev","sector":"Consumer Staples","weight":"2%","q":7,"notes":"Brand compounding"},
-    {"ticker":"COCO","name":"Vita Coco","sector":"Consumer Staples","weight":"1%","q":6,"notes":"No debt"},
-    {"ticker":"IRMD","name":"IRadimed","sector":"Healthcare","weight":"1%","q":6,"notes":"Niche MRI devices"},
-    {"ticker":"RMBS","name":"Rambus","sector":"Technology","weight":"2%","q":7,"notes":"DDR5/IP"},
-    {"ticker":"UPS","name":"UPS","sector":"Industrials","weight":"3%","q":7,"notes":"Logistics"},
-    {"ticker":"REZI","name":"Resideo","sector":"Industrials","weight":"3%","q":8,"notes":"10% owner repeat buys (NEW Core)"},
-    {"ticker":"UI","name":"Ubiquiti","sector":"Technology","weight":"3%","q":8,"notes":"EPS + margin expansion (Graduated)"},
-    {"ticker":"SMH","name":"VanEck Semi ETF","sector":"Technology","weight":"3%","q":7,"notes":"Vol buffer"},
-    {"ticker":"XLK","name":"Tech Sector ETF","sector":"Technology","weight":"3%","q":7,"notes":"Broad anchor"},
-    {"ticker":"XLI","name":"Industrial Sector ETF","sector":"Industrials","weight":"2%","q":7,"notes":"Balances tech tilt"}
+    { "ticker": "MSFT", "name": "Microsoft", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 9, "notes": "Cloud + Copilot" },
+    { "ticker": "META", "name": "Meta", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Ads + AI infra" },
+    { "ticker": "GOOGL", "name": "Alphabet A", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Ads + Cloud" },
+    { "ticker": "NVDA", "name": "NVIDIA", "sector": "Technology", "weight": "2%", "badge": "🟢 Engine", "q": 8, "notes": "Tier 3 cap (≤2%)" },
+    { "ticker": "AMZN", "name": "Amazon", "sector": "Consumer Discretionary", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Retail + AWS" },
+    { "ticker": "ANET", "name": "Arista Networks", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "AI networking" },
+    { "ticker": "LRCX", "name": "Lam Research", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "HBM/packaging" },
+    { "ticker": "EME", "name": "EMCOR", "sector": "Industrials", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Data center MEP" },
+    { "ticker": "IESC", "name": "IES Holdings", "sector": "Industrials", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "Power enclosures" },
+    { "ticker": "FIX", "name": "Comfort Systems", "sector": "Industrials", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "HVAC DC backlog" },
+    { "ticker": "MNST", "name": "Monster Beverage", "sector": "Consumer Staples", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "Brand compounding" },
+    { "ticker": "COCO", "name": "Vita Coco", "sector": "Consumer Staples", "weight": "1%", "badge": "🟢 Engine", "q": 6, "notes": "No debt" },
+    { "ticker": "IRMD", "name": "IRadimed", "sector": "Healthcare", "weight": "1%", "badge": "🟢 Engine", "q": 6, "notes": "Niche MRI devices" },
+    { "ticker": "RMBS", "name": "Rambus", "sector": "Technology", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "DDR5/IP" },
+    { "ticker": "REZI", "name": "Resideo", "sector": "Industrials", "weight": "3%", "badge": "🟢 NEW Core", "q": 8, "notes": "10% owner repeat buys" },
+    { "ticker": "UI", "name": "Ubiquiti", "sector": "Technology", "weight": "3%", "badge": "🟢 NEW Core", "q": 8, "notes": "EPS + margin expansion" },
+    { "ticker": "SMH", "name": "VanEck Semi ETF", "sector": "Technology", "weight": "3%", "badge": "🟢 Core ETF", "q": 7, "notes": "Vol buffer" },
+    { "ticker": "XLK", "name": "Tech Sector ETF", "sector": "Technology", "weight": "3%", "badge": "🟢 Core ETF", "q": 7, "notes": "Broad anchor" },
+    { "ticker": "XLI", "name": "Industrial Sector ETF", "sector": "Industrials", "weight": "2%", "badge": "🟢 Core ETF", "q": 7, "notes": "Balances tech tilt" }
   ],
   "swing": [
-    {"ticker":"ZM","name":"Zoom","weight":"3%","signal":"🟢","q":8,"notes":"Beat+raised; above AVWAP"},
-    {"ticker":"NVDA","name":"NVIDIA","weight":"2%","signal":"🟡","q":8,"notes":"Earnings Aug 27 (AMC); watch event AVWAP"},
-    {"ticker":"SNOW","name":"Snowflake","weight":"2%","signal":"🟡","q":7,"notes":"Earnings Aug 27 (AMC)"},
-    {"ticker":"WDAY","name":"Workday","weight":"2%","signal":"🟢","q":7,"notes":"Guide-up continuation"},
-    {"ticker":"WMT","name":"Walmart","weight":"2%","signal":"🟡","q":6,"notes":"Post-miss repair"},
-    {"ticker":"BAC","name":"Bank of America","weight":"3%","signal":"🟢","q":8,"notes":"Div + buyback catalyst"}
+    { "ticker": "INR", "name": "Infinity Natural Resources", "weight": "3%", "signal": "🟢", "q": 7, "notes": "Insider buy $690k @ ~$13.79; Swing Tier 2; watch volume >1.5x" },
+    { "ticker": "SMTC", "name": "Semtech", "weight": "2%", "signal": "🟢", "q": 7, "notes": "Q2 EPS +2.5% beat, rev +0.6%; Q3 guide $266M steady. Swing Tier 3 starter." },
+    { "ticker": "HEI", "name": "HEICO", "weight": "3%", "signal": "🟢", "q": 8, "notes": "Q2 rev +15.7% YoY, EPS beat +10.3%. Swing Tier 2; secular aerospace tailwinds." }
   ],
   "spec": [
-    {"ticker":"TPVG","name":"TriplePoint","weight":"1%","notes":"CEO largest-ever buy"},
-    {"ticker":"UAA","name":"Under Armour","weight":"1%","notes":"Director cluster buys"},
-    {"ticker":"REYN","name":"Reynolds","weight":"1%","notes":"Director conviction buys"},
-    {"ticker":"CEPF","name":"Cantor EP IV","weight":"1%","notes":"10% owner large buy"},
-    {"ticker":"ONDO","name":"Ondo Finance","weight":"1%","notes":"RWA rails adoption"}
+    { "ticker": "GPUS", "name": "Hyperscale Data", "weight": "1%", "signal": "🟡", "q": 5, "notes": "Exec Chair + 10% owner buys (11,750 sh @ $0.54–0.60). Spec Tier 3 (≤2%) due to liquidity." },
+    { "ticker": "NTLA", "name": "Intellia Therapeutics", "weight": "3%", "signal": "🟢", "q": 7, "notes": "Insider buy 100k sh (~$1M) @ ~$10.03. Spec→Graduation Watch: promote on EPS/clinical + margin trend." }
   ],
   "catalysts": {
     "company": [
-      {"date":"2025-08-27","ticker":"NVDA","label":"Q2 FY26 earnings (AMC)","color":"y","impact":"Watch"},
-      {"date":"2025-08-27","ticker":"SNOW","label":"Q2 earnings (AMC)","color":"y","impact":"Watch"},
-      {"date":"2025-10-Late","ticker":"LRCX","label":"Earnings window (est.)","color":"g","impact":"Green"},
-      {"date":"2025-10-Late","ticker":"TXN","label":"Q3 earnings window (est.)","color":"y","impact":"Watch"},
-      {"date":"2025-11-20","ticker":"WMT","label":"Q3 FY26 earnings","color":"y","impact":"Watch"},
-      {"date":"2025-11-Early","ticker":"MCK","label":"Earnings window (proj.)","color":"y","impact":"Watch"},
-      {"date":"2025-11-Mid","ticker":"LOAR","label":"Next update window (est.)","color":"g","impact":"Green"},
-      {"date":"2025-11-05","ticker":"MSCI","label":"Nov index review (announcement)","color":"y","impact":"Watch"},
-      {"date":"2025-11-25","ticker":"MSCI","label":"Nov index review (effective)","color":"y","impact":"Watch"}
+      { "date": "2025-08-27", "ticker": "NVDA", "label": "Q2 earnings (AI demand focus)", "color": "g", "impact": "High" },
+      { "date": "2025-08-26", "ticker": "VRNT", "label": "To be acquired by Thoma Bravo ($2B all-cash)", "color": "y", "impact": "High" },
+      { "date": "2025-08-26", "ticker": "MNKD", "label": "To acquire scPharmaceuticals ($360M)", "color": "y", "impact": "Med" },
+      { "date": "2025-08-26", "ticker": "CRGY", "label": "To acquire Vital Energy ($3.1B all-stock)", "color": "y", "impact": "High" },
+      { "date": "2025-08-26", "ticker": "DAY", "label": "To be acquired by Thoma Bravo ($12.3B all-cash)", "color": "y", "impact": "High" },
+      { "date": "2025-08-26", "ticker": "NXST", "label": "To acquire TEGNA ($6.2B cash)", "color": "y", "impact": "High" },
+      { "date": "2025-08-26", "ticker": "MTB", "label": "Dividend +11% → $1.50", "color": "g", "impact": "Med" },
+      { "date": "2025-08-26", "ticker": "AROC", "label": "Dividend +10.5%", "color": "g", "impact": "Med" },
+      { "date": "2025-08-26", "ticker": "CSL", "label": "Dividend +10%", "color": "g", "impact": "Med" },
+      { "date": "2025-08-26", "ticker": "GOLD", "label": "Dividend +50%", "color": "g", "impact": "High" },
+      { "date": "2025-08-26", "ticker": "WFC", "label": "Dividend +12.5%", "color": "g", "impact": "Med" },
+      { "date": "2025-08-26", "ticker": "INR", "label": "Insider open-market buy (~$690k)", "color": "g", "impact": "High" },
+      { "date": "2025-08-26", "ticker": "NTLA", "label": "Insider buy 100k sh (~$1.0M)", "color": "g", "impact": "High" },
+      { "date": "2025-08-26", "ticker": "GPUS", "label": "Exec Chair + 10% owner buys (11,750 sh)", "color": "y", "impact": "Med" }
     ],
-    "macro": [
-      {"date":"Mon","label":"New Home Sales / Dallas Fed","color":"y","impact":"Med"},
-      {"date":"Tue","label":"Durable Goods; Case-Shiller; Confidence","color":"y","impact":"Med"},
-      {"date":"Tue–Wed","label":"Fed Beige Book / Speeches","color":"y","impact":"Med"},
-      {"date":"Thu","label":"Claims; Permits/Starts","color":"y","impact":"Med"},
-      {"date":"Fri","label":"Core PCE; Income/Spending; UMich","color":"r","impact":"High"},
-      {"date":"All week","label":"T-bill auctions","color":"y","impact":"Med"}
-    ]
+    "macro": []
   },
-  "flow": { "etf5d": 0.26, "basis": 9.5, "oiChg": 3.2, "skew": "calls>puts", "ivRank": 42, "offEx": 47 },
-  "blindspots": { "web": "↑ 4w", "jobs": "↑ 3w", "app": "Top-50", "darkpool": "Buy-skew" }
+  "flow": {
+    "etf5d": 0,
+    "basis": 0,
+    "oiChg": 0,
+    "skew": "flat",
+    "ivRank": 0,
+    "offEx": 40
+  },
+  "blindspots": {
+    "web": "—",
+    "jobs": "—",
+    "app": "—",
+    "darkpool": "—"
+  }
 }
