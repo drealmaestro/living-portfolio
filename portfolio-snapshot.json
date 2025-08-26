@@ -1,0 +1,7 @@
+{
+  "as_of": "2025-08-27",
+  "sectors": { "Technology": 0.31, "Health Care": 0.12 },
+  "single_names": { "NVDA": 0.062, "VOO": 0.20 },
+  "crypto": { "BTC": 0.04, "ETH": 0.03, "SOL": 0.01 },
+  "speculative": { "RIGL": 0.008 }
+}
