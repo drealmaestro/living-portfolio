@@ -5,11 +5,6 @@
     { "ticker": "OKTA", "label": "Q2 Earnings", "date": "2025-08-26", "impact": "Med" },
     { "ticker": "HEI",  "label": "Q2 Earnings (beat)", "date": "2025-08-26", "impact": "Med" },
     { "ticker": "SMTC", "label": "Q2 Earnings (beat/guide)", "date": "2025-08-26", "impact": "Med" },
-    { "ticker": "MSCI", "label": "Q3 Earnings (est.)", "date": "2025-10-25", "impact": "High" },
-
-    { "ticker": "TSLA", "label": "Q3 Deliveries", "date": "2025-10-10", "impact": "High" },
-
-    { "ticker": "ETH",  "label": "Fusaka Upgrade (target)", "date": "2025-11-05", "impact": "High" },
 
     { "ticker": "VRNT", "label": "Thoma Bravo acquisition ($2B, cash)", "date": "2025-08-26", "impact": "High" },
     { "ticker": "MNKD", "label": "To acquire scPharmaceuticals ($360M)", "date": "2025-08-26", "impact": "Med" },
@@ -23,8 +18,10 @@
     { "ticker": "GOLD", "label": "Dividend +50%",          "date": "2025-08-26", "impact": "High" },
     { "ticker": "WFC",  "label": "Dividend +12.5%",        "date": "2025-08-26", "impact": "Med" },
 
-    { "ticker": "INR",  "label": "Insider buy (~$690k)",                  "date": "2025-08-26", "impact": "High" },
-    { "ticker": "NTLA", "label": "Insider buy (100k sh, ~$1.0M)",         "date": "2025-08-26", "impact": "High" },
-    { "ticker": "GPUS", "label": "Exec Chair + 10% owner buys (11,750)",  "date": "2025-08-26", "impact": "Med" }
+    { "ticker": "INR",  "label": "Insider buy (~$690k)",                 "date": "2025-08-26", "impact": "High" },
+    { "ticker": "NTLA", "label": "Insider buy (100k sh, ~$1.0M)",        "date": "2025-08-26", "impact": "High" },
+    { "ticker": "GPUS", "label": "Exec Chair + 10% owner buys (11,750)", "date": "2025-08-26", "impact": "Med" },
+
+    { "ticker": "LLY",  "label": "Orforglipron Phase 3 success; FDA filing planned", "date": "2025-08-26", "impact": "High" }
   ]
 }
