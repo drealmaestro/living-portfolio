@@ -1,67 +1,70 @@
 {
-  "hash": "2025-08-27T09:35:00Z",
-  "core": [
-    { "ticker": "MSFT", "name": "Microsoft", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 9, "notes": "Cloud + Copilot compounding; ROIC↑, FCF strong", "exits": "Breaks weekly 50MA on >1.5x vol or Copilot adoption stalls", "source_url": "" },
-    { "ticker": "META", "name": "Meta Platforms", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Ads + AI infra; margin expansion", "exits": "RS < sector for 4w; weekly 50MA fail", "source_url": "" },
-    { "ticker": "GOOGL", "name": "Alphabet A", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Search/Ads + Cloud; durable FCF", "exits": "Below AVWAP from last earnings on >1.5x vol", "source_url": "" },
-    { "ticker": "NVDA", "name": "NVIDIA", "sector": "Technology", "weight": "2%", "badge": "🟢 Engine (Tier3 cap)", "q": 8, "notes": "AI cycle leader; earnings 27 Aug", "exits": "Post-earnings breakdown below event-day AVWAP", "source_url": "" },
-    { "ticker": "AMZN", "name": "Amazon", "sector": "Consumer Discretionary", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "AWS + retail efficiency; FCF inflecting", "exits": "50WMA fail on >1.5x vol", "source_url": "" },
-    { "ticker": "ANET", "name": "Arista Networks", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "AI networking share gains", "exits": "Lose breakout pivot; RS roll-over", "source_url": "" },
-    { "ticker": "LRCX", "name": "Lam Research", "sector": "Technology", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "HBM/advanced packaging exposure", "exits": "Below weekly 200-SMA or thesis break", "source_url": "" },
-    { "ticker": "EME", "name": "EMCOR", "sector": "Industrials", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Data center MEP backlog", "exits": "Project cancellations / margin roll-over", "source_url": "" },
-    { "ticker": "IESC", "name": "IES Holdings", "sector": "Industrials", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "Power enclosures growth", "exits": "Break swing low on >1.5x vol", "source_url": "" },
-    { "ticker": "FIX", "name": "Comfort Systems", "sector": "Industrials", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "HVAC for DC build-out", "exits": "Below 50WMA", "source_url": "" },
-    { "ticker": "MNST", "name": "Monster Beverage", "sector": "Consumer Staples", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "Brand compounding; FCF rich", "exits": "Channel inventory reversal", "source_url": "" },
-    { "ticker": "COCO", "name": "Vita Coco", "sector": "Consumer Staples", "weight": "1%", "badge": "🟢 Engine", "q": 6, "notes": "Debt-free; steady growth", "exits": "Gross margin compression", "source_url": "" },
-    { "ticker": "IRMD", "name": "IRadimed", "sector": "Healthcare", "weight": "1%", "badge": "🟢 Engine", "q": 6, "notes": "Niche MRI devices; high margins", "exits": "Below 200-DMA", "source_url": "" },
-    { "ticker": "RMBS", "name": "Rambus", "sector": "Technology", "weight": "2%", "badge": "🟢 Engine", "q": 7, "notes": "DDR5/IP leverage", "exits": "Licensing setbacks", "source_url": "" },
-    { "ticker": "REZI", "name": "Resideo", "sector": "Industrials", "weight": "3%", "badge": "🟢 NEW Core", "q": 8, "notes": "10% owner repeat buys; operational turnaround", "exits": "Insider support fades + margin roll-over", "source_url": "" },
-    { "ticker": "UI", "name": "Ubiquiti", "sector": "Technology", "weight": "3%", "badge": "🟢 NEW Core", "q": 8, "notes": "EPS + margin expansion", "exits": "Below 50WMA", "source_url": "" },
-    { "ticker": "SMH", "name": "VanEck Semiconductor ETF", "sector": "Technology", "weight": "3%", "badge": "🟢 Core ETF", "q": 7, "notes": "Volatility buffer vs single names", "exits": "Semi cycle deterioration", "source_url": "" },
-    { "ticker": "XLK", "name": "Technology Select Sector SPDR", "sector": "Technology", "weight": "3%", "badge": "🟢 Core ETF", "q": 7, "notes": "Broad tech anchor", "exits": "Sector relative weakness", "source_url": "" },
-    { "ticker": "XLI", "name": "Industrial Select Sector SPDR", "sector": "Industrials", "weight": "2%", "badge": "🟢 Core ETF", "q": 7, "notes": "Balances tech tilt", "exits": "Sector relative weakness", "source_url": "" }
-  ],
-  "swing": [
-    { "ticker": "INR",  "name": "Infinity Natural Resources", "weight": "3%", "signal": "🟢 Insider buy", "q": 7, "notes": "Insider open-market buy (~$690k @ ~$13.79); watch >1.5x vol", "exits": "Close < event-day AVWAP or break swing low on >1.5x vol", "source_url": "" },
-    { "ticker": "SMTC", "name": "Semtech", "weight": "2%", "signal": "🟢 Earnings beat", "q": 7, "notes": "EPS +2.5% beat; rev +0.6%; Q3 guide ~$266M", "exits": "Lose breakout pivot; 2x ATR stop", "source_url": "" },
-    { "ticker": "HEI",  "name": "HEICO", "weight": "3%", "signal": "🟢 Earnings beat", "q": 8, "notes": "Rev +15.7% YoY; EPS +10.3%; aerospace secular", "exits": "2x ATR stop; 3 distribution days", "source_url": "" },
-    { "ticker": "RIGL", "name": "Rigel Pharma", "weight": "1%", "signal": "🟡 Momentum", "q": 6, "notes": "52-wk highs flagged; momentum scan", "exits": "Momentum fail on >1.5x vol", "source_url": "" },
-
-    { "ticker": "ET",   "name": "Energy Transfer LP", "weight": "2.5%", "signal": "🟢 Insider cluster buy", "q": 7, "notes": "Director bought ~2.0M sh (~$34.7M) @ ~$17.3; FCF-rich midstream", "exits": "Close < event AVWAP or < 50-DMA on >1.5x vol", "source_url": "" },
-    { "ticker": "ASAN", "name": "Asana", "weight": "1.5%", "signal": "🟢 Founder/director buys", "q": 6, "notes": "Multiple buys by Dustin Moskovitz (~$7.8M) @ ~$13.5–13.9; price confirm needed", "exits": "Below range low or < event AVWAP", "source_url": "" },
-    { "ticker": "WU",   "name": "Western Union", "weight": "1.5%", "signal": "🟢 CEO buy", "q": 6, "notes": "CEO bought ~176k sh (~$1.5M) @ ~$8.49; turnaround watch", "exits": "Breakdown < 50-DMA on >1.5x vol", "source_url": "" },
-    { "ticker": "COTY", "name": "Coty", "weight": "1.5%", "signal": "🟢 CEO buy", "q": 6, "notes": "CEO bought ~260k sh (~$1M) @ ~$3.92; valuation reset potential", "exits": "Lose post-buy AVWAP", "source_url": "" },
-
-    { "ticker": "LRCX", "name": "Lam Research", "weight": "1.5%", "signal": "🟡 (dual-tag)", "q": 7, "notes": "Swing half + Core half; HBM packaging theme", "exits": "Below weekly 200-SMA", "source_url": "" }
-  ],
-  "spec": [
-    { "ticker": "GPUS", "name": "Hyperscale Data", "weight": "1%", "signal": "🟡 Insider buys (microcap)", "q": 5, "notes": "Exec Chair + 10% owner buys (~11.8k sh); microcap liquidity risk", "graduation": "watch", "graduationCriteria": ["EPS+FCF positive 4Q", "Net margin expansion", "Institutional flow confirm"], "exits": "Hard −20% stop or liquidity fails", "source_url": "" },
-    { "ticker": "NTLA", "name": "Intellia Therapeutics", "weight": "1%", "signal": "🟢 Insider $1M buy", "q": 7, "notes": "100k sh buy; CRISPR moat; speculative", "graduation": "watch", "graduationCriteria": ["EPS+FCF positive 4Q", "Net margin expansion", "Inst flow confirm"], "exits": "Below 50-DMA on heavy vol or trial slip", "source_url": "" },
-    { "ticker": "LLY",  "name": "Eli Lilly", "weight": "1%", "signal": "🟢 Obesity pill P3 success", "q": 8, "notes": "Orforglipron P3 success; FDA filing planned", "graduation": "watch", "graduationCriteria": ["FDA submission filed", "Institutional flow", "Positive obesity P3 readout"], "exits": "Regulatory setback or safety signal", "source_url": "" },
-
-    { "ticker": "MDGL", "name": "Madrigal Pharmaceuticals", "weight": "1%", "signal": "🟢 Director (Baker Bros.) large buys", "q": 6, "notes": "Multiple buys totaling ~$62M @ ~$364–385; high signal, but biotech risk", "graduation": "watch", "graduationCriteria": ["Regulatory/clinical wins", "EPS/FCF inflection", "Moat confirmation"], "exits": "−20% hard stop or thesis break", "source_url": "" },
-    { "ticker": "STSS", "name": "Stelis Biopharma (per brief)", "weight": "0.5%", "signal": "🟢 Cluster director buys", "q": 5, "notes": "Multiple directors ~400k sh; verify ticker/listing before size-up", "graduation": "verify", "graduationCriteria": ["Listing/ticker confirmation", "EPS trend", "Moat signal"], "exits": "Tight risk; liquidity check", "source_url": "" },
-    { "ticker": "BKKT", "name": "Bakkt Holdings", "weight": "1%", "signal": "🟢 CEO buys", "q": 5, "notes": "CEO bought ~180k sh (~$1.47M) @ ~$8.1–8.6; crypto infra beta", "graduation": "watch", "graduationCriteria": ["Revenue traction", "Positive guidance", "Crypto adoption tailwind"], "exits": "Below 50-DMA on >1.5x vol", "source_url": "" }
-  ],
+  "hash": "2025-08-27-catalystpush1",
+  "core": [],
+  "swing": [],
+  "spec": [],
   "catalysts": {
     "company": [
-      { "date": "2025-08-27", "ticker": "NVDA", "label": "Q2 earnings — AI demand & DC growth", "color": "g", "impact": "High", "source_url": "" },
-
-      { "date": "2025-08-27", "ticker": "MDGL", "label": "Insider open-market purchases (~$62M) — watch price confirm > AVWAP", "color": "g", "impact": "High", "source_url": "" },
-      { "date": "2025-08-27", "ticker": "ET",   "label": "Insider director buys (~$34.7M) — watch > AVWAP, vol expansion", "color": "g", "impact": "High", "source_url": "" },
-      { "date": "2025-08-27", "ticker": "ASAN", "label": "Founder/director buys (~$7.8M) — needs price confirmation", "color": "y", "impact": "Med", "source_url": "" },
-      { "date": "2025-08-27", "ticker": "WU",   "label": "CEO buy (~$1.5M) — turnaround watch", "color": "y", "impact": "Med", "source_url": "" },
-      { "date": "2025-08-27", "ticker": "COTY", "label": "CEO buy (~$1M) — valuation reset potential", "color": "y", "impact": "Med", "source_url": "" },
-      { "date": "2025-08-27", "ticker": "BKKT", "label": "CEO buys (~$1.47M) — crypto beta", "color": "y", "impact": "Med", "source_url": "" },
-      { "date": "2025-08-27", "ticker": "STSS", "label": "Clustered director buys (~$2.5M+) — verify ticker/listing", "color": "y", "impact": "Med", "source_url": "" }
-
+      {
+        "date": "",
+        "ticker": "NVDA",
+        "label": "Earnings Preview — Nvidia's quarterly results due … strong demand, China rebound expected. Guidance upgrades likely.",
+        "color": "y",
+        "impact": "Med",
+        "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
+      },
+      {
+        "date": "",
+        "ticker": "INTC",
+        "label": "Regulatory/Ownership — U.S. government to take a ~9.9% stake; Intel warns of foreign regulatory complications.",
+        "color": "y",
+        "impact": "Med",
+        "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
+      },
+      {
+        "date": "",
+        "ticker": "AAPL",
+        "label": "Strategic Update — Three-year overhaul of iPhone hardware and software reported.",
+        "color": "y",
+        "impact": "Med",
+        "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
+      },
+      {
+        "date": "",
+        "ticker": "KDP",
+        "label": "M&A Announcement — Keurig Dr Pepper acquiring JDE Peet's for $18B; follow-on split planned.",
+        "color": "g",
+        "impact": "High",
+        "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
+      },
+      {
+        "date": "",
+        "ticker": "VRNT",
+        "label": "M&A Announcement — Thoma Bravo to acquire Verint Systems for $2B, adding to active PE deal trend.",
+        "color": "g",
+        "impact": "High",
+        "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
+      },
+      {
+        "date": "",
+        "ticker": "BAC",
+        "label": "Structured Product — Issued yield notes linked to NDX, RTY, SPX (7.75% yield, 18-month term), with callables starting Nov 2025.",
+        "color": "r",
+        "impact": "Low",
+        "source_url": "https://investor.bankofamerica.com/regulatory-and-other-filings/all-sec-filings/content/0001918704-25-012798/0001918704-25-012798.pdf"
+      },
+      {
+        "date": "",
+        "ticker": "BAY",
+        "label": "Compliance/Extension — Bayview Acquisition Corp received minimum market value deficiency notice from Nasdaq. Merger deadline further extended, and new promissory note issued.",
+        "color": "g",
+        "impact": "High",
+        "source_url": "https://www.investing.com/news/sec-filings/bayview-acquisition-corp-receives-nasdaq-notice-for-minimum-market-value-deficiency-93CH-4211680"
+      }
     ],
-    "macro": [
-      { "date": "2025-08-29", "label": "US Core PCE (July) + Personal Income/Spending", "color": "y", "impact": "High" },
-      { "date": "2025-08-26", "label": "US Durable Goods (Jul prelim) & Consumer Confidence (Aug)", "color": "y", "impact": "Med" }
-    ]
+    "macro": []
   },
   "heatmap": null,
-  "flow": { "etf5d": 0, "basis": 0, "oiChg": 0, "skew": "neutral", "ivRank": 0, "offEx": 40 },
-  "blindspots": { "web": "OK", "jobs": "OK", "app": "OK", "darkpool": "—" }
+  "flow": null,
+  "blindspots": null
 }
