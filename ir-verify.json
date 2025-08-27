@@ -1,17 +1,53 @@
 {
   "events": [
-    { "ticker": "NVDA", "date": "2025-08-27", "label": "Q2 earnings (AI/DC growth, margins)", "session": "AMC", "source_url": "" },
-
-    { "ticker": "MDGL", "date": "2025-08-27", "label": "Insider (Baker Bros.) multiple open-market buys", "session": "", "source_url": "" },
-    { "ticker": "ET",   "date": "2025-08-27", "label": "Insider director open-market buys (~$34.7M)", "session": "", "source_url": "" },
-    { "ticker": "ASAN", "date": "2025-08-27", "label": "Founder/director open-market buys (~$7.8M)", "session": "", "source_url": "" },
-    { "ticker": "WU",   "date": "2025-08-27", "label": "CEO open-market buy (~$1.5M)", "session": "", "source_url": "" },
-    { "ticker": "COTY", "date": "2025-08-27", "label": "CEO open-market buy (~$1M)", "session": "", "source_url": "" },
-    { "ticker": "BKKT", "date": "2025-08-27", "label": "CEO open-market buys (~$1.47M)", "session": "", "source_url": "" },
-    { "ticker": "STSS", "date": "2025-08-27", "label": "Clustered director buys (~$2.5M+)", "session": "", "source_url": "" }
-  ],
-  "meta": {
-    "generated_at": "2025-08-27T09:35:00Z",
-    "note": "Insider buys are stamped with today's date for verification tagging; earnings/dated events will ✓-match timeline dates."
-  }
+    {
+      "ticker": "NVDA",
+      "date": "",
+      "label": "Quarterly earnings preview (guidance upgrade expected)",
+      "session": "",
+      "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
+    },
+    {
+      "ticker": "INTC",
+      "date": "",
+      "label": "U.S. gov’t stake / regulatory developments",
+      "session": "",
+      "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
+    },
+    {
+      "ticker": "AAPL",
+      "date": "",
+      "label": "3-year iPhone hardware & software overhaul",
+      "session": "",
+      "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
+    },
+    {
+      "ticker": "KDP",
+      "date": "",
+      "label": "M&A: acquiring JDE Peet’s ($18B)",
+      "session": "",
+      "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
+    },
+    {
+      "ticker": "VRNT",
+      "date": "",
+      "label": "M&A: Thoma Bravo acquisition ($2B)",
+      "session": "",
+      "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
+    },
+    {
+      "ticker": "BAC",
+      "date": "",
+      "label": "Structured yield notes issued",
+      "session": "",
+      "source_url": "https://investor.bankofamerica.com/regulatory-and-other-filings/all-sec-filings/content/0001918704-25-012798/0001918704-25-012798.pdf"
+    },
+    {
+      "ticker": "BAY",
+      "date": "",
+      "label": "Compliance/Extension — Nasdaq notice + merger deadline",
+      "session": "",
+      "source_url": "https://www.investing.com/news/sec-filings/bayview-acquisition-corp-receives-nasdaq-notice-for-minimum-market-value-deficiency-93CH-4211680"
+    }
+  ]
 }
