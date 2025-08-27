@@ -1,54 +1,14 @@
 {
-  "hash": "2025-08-27T10-55-utc-v1",
   "events": [
-    {
-      "ticker": "NVDA",
-      "date": "",
-      "label": "Quarterly earnings preview (guidance upgrade expected)",
-      "session": "",
-      "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
-    },
-    {
-      "ticker": "INTC",
-      "date": "",
-      "label": "U.S. gov’t stake / regulatory developments",
-      "session": "",
-      "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
-    },
-    {
-      "ticker": "AAPL",
-      "date": "",
-      "label": "3-year iPhone hardware & software overhaul",
-      "session": "",
-      "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
-    },
-    {
-      "ticker": "KDP",
-      "date": "",
-      "label": "M&A: acquiring JDE Peet’s ($18B)",
-      "session": "",
-      "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
-    },
-    {
-      "ticker": "VRNT",
-      "date": "",
-      "label": "M&A: Thoma Bravo acquisition ($2B)",
-      "session": "",
-      "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
-    },
-    {
-      "ticker": "BAC",
-      "date": "",
-      "label": "Structured yield notes issued",
-      "session": "",
-      "source_url": "https://investor.bankofamerica.com/regulatory-and-other-filings/all-sec-filings/content/0001918704-25-012798/0001918704-25-012798.pdf"
-    },
-    {
-      "ticker": "BAY",
-      "date": "",
-      "label": "Compliance/Extension — Nasdaq notice + merger deadline",
-      "session": "",
-      "source_url": "https://www.investing.com/news/sec-filings/bayview-acquisition-corp-receives-nasdaq-notice-for-minimum-market-value-deficiency-93CH-4211680"
-    }
+    { "ticker": "NVDA", "date": "2025-08-27", "label": "Q2 Earnings", "session": "AMC", "source_url": "" },
+    { "ticker": "KDP",  "date": "2025-09-15", "label": "M&A milestone / vote window", "session": "", "source_url": "" },
+    { "ticker": "VRNT", "date": "2025-09-20", "label": "Take-private closing milestone", "session": "", "source_url": "" },
+    { "ticker": "MACRO", "date": "2025-08-28", "label": "Initial Jobless Claims", "session": "08:30 ET", "source_url": "" },
+    { "ticker": "MACRO", "date": "2025-08-28", "label": "GDP Q2 (Second Estimate)", "session": "12:30 ET", "source_url": "" },
+    { "ticker": "MACRO", "date": "2025-08-28", "label": "Corporate Profits (Prelim Q2)", "session": "12:30 ET", "source_url": "" },
+    { "ticker": "MACRO", "date": "2025-08-28", "label": "GDP Price Index (Q2 2nd est)", "session": "12:30 ET", "source_url": "" },
+    { "ticker": "MACRO", "date": "2025-08-29", "label": "Core PCE (July)", "session": "08:30 ET", "source_url": "" },
+    { "ticker": "MACRO", "date": "2025-08-29", "label": "Initial Jobless Claims (weekly follow-through)", "session": "08:30 ET", "source_url": "" },
+    { "ticker": "MACRO", "date": "2025-08-28", "label": "Pending Home Sales (July)", "session": "10:00 ET", "source_url": "" }
   ]
 }
