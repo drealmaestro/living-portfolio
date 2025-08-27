@@ -1,13 +1,17 @@
 {
   "events": [
     { "ticker": "NVDA", "date": "2025-08-27", "label": "Q2 earnings (AI/DC growth, margins)", "session": "AMC", "source_url": "" },
-    { "ticker": "SMTC", "date": "2025-08-26", "label": "Q2 earnings (beat/guide)", "session": "", "source_url": "" },
-    { "ticker": "HEI",  "date": "2025-08-26", "label": "Q2 earnings (beat)", "session": "", "source_url": "" },
-    { "ticker": "INR",  "date": "2025-08-26", "label": "Insider buy (~$690k) — price confirm watch", "session": "", "source_url": "" },
-    { "ticker": "LLY",  "date": "2025-08-26", "label": "Orforglipron Phase 3 success; FDA filing planned", "session": "", "source_url": "" }
+
+    { "ticker": "MDGL", "date": "2025-08-27", "label": "Insider (Baker Bros.) multiple open-market buys", "session": "", "source_url": "" },
+    { "ticker": "ET",   "date": "2025-08-27", "label": "Insider director open-market buys (~$34.7M)", "session": "", "source_url": "" },
+    { "ticker": "ASAN", "date": "2025-08-27", "label": "Founder/director open-market buys (~$7.8M)", "session": "", "source_url": "" },
+    { "ticker": "WU",   "date": "2025-08-27", "label": "CEO open-market buy (~$1.5M)", "session": "", "source_url": "" },
+    { "ticker": "COTY", "date": "2025-08-27", "label": "CEO open-market buy (~$1M)", "session": "", "source_url": "" },
+    { "ticker": "BKKT", "date": "2025-08-27", "label": "CEO open-market buys (~$1.47M)", "session": "", "source_url": "" },
+    { "ticker": "STSS", "date": "2025-08-27", "label": "Clustered director buys (~$2.5M+)", "session": "", "source_url": "" }
   ],
   "meta": {
-    "generated_at": "2025-08-27T07:30:00Z",
-    "note": "✓ shows when a timeline item matches this date; ⚠ hints when a different date is shown or missing."
+    "generated_at": "2025-08-27T09:35:00Z",
+    "note": "Insider buys are stamped with today's date for verification tagging; earnings/dated events will ✓-match timeline dates."
   }
 }
