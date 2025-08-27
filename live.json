@@ -1,70 +1,39 @@
 {
-  "hash": "2025-08-27T10-45-utc-v1",
-  "core": [],
-  "swing": [],
-  "spec": [],
+  "hash": "2025-08-27T10:05:00Z",
+  "core": [
+    { "ticker": "NVDA", "name": "Nvidia", "sector": "Semiconductors", "weight": "3%", "badge": "🟢 Engine", "q": 9, "notes": "AI demand; Aug 27 earnings" },
+    { "ticker": "AMD", "name": "Advanced Micro Devices", "sector": "Semiconductors", "weight": "3%", "badge": "🟢 Engine", "q": 8, "notes": "Server GPU ramp" },
+    { "ticker": "ZM", "name": "Zoom Video", "sector": "Software", "weight": "3%", "badge": "🟢 Engine", "q": 7, "notes": "EPS beat + raised guidance" },
+    { "ticker": "BAC", "name": "Bank of America", "sector": "Financials", "weight": "3%", "badge": "🟢 Engine", "q": 7, "notes": "Dividend hike + $40B buyback" }
+  ],
+  "swing": [
+    { "ticker": "ZM", "name": "Zoom Video", "weight": "3%", "signal": "EPS beat/guide ↑", "q": 7, "notes": "Closed above AVWAP; swing + LT split" },
+    { "ticker": "BAC", "name": "Bank of America", "weight": "3%", "signal": "Buyback/div ↑", "q": 7, "notes": "Range break on volume; swing + LT split" }
+  ],
+  "spec": [
+    { "ticker": "PDD", "name": "Pinduoduo", "weight": "1.5%", "notes": "Speculative e-commerce expansion" },
+    { "ticker": "VITL", "name": "Vital Farms", "weight": "1%", "notes": "Small-cap growth; margin inflection" },
+    { "ticker": "NSSC", "name": "NAPCO Security", "weight": "0.5%", "notes": "Spec growth sleeve" }
+  ],
   "catalysts": {
     "company": [
-      {
-        "date": "",
-        "ticker": "NVDA",
-        "label": "Earnings Preview — Nvidia's quarterly results due … strong demand, China rebound expected. Guidance upgrades likely.",
-        "color": "y",
-        "impact": "Med",
-        "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
-      },
-      {
-        "date": "",
-        "ticker": "INTC",
-        "label": "Regulatory/Ownership — U.S. government to take a ~9.9% stake; Intel warns of foreign regulatory complications.",
-        "color": "y",
-        "impact": "Med",
-        "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
-      },
-      {
-        "date": "",
-        "ticker": "AAPL",
-        "label": "Strategic Update — Three-year overhaul of iPhone hardware and software reported.",
-        "color": "y",
-        "impact": "Med",
-        "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
-      },
-      {
-        "date": "",
-        "ticker": "KDP",
-        "label": "M&A Announcement — Keurig Dr Pepper acquiring JDE Peet's for $18B; follow-on split planned.",
-        "color": "g",
-        "impact": "High",
-        "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
-      },
-      {
-        "date": "",
-        "ticker": "VRNT",
-        "label": "M&A Announcement — Thoma Bravo to acquire Verint Systems for $2B, adding to active PE deal trend.",
-        "color": "g",
-        "impact": "High",
-        "source_url": "https://www.investing.com/news/stock-market-news/sp-500-cuts-losses-as-nvidia-climbs-ahead-of-results-4209397"
-      },
-      {
-        "date": "",
-        "ticker": "BAC",
-        "label": "Structured Product — Issued yield notes linked to NDX, RTY, SPX (7.75% yield, 18-month term), with callables starting Nov 2025.",
-        "color": "r",
-        "impact": "Low",
-        "source_url": "https://investor.bankofamerica.com/regulatory-and-other-filings/all-sec-filings/content/0001918704-25-012798/0001918704-25-012798.pdf"
-      },
-      {
-        "date": "",
-        "ticker": "BAY",
-        "label": "Compliance/Extension — Bayview Acquisition Corp received minimum market value deficiency notice from Nasdaq. Merger deadline further extended, and new promissory note issued.",
-        "color": "g",
-        "impact": "High",
-        "source_url": "https://www.investing.com/news/sec-filings/bayview-acquisition-corp-receives-nasdaq-notice-for-minimum-market-value-deficiency-93CH-4211680"
-      }
+      { "date": "", "ticker": "NVDA", "label": "Earnings Preview — AI demand; China rebound expected", "color": "y", "impact": "Med", "source_url": "" },
+      { "date": "", "ticker": "INTC", "label": "Regulatory/Ownership — US gov stake headlines", "color": "y", "impact": "Med", "source_url": "" },
+      { "date": "", "ticker": "KDP", "label": "M&A — Deal headlines", "color": "g", "impact": "High", "source_url": "" },
+      { "date": "", "ticker": "VRNT", "label": "M&A — Take-private (Thoma Bravo)", "color": "g", "impact": "High", "source_url": "" },
+      { "date": "", "ticker": "BAC", "label": "Structured product filings; capital return flows", "color": "y", "impact": "Med", "source_url": "" }
     ],
-    "macro": []
+    "macro": [
+      { "date": "2025-08-28", "label": "Initial Jobless Claims (exp ~237k; prev ~230k)", "color": "y", "impact": "High", "source_url": "" },
+      { "date": "2025-08-28", "label": "GDP Q2 (2nd est) (exp ~3.0%; prev 3.1%)", "color": "y", "impact": "High", "source_url": "" },
+      { "date": "2025-08-28", "label": "Corporate Profits (Prelim Q2) (exp -3.3%; prev +1.8%)", "color": "y", "impact": "Med", "source_url": "" },
+      { "date": "2025-08-28", "label": "GDP Price Index (Q2 2nd est) (exp 2.0%; prev 3.8%)", "color": "y", "impact": "High", "source_url": "" },
+      { "date": "2025-08-29", "label": "Core PCE (July) — Fed’s inflation gauge", "color": "g", "impact": "High", "source_url": "" },
+      { "date": "2025-08-29", "label": "Initial Jobless Claims (weekly follow-through)", "color": "y", "impact": "Med", "source_url": "" },
+      { "date": "2025-08-28", "label": "Pending Home Sales (July)", "color": "y", "impact": "Med", "source_url": "" }
+    ]
   },
-  "heatmap": null,
-  "flow": null,
-  "blindspots": null
+  "heatmap": {},
+  "flow": {},
+  "blindspots": {}
 }
