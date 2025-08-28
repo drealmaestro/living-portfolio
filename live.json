@@ -5,110 +5,185 @@
       "ticker": "ET",
       "name": "Energy Transfer",
       "weight": "1.5%",
-      "signal": "Insider cluster buy (≥$30M)",
+      "signal": "Insider cluster buy (≥$30M) — GREEN",
       "q": 7,
       "notes": "Director repeat buys; confirmed above event-day AVWAP",
       "exits": "Lose event AVWAP on >1.5x vol; thesis break",
       "eventType": "Insider Buy",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T07:15:00Z",
+      "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Energy"
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "weight": "1.5%",
-      "signal": "Semi capex cycle + AI/HBM demand",
+      "signal": "Semi capex + AI/HBM demand — GREEN",
       "q": 8,
-      "notes": "3–6M catalysts: memory spend upcycle; follow-through orders",
+      "notes": "3–6M: memory upcycle; follow-through orders",
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
-      "updatedAt": "2025-08-28T07:12:00Z",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Technology"
     },
     {
       "ticker": "TXN",
       "name": "Texas Instruments",
       "weight": "1.0%",
-      "signal": "Auto/industrial recovery; margin rebuild",
+      "signal": "Auto/industrial recovery; margin rebuild — YELLOW",
       "q": 6,
-      "notes": "3–6M watch: book-to-bill and utilization uptick",
+      "notes": "Watch book-to-bill, utilization",
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
-      "updatedAt": "2025-08-28T07:12:00Z",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Technology"
     },
     {
       "ticker": "WMT",
       "name": "Walmart",
       "weight": "1.0%",
-      "signal": "Traffic share + ads/health mix",
+      "signal": "Traffic share + ads/health mix — GREEN",
       "q": 7,
       "notes": "Next 3–6M: comps, ads attach, membership growth",
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
-      "updatedAt": "2025-08-28T07:12:00Z",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Consumer Staples"
     },
     {
       "ticker": "MSCI",
       "name": "MSCI Inc.",
       "weight": "1.0%",
-      "signal": "Index/licensing resilience; data pricing",
+      "signal": "Index/licensing resilience; data pricing — YELLOW",
       "q": 7,
-      "notes": "Catalysts: pricing actions; ESG/data contract wins",
+      "notes": "Pricing actions; ESG/data contracts",
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
-      "updatedAt": "2025-08-28T07:12:00Z",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Financials"
     },
     {
       "ticker": "WST",
       "name": "West Pharmaceutical",
       "weight": "0.8%",
-      "signal": "Drug delivery mix; margin expansion",
+      "signal": "Drug delivery mix; margin expansion — YELLOW",
       "q": 7,
-      "notes": "Watch biologics launches; operating leverage",
+      "notes": "Biologics launches; operating leverage",
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
-      "updatedAt": "2025-08-28T07:12:00Z",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Healthcare"
     },
     {
       "ticker": "MCK",
       "name": "McKesson",
       "weight": "1.0%",
-      "signal": "Specialty/oncology distribution strength",
+      "signal": "Specialty/oncology distribution strength — GREEN",
       "q": 7,
-      "notes": "Catalysts: contract renewals; biosimilar uptake",
+      "notes": "Contract renewals; biosimilar uptake",
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
-      "updatedAt": "2025-08-28T07:12:00Z",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Healthcare"
     },
     {
       "ticker": "PLTR",
       "name": "Palantir",
       "weight": "1.0%",
-      "signal": "AIP adoption + gov’t backlog",
+      "signal": "AIP adoption + gov’t backlog — YELLOW",
       "q": 6,
-      "notes": "3–6M: enterprise wins; margin trajectory",
+      "notes": "Enterprise wins; margin trajectory",
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
-      "updatedAt": "2025-08-28T07:12:00Z",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Technology"
     },
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "weight": "1.5%",
-      "signal": "AI demand momentum; product cadence",
+      "signal": "AI demand momentum; product cadence — GREEN",
       "q": 8,
-      "notes": "Post-earnings follow-through; supply signals; HBM capacity",
+      "notes": "Post-earnings follow-through; HBM capacity checks",
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
-      "updatedAt": "2025-08-28T07:12:00Z",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Technology"
+    },
+
+    // ==== CRYPTO MAJORS (within your caps) ====
+    {
+      "ticker": "BTC",
+      "name": "Bitcoin",
+      "weight": "2.5%",
+      "signal": "Spot-ETF net inflows turning positive — GREEN",
+      "q": 7,
+      "notes": "Watch 20d flow trend; maintain above weekly 200-SMA",
+      "exits": "Lose AVWAP from latest inflow day; macro risk-off spike",
+      "eventType": "Crypto Flow",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
+      "sector": "Crypto"
+    },
+    {
+      "ticker": "ETH",
+      "name": "Ethereum",
+      "weight": "2.0%",
+      "signal": "Core-dev upgrade path stabilized; staking dynamics — GREEN",
+      "q": 7,
+      "notes": "Track client releases & dev-call notes; L2 activity",
+      "exits": "Break of weekly 200-SMA; dev delay with risk-off",
+      "eventType": "Crypto Dev",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
+      "sector": "Crypto"
+    },
+    {
+      "ticker": "SOL",
+      "name": "Solana",
+      "weight": "1.0%",
+      "signal": "Sustained uptime; ecosystem milestones — YELLOW",
+      "q": 6,
+      "notes": "Monitor validator health; key launches",
+      "exits": "Outage >1h or perf degradation; 50-DMA fail",
+      "eventType": "Crypto Infra",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
+      "sector": "Crypto"
+    },
+    {
+      "ticker": "RNDR",
+      "name": "Render",
+      "weight": "1.0%",
+      "signal": "AI-compute demand & network usage — GREEN",
+      "q": 7,
+      "notes": "Track network utilization; partner activity",
+      "exits": "Utilization drop 20% 4w; 50-DMA fail",
+      "eventType": "Crypto Adoption",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
+      "sector": "Crypto"
+    },
+    {
+      "ticker": "ONDO",
+      "name": "Ondo Finance",
+      "weight": "0.7%",
+      "signal": "RWA adoption momentum — YELLOW",
+      "q": 6,
+      "notes": "Monitor tokenized treasuries flows; institutional traction",
+      "exits": "TVL drop >15% 4w; thesis break",
+      "eventType": "Crypto Adoption",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T08:05:00Z",
+      "sector": "Crypto"
     }
   ],
   "spec": [
@@ -116,7 +191,7 @@
       "ticker": "ASAN",
       "name": "Asana",
       "weight": "0.7%",
-      "signal": "Founder buys (~$7.8M) — pending confirm",
+      "signal": "Founder buys (~$7.8M) — pending confirm — YELLOW",
       "q": 6,
       "notes": "Awaiting > event-day AVWAP or range-break on >1.5× vol",
       "graduation": "watch",
@@ -124,7 +199,7 @@
       "exits": "50-DMA fail or −20% stop",
       "eventType": "Insider Buy",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T07:15:00Z",
+      "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Technology"
     }
   ],
@@ -150,6 +225,41 @@
         "label": "Channel supply checks / product cadence",
         "color": "y",
         "impact": "Med"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "BTC",
+        "label": "ETF net-flow uptick — track 5-day trend",
+        "color": "g",
+        "impact": "High"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "ETH",
+        "label": "Core-dev call notes; upgrade path",
+        "color": "y",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "SOL",
+        "label": "Uptime/throughput check; ecosystem launch",
+        "color": "y",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "RNDR",
+        "label": "Network utilization growth",
+        "color": "g",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "ONDO",
+        "label": "RWA/TVL adoption updates",
+        "color": "y",
+        "impact": "Med"
       }
     ],
     "macro": [
@@ -169,7 +279,7 @@
   },
   "flow": {},
   "meta": {
-    "today": { "adds": 2, "promotions": 0, "exits": 0 }
+    "today": { "adds": 7, "promotions": 0, "exits": 0 }
   },
-  "hash": "2025-08-28T07:20:00Z"
+  "hash": "2025-08-28T08:05:00Z"
 }
