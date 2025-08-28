@@ -1,14 +1,4 @@
 {
-  "events": [
-    { "ticker": "NVDA", "date": "2025-08-27", "label": "Q2 Earnings", "session": "AMC", "source_url": "" },
-    { "ticker": "KDP",  "date": "2025-09-15", "label": "M&A milestone / vote window", "session": "", "source_url": "" },
-    { "ticker": "VRNT", "date": "2025-09-20", "label": "Take-private closing milestone", "session": "", "source_url": "" },
-    { "ticker": "MACRO", "date": "2025-08-28", "label": "Initial Jobless Claims", "session": "08:30 ET", "source_url": "" },
-    { "ticker": "MACRO", "date": "2025-08-28", "label": "GDP Q2 (Second Estimate)", "session": "12:30 ET", "source_url": "" },
-    { "ticker": "MACRO", "date": "2025-08-28", "label": "Corporate Profits (Prelim Q2)", "session": "12:30 ET", "source_url": "" },
-    { "ticker": "MACRO", "date": "2025-08-28", "label": "GDP Price Index (Q2 2nd est)", "session": "12:30 ET", "source_url": "" },
-    { "ticker": "MACRO", "date": "2025-08-29", "label": "Core PCE (July)", "session": "08:30 ET", "source_url": "" },
-    { "ticker": "MACRO", "date": "2025-08-29", "label": "Initial Jobless Claims (weekly follow-through)", "session": "08:30 ET", "source_url": "" },
-    { "ticker": "MACRO", "date": "2025-08-28", "label": "Pending Home Sales (July)", "session": "10:00 ET", "source_url": "" }
-  ]
+  "lastCheck": "2025-08-27T00:00:00Z",
+  "verified": []
 }
