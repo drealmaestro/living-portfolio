@@ -1,4 +1,7 @@
 {
-  "lastCheck": "2025-08-27T00:00:00Z",
-  "verified": []
+  "events": [
+    { "ticker": "ET", "date": "2025-08-28", "label": "Insider Buy (cluster)" },
+    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider Buy (founder)" }
+  ],
+  "lastCheck": "2025-08-28T07:20:00Z"
 }
