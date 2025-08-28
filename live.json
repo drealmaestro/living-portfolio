@@ -1,9 +1,175 @@
 {
   "core": [],
-  "swing": [],
-  "spec": [],
+  "swing": [
+    {
+      "ticker": "ET",
+      "name": "Energy Transfer",
+      "weight": "1.5%",
+      "signal": "Insider cluster buy (≥$30M)",
+      "q": 7,
+      "notes": "Director repeat buys; confirmed above event-day AVWAP",
+      "exits": "Lose event AVWAP on >1.5x vol; thesis break",
+      "eventType": "Insider Buy",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T07:15:00Z",
+      "sector": "Energy"
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research",
+      "weight": "1.5%",
+      "signal": "Semi capex cycle + AI/HBM demand",
+      "q": 8,
+      "notes": "3–6M catalysts: memory spend upcycle; follow-through orders",
+      "exits": "50-DMA fail; thesis break",
+      "eventType": "Company",
+      "updatedAt": "2025-08-28T07:12:00Z",
+      "sector": "Technology"
+    },
+    {
+      "ticker": "TXN",
+      "name": "Texas Instruments",
+      "weight": "1.0%",
+      "signal": "Auto/industrial recovery; margin rebuild",
+      "q": 6,
+      "notes": "3–6M watch: book-to-bill and utilization uptick",
+      "exits": "50-DMA fail; thesis break",
+      "eventType": "Company",
+      "updatedAt": "2025-08-28T07:12:00Z",
+      "sector": "Technology"
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "weight": "1.0%",
+      "signal": "Traffic share + ads/health mix",
+      "q": 7,
+      "notes": "Next 3–6M: comps, ads attach, membership growth",
+      "exits": "50-DMA fail; thesis break",
+      "eventType": "Company",
+      "updatedAt": "2025-08-28T07:12:00Z",
+      "sector": "Consumer Staples"
+    },
+    {
+      "ticker": "MSCI",
+      "name": "MSCI Inc.",
+      "weight": "1.0%",
+      "signal": "Index/licensing resilience; data pricing",
+      "q": 7,
+      "notes": "Catalysts: pricing actions; ESG/data contract wins",
+      "exits": "50-DMA fail; thesis break",
+      "eventType": "Company",
+      "updatedAt": "2025-08-28T07:12:00Z",
+      "sector": "Financials"
+    },
+    {
+      "ticker": "WST",
+      "name": "West Pharmaceutical",
+      "weight": "0.8%",
+      "signal": "Drug delivery mix; margin expansion",
+      "q": 7,
+      "notes": "Watch biologics launches; operating leverage",
+      "exits": "50-DMA fail; thesis break",
+      "eventType": "Company",
+      "updatedAt": "2025-08-28T07:12:00Z",
+      "sector": "Healthcare"
+    },
+    {
+      "ticker": "MCK",
+      "name": "McKesson",
+      "weight": "1.0%",
+      "signal": "Specialty/oncology distribution strength",
+      "q": 7,
+      "notes": "Catalysts: contract renewals; biosimilar uptake",
+      "exits": "50-DMA fail; thesis break",
+      "eventType": "Company",
+      "updatedAt": "2025-08-28T07:12:00Z",
+      "sector": "Healthcare"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "weight": "1.0%",
+      "signal": "AIP adoption + gov’t backlog",
+      "q": 6,
+      "notes": "3–6M: enterprise wins; margin trajectory",
+      "exits": "50-DMA fail; thesis break",
+      "eventType": "Company",
+      "updatedAt": "2025-08-28T07:12:00Z",
+      "sector": "Technology"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "weight": "1.5%",
+      "signal": "AI demand momentum; product cadence",
+      "q": 8,
+      "notes": "Post-earnings follow-through; supply signals; HBM capacity",
+      "exits": "50-DMA fail; thesis break",
+      "eventType": "Company",
+      "updatedAt": "2025-08-28T07:12:00Z",
+      "sector": "Technology"
+    }
+  ],
+  "spec": [
+    {
+      "ticker": "ASAN",
+      "name": "Asana",
+      "weight": "0.7%",
+      "signal": "Founder buys (~$7.8M) — pending confirm",
+      "q": 6,
+      "notes": "Awaiting > event-day AVWAP or range-break on >1.5× vol",
+      "graduation": "watch",
+      "graduationCriteria": ["Close > event AVWAP", "Vol > 1.5× 20d"],
+      "exits": "50-DMA fail or −20% stop",
+      "eventType": "Insider Buy",
+      "eventDate": "2025-08-28",
+      "updatedAt": "2025-08-28T07:15:00Z",
+      "sector": "Technology"
+    }
+  ],
   "catalysts": {
-    "company": [],
-    "macro": []
-  }
+    "company": [
+      {
+        "date": "2025-08-28",
+        "ticker": "ET",
+        "label": "Insider cluster buy — monitor AVWAP hold",
+        "color": "g",
+        "impact": "High"
+      },
+      {
+        "date": "2025-09-15",
+        "ticker": "LRCX",
+        "label": "Memory capex updates / orders",
+        "color": "y",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-09-20",
+        "ticker": "NVDA",
+        "label": "Channel supply checks / product cadence",
+        "color": "y",
+        "impact": "Med"
+      }
+    ],
+    "macro": [
+      {
+        "date": "2025-08-28",
+        "label": "Initial Jobless Claims; Q2 GDP 2nd est.; Corp Profits prelim",
+        "color": "y",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-08-29",
+        "label": "Core PCE (Jul), Personal Income/Spending; U. Mich Sentiment (final)",
+        "color": "y",
+        "impact": "High"
+      }
+    ]
+  },
+  "flow": {},
+  "meta": {
+    "today": { "adds": 2, "promotions": 0, "exits": 0 }
+  },
+  "hash": "2025-08-28T07:20:00Z"
 }
