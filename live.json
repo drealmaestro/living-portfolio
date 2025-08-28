@@ -77,8 +77,6 @@
       "sector": "Consumer Discretionary",
       "updatedAt": "2025-08-28T08:20:00Z"
     },
-
-    /* ETFs (diversifiers; shown under 'ETFs' group in UI) */
     {
       "ticker": "VOO",
       "name": "Vanguard S&P 500",
@@ -157,7 +155,6 @@
       "updatedAt": "2025-08-28T08:20:00Z"
     }
   ],
-
   "swing": [
     {
       "ticker": "ET",
@@ -276,8 +273,6 @@
       "updatedAt": "2025-08-28T08:05:00Z",
       "sector": "Technology"
     },
-
-    /* CRYPTO MAJORS — within caps (total crypto ≤15%; BTC/ETH ≤5% each; SOL ≤3%) */
     {
       "ticker": "BTC",
       "name": "Bitcoin",
@@ -344,7 +339,6 @@
       "sector": "Crypto"
     }
   ],
-
   "spec": [
     {
       "ticker": "ASAN",
@@ -362,25 +356,87 @@
       "sector": "Technology"
     }
   ],
-
   "catalysts": {
     "company": [
-      { "date": "2025-08-28", "ticker": "ET",   "label": "Insider cluster buy — monitor AVWAP hold", "color": "g", "impact": "High" },
-      { "date": "2025-09-15", "ticker": "LRCX", "label": "Memory capex updates / orders", "color": "y", "impact": "Med" },
-      { "date": "2025-09-20", "ticker": "NVDA", "label": "Channel supply checks / product cadence", "color": "y", "impact": "Med" },
-      { "date": "2025-08-28", "ticker": "BTC",  "label": "ETF net-flow uptick — track 5-day trend", "color": "g", "impact": "High" },
-      { "date": "2025-08-28", "ticker": "ETH",  "label": "Core-dev call notes; upgrade path", "color": "y", "impact": "Med" },
-      { "date": "2025-08-28", "ticker": "SOL",  "label": "Uptime/throughput check; ecosystem launch", "color": "y", "impact": "Med" },
-      { "date": "2025-08-28", "ticker": "RNDR", "label": "Network utilization growth", "color": "g", "impact": "Med" },
-      { "date": "2025-08-28", "ticker": "ONDO", "label": "RWA/TVL adoption updates", "color": "y", "impact": "Med" }
+      {
+        "date": "2025-08-28",
+        "ticker": "ET",
+        "label": "Insider cluster buy — monitor AVWAP hold",
+        "color": "g",
+        "impact": "High"
+      },
+      {
+        "date": "2025-09-15",
+        "ticker": "LRCX",
+        "label": "Memory capex updates / orders",
+        "color": "y",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-09-20",
+        "ticker": "NVDA",
+        "label": "Channel supply checks / product cadence",
+        "color": "y",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "BTC",
+        "label": "ETF net-flow uptick — track 5-day trend",
+        "color": "g",
+        "impact": "High"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "ETH",
+        "label": "Core-dev call notes; upgrade path",
+        "color": "y",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "SOL",
+        "label": "Uptime/throughput check; ecosystem launch",
+        "color": "y",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "RNDR",
+        "label": "Network utilization growth",
+        "color": "g",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-08-28",
+        "ticker": "ONDO",
+        "label": "RWA/TVL adoption updates",
+        "color": "y",
+        "impact": "Med"
+      }
     ],
     "macro": [
-      { "date": "2025-08-28", "label": "Initial Jobless Claims; Q2 GDP 2nd est.; Corp Profits prelim", "color": "y", "impact": "Med" },
-      { "date": "2025-08-29", "label": "Core PCE (Jul), Personal Income/Spending; U. Mich Sentiment (final)", "color": "y", "impact": "High" }
+      {
+        "date": "2025-08-28",
+        "label": "Initial Jobless Claims; Q2 GDP 2nd est.; Corp Profits prelim",
+        "color": "y",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-08-29",
+        "label": "Core PCE (Jul), Personal Income/Spending; U. Mich Sentiment (final)",
+        "color": "y",
+        "impact": "High"
+      }
     ]
   },
-
   "flow": {},
-  "meta": { "today": { "adds": 12, "promotions": 0, "exits": 0 } },
+  "meta": {
+    "today": {
+      "adds": 12,
+      "promotions": 0,
+      "exits": 0
+    }
+  },
   "hash": "2025-08-28T08:20:00Z"
 }
