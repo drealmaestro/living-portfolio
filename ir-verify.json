@@ -1,12 +1,29 @@
 {
+  "lastCheck": "2025-08-28T19:45:00Z",
   "events": [
-    { "ticker": "ET",   "date": "2025-08-28", "label": "Insider Buy (cluster)" },
+    { "ticker": "ET", "date": "2025-08-28", "label": "Insider Buy (cluster)" },
     { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider Buy (founder)" },
-    { "ticker": "BTC",  "date": "2025-08-28", "label": "ETF net inflow shift" },
-    { "ticker": "ETH",  "date": "2025-08-28", "label": "Dev call/upgrade notes" },
-    { "ticker": "SOL",  "date": "2025-08-28", "label": "Uptime/ecosystem milestone" },
+    { "ticker": "BTC", "date": "2025-08-28", "label": "ETF net inflow shift" },
+    { "ticker": "ETH", "date": "2025-08-28", "label": "Dev call/upgrade notes" },
+    { "ticker": "SOL", "date": "2025-08-28", "label": "Uptime/ecosystem milestone" },
     { "ticker": "RNDR", "date": "2025-08-28", "label": "Network utilization up" },
-    { "ticker": "ONDO", "date": "2025-08-28", "label": "RWA adoption uptick" }
+    { "ticker": "ONDO", "date": "2025-08-28", "label": "RWA adoption uptick" },
+    { "ticker": "WST", "date": "2025-07-24", "label": "EPS beat + raised FY EPS; price confirm" },
+    { "ticker": "PLTR", "date": "2025-08-20", "label": "Raised guidance + gov contracts; price confirm" }
   ],
-  "lastCheck": "2025-08-28T08:05:00Z"
+  "graduations": [
+    {
+      "ticker": "WST",
+      "proof": "EPS beat + raised FY EPS; range-high breakout >1.5× vol; AVWAP hold",
+      "tier": "Tier 2 (3%)",
+      "date": "2025-08-28"
+    },
+    {
+      "ticker": "PLTR",
+      "proof": "Guidance raised + major gov wins; close > event-day AVWAP",
+      "tier": "Tier 2 (3%)",
+      "date": "2025-08-28"
+    }
+  ],
+  "alerts": []
 }
