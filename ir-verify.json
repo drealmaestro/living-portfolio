@@ -1,7 +1,12 @@
 {
   "events": [
-    { "ticker": "ET", "date": "2025-08-28", "label": "Insider Buy (cluster)" },
-    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider Buy (founder)" }
+    { "ticker": "ET",   "date": "2025-08-28", "label": "Insider Buy (cluster)" },
+    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider Buy (founder)" },
+    { "ticker": "BTC",  "date": "2025-08-28", "label": "ETF net inflow shift" },
+    { "ticker": "ETH",  "date": "2025-08-28", "label": "Dev call/upgrade notes" },
+    { "ticker": "SOL",  "date": "2025-08-28", "label": "Uptime/ecosystem milestone" },
+    { "ticker": "RNDR", "date": "2025-08-28", "label": "Network utilization up" },
+    { "ticker": "ONDO", "date": "2025-08-28", "label": "RWA adoption uptick" }
   ],
-  "lastCheck": "2025-08-28T07:20:00Z"
+  "lastCheck": "2025-08-28T08:05:00Z"
 }
