@@ -1,230 +1,138 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Living Portfolio — Unified Dashboard</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Living Portfolio — v2 Focus Mode</title>
 <style>
-body { font-family: system-ui, sans-serif; margin: 0; padding: 0; background: #0a0f1c; color: #f1f5f9; }
-.wrapper { max-width: 1200px; margin: auto; padding: 1rem; }
-.card { background: #111827; margin-bottom: 1rem; padding: 1rem; border-radius: 0.75rem; box-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-h1,h2,h3 { margin: 0 0 .5rem 0; color: #f9fafb; }
-.table { width: 100%; border-collapse: collapse; margin-top: .5rem; }
-.table th, .table td { padding: .5rem; border-bottom: 1px solid #374151; text-align: left; }
-.badge { display:inline-block; padding:2px 6px; background:#1e293b; border-radius:4px; font-weight:bold; }
-.tag { display:inline-block; padding:2px 6px; border-radius:4px; font-size:.75rem; }
-.tag.g { background:#064e3b; color:#10b981; }
-.tag.y { background:#78350f; color:#fbbf24; }
-.tag.r { background:#7f1d1d; color:#f87171; }
-.small { font-size:.875rem; color:#94a3b8; }
-.note { background:#1e293b; padding:.5rem; border-radius:.5rem; margin-top:.5rem; }
-.heat { display:grid; grid-template-columns: repeat(2,1fr); gap:.5rem; }
-.cell { background:#1f2937; padding:.5rem; border-radius:.5rem; }
+:root{--bg:#0b1220;--panel:#0f172a;--muted:#94a3b8;--text:#e2e8f0;
+--g:#10b981;--y:#f59e0b;--r:#ef4444;--b:#38bdf8;--card:#111827;--chip:#0b2538}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);
+font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+.wrapper{max-width:1200px;margin:auto;padding:16px}
+.header{display:grid;gap:10px;grid-template-columns:1fr auto;align-items:center;margin-bottom:12px}
+.h1{font-size:20px;font-weight:700}.sub{color:var(--muted);font-size:12px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.card{background:var(--panel);border:1px solid #0b2540;border-radius:14px;padding:12px}
+.h2{font-size:14px;text-transform:uppercase;color:#93c5fd;margin:4px 0 10px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{font-size:12px;text-align:left;padding:6px;border-bottom:1px solid #0b2540}
+.table th{color:#a5b4fc;font-weight:600}
+.badge{padding:2px 8px;border-radius:999px;background:#0b1b2c;border:1px solid #1b3a5a;color:#7dd3fc;font-weight:600}
+.tag{padding:2px 6px;border-radius:999px;font-size:11px;margin-right:4px}
+.tag.g{background:rgba(16,185,129,.15);color:#34d399}
+.tag.y{background:rgba(245,158,11,.15);color:#fbbf24}
+.tag.r{background:rgba(239,68,68,.15);color:#f87171}
+.timeline{display:grid;gap:6px;max-height:420px;overflow:auto}
+.timeline .item{display:flex;gap:8px;align-items:center;background:#0b1b2c;border:1px solid #1b3a5a;border-radius:10px;padding:8px}
+.small{font-size:11px;color:var(--muted)}
+.focus-toggle{margin-left:12px;font-size:12px;color:#bae6fd;cursor:pointer}
 </style>
 </head>
 <body>
 <div class="wrapper">
-  <!-- HEADER -->
-  <div class="card">
-    <h1>Living Portfolio — Unified Dashboard</h1>
-    <div class="small">Status: <span id="compliancePill" class="tag y">CHECKING…</span> · Last update <span id="asof">—</span></div>
-  </div>
-
-  <!-- CORE LONG-TERM -->
-  <div class="card">
-    <h2>Core — Long-term (🟢 Compounding Engine)</h2>
-    <table class="table" id="coreLTTable">
-      <thead><tr><th>Ticker</th><th>Name</th><th>Sector</th><th>Weight</th><th>Badge</th><th>Q</th><th>Notes</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-  <!-- CORE SWING -->
-  <div class="card">
-    <h2>Core — Swing (3–6M)</h2>
-    <table class="table" id="coreSwingTable">
-      <thead><tr><th>Ticker</th><th>Name</th><th>Weight</th><th>Signal</th><th>Q</th><th>Notes</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-  <!-- SPEC SLEEVE -->
-  <div class="card">
-    <h2>Speculative Sleeve (≤5%)</h2>
-    <table class="table" id="specTable">
-      <thead><tr><th>Ticker</th><th>Name</th><th>Weight</th><th>Notes</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-
-  <!-- FLOW & MICROSTRUCTURE -->
-  <div class="card">
-    <h2>Flow & Microstructure</h2>
-    <ul class="small">
-      <li><b>BTC/ETH ETF net flows (5d)</b>: <span class="tag y" id="flowEtf">n/a</span></li>
-      <li><b>Perp basis</b>: <span class="tag y" id="flowBasis">n/a</span> · <b>Open Interest</b>: <span class="tag y" id="flowOI">n/a</span></li>
-      <li><b>Options skew</b>: <span class="tag y" id="flowSkew">n/a</span> · <b>IV Rank</b>: <span class="tag y" id="flowIV">n/a</span></li>
-      <li><b>Off-exchange % volume</b>: <span class="tag y" id="flowOffEx">n/a</span></li>
-    </ul>
-  </div>
-
-  <!-- BLIND-SPOT STRIP -->
-  <div class="card" id="blindspotPanel">
-    <h2>Blind-Spot Strip</h2>
-    <div class="heat" id="blindTiles">
-      <div class="cell"><b>Web Traffic</b><span id="tileWeb">n/a</span></div>
-      <div class="cell"><b>Job Posts</b><span id="tileJobs">n/a</span></div>
-      <div class="cell"><b>App Rank</b><span id="tileApp">n/a</span></div>
-      <div class="cell"><b>Dark Pool Proxy</b><span id="tileDP">n/a</span></div>
+  <div class="header">
+    <div>
+      <div class="h1">⚡ Living Portfolio Dashboard — v2 Focus Mode</div>
+      <div class="sub">As-of <span id="asof">—</span> <span class="focus-toggle" id="focusBtn">[Focus Mode OFF]</span></div>
     </div>
   </div>
 
-  <!-- CATALYST TIMELINE + IR VERIFIER -->
   <div class="card">
-    <h2>Catalyst Timeline</h2>
-    <div class="lanes">
-      <div>
-        <h3>Company Catalysts</h3>
-        <ul id="catalystsCompany"></ul>
-      </div>
-      <div>
-        <h3>Macro Catalysts</h3>
-        <ul id="catalystsMacro"></ul>
-      </div>
-    </div>
-    <div class="note small" style="margin-top:8px">
-      <b>IR Verifier:</b> <span id="verifyStatus">Not configured</span>
-    </div>
+    <div class="h2">Core Portfolio</div>
+    <table class="table" id="coreTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Notes</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="card">
+    <div class="h2">Swing Plays (3–6M)</div>
+    <table class="table" id="swingTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Signal</th><th>Notes</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="card">
+    <div class="h2">Speculative Sleeve</div>
+    <table class="table" id="specTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Notes</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div class="card">
+    <div class="h2">Catalyst Timeline (Next 90d)</div>
+    <div class="timeline" id="timeline"></div>
   </div>
 </div>
 
 <script>
-(function(){
-  const now=new Date();const pad=n=>String(n).padStart(2,'0');
-  document.getElementById('asof').textContent=
-    now.getFullYear()+"-"+pad(now.getMonth()+1)+"-"+pad(now.getDate())+" "+pad(now.getHours())+":"+pad(now.getMinutes());
-  const techInclEtfs=28; const crypto=10; const spec=5; const buffer=5; const singleTier3_NVDA=2;
-  const ok=(techInclEtfs<=30)&&(crypto<=15)&&(spec<=5)&&(buffer>=5)&&(singleTier3_NVDA<=2);
-  const pill=document.getElementById('compliancePill');
-  pill.textContent= ok? 'COMPLIANT':'BREACH';
-  pill.style.background= ok? '#0ea5e9':'#ef4444';
-})();
+(() => {
+  const ENDPOINT = 'https://drealmaestro.github.io/living-portfolio/live.json';
+  let focus=false;
+  const $=s=>document.querySelector(s);
+  const asPercent=x=>parseFloat(String(x).replace('%',''))||0;
+  const nowStr=()=>{const d=new Date();return d.toISOString().slice(0,16).replace('T',' ')};
 
-// ===== LIVE DATA =====
-window.LPE_DATA_ENDPOINT = "https://drealmaestro.github.io/living-portfolio/live.json";
-window.LPE_IR_VERIFY_ENDPOINT = "https://drealmaestro.github.io/living-portfolio/ir-verify.json";
-
-(function(){
-  const endpoint = window.LPE_DATA_ENDPOINT; if(!endpoint) return;
-  const bust = ()=>'&cb='+(Date.now());
-  let lastHash = null;
-  const tick = ()=>{
-    fetch(endpoint + (endpoint.includes('?')?'&':'?')+bust(), {cache:'no-store'})
-      .then(r=>r.json())
-      .then(data=>{
-        if(!data) return;
-        if(data.hash && data.hash===lastHash) return;
-        lastHash = data.hash || Math.random().toString(36).slice(2);
-        renderCore(data.core||[]);
-        renderSwing(data.swing||[]);
-        renderSpec(data.spec||[]);
-        renderCatalysts(data.catalysts||{company:[],macro:[]});
-        renderFlow(data.flow||null);
-        renderBlindspots(data.blindspots||null);
-      })
-      .catch(()=>{});
-  };
-  tick(); setInterval(tick, 180000);
-
-  function formatQ(q){ if(q==null) return ''; const n=Number(q); if(Number.isNaN(n)) return q; const cls = n>=9?'g':(n>=6?'y':'r'); return `<span class="tag ${cls}">${n}</span>`; }
-  function td(x){return `<td>${x??''}</td>`}
-  function renderCore(rows){
-    const body=document.getElementById('coreLTTable').querySelector('tbody');
-    body.innerHTML = rows.map(r=>`<tr><td><span class="badge">${r.ticker}</span></td>${td(r.name)}${td(r.sector)}${td(r.weight)}${td(r.badge||'🟢 Engine')}${td(formatQ(r.q))}${td(r.notes||'')}</tr>`).join('');
+  function renderCore(core){
+    const tb=$('#coreTable tbody');
+    tb.innerHTML=core.map(it=>`
+      <tr data-color="${it.signal||'g'}" data-date="${it.meta?.date||''}">
+        <td><span class="badge">${it.ticker}</span></td>
+        <td>${it.weight||''}</td>
+        <td>${it.notes||''}</td>
+      </tr>`).join('');
   }
+
   function renderSwing(rows){
-    const body=document.getElementById('coreSwingTable').querySelector('tbody');
-    body.innerHTML = rows.map(r=>`<tr><td><span class="badge">${r.ticker}</span></td>${td(r.name)}${td(r.weight)}${td(r.signal||'')}${td(formatQ(r.q))}${td(r.notes||'')}</tr>`).join('');
+    const tb=$('#swingTable tbody');
+    tb.innerHTML=rows.map(r=>`
+      <tr data-color="${r.signal||'g'}" data-date="${r.meta?.date||''}">
+        <td><span class="badge">${r.ticker}</span></td>
+        <td>${r.weight||''}</td>
+        <td>${r.signal||''}</td>
+        <td>${r.notes||''}</td>
+      </tr>`).join('');
   }
+
   function renderSpec(rows){
-    const body=document.getElementById('specTable').querySelector('tbody');
-    body.innerHTML = rows.map(r=>`<tr><td><span class="badge">${r.ticker}</span></td>${td(r.name)}${td(r.weight)}${td(r.notes||'')}</tr>`).join('');
+    const tb=$('#specTable tbody');
+    tb.innerHTML=rows.map(r=>`
+      <tr data-color="${r.signal||'y'}" data-date="${r.meta?.date||''}">
+        <td><span class="badge">${r.ticker}</span></td>
+        <td>${r.weight||''}</td>
+        <td>${r.notes||''}</td>
+      </tr>`).join('');
   }
-  function renderCatalysts(c){
-    const cUL=document.getElementById('catalystsCompany');
-    const mUL=document.getElementById('catalystsMacro');
-    if(cUL){ cUL.innerHTML = (c.company||[]).map(x=>`<li><b>${x.date}</b> — <b>${x.ticker}</b> ${x.label} <span class="tag ${x.color||'y'}">${x.impact||'Watch'}</span></li>`).join(''); }
-    if(mUL){ mUL.innerHTML = (c.macro||[]).map(x=>`<li><b>${x.date||x.label}</b> — ${x.label||''} <span class="tag ${x.color||'y'}">${x.impact||'Med'}</span></li>`).join(''); }
-  }
-  function renderFlow(flow){
-    if(!flow) return;
-    const set=(id,txt,cls)=>{const el=document.getElementById(id); if(!el) return; el.textContent=txt; el.className='tag '+(cls||'y');};
-    const color=(v,th)=> v>=th.g? 'g' : v<=th.r? 'r' : 'y';
-    if(flow.etf5d!=null) set('flowEtf', (flow.etf5d>0?'+':'')+flow.etf5d+" (5d)", color(flow.etf5d,{g:0,r:-0.1}));
-    if(flow.basis!=null) set('flowBasis', flow.basis+"%", color(flow.basis,{g:8,r:0}));
-    if(flow.oiChg!=null) set('flowOI', (flow.oiChg>0?'+':'')+flow.oiChg+'%', color(flow.oiChg,{g:2,r:-2}));
-    if(flow.skew!=null) set('flowSkew', flow.skew, (flow.skew==="calls>puts"? 'g': (flow.skew==="puts>calls"? 'r':'y')));
-    if(flow.ivRank!=null) set('flowIV', 'IVR '+flow.ivRank, 'y');
-    if(flow.offEx!=null) set('flowOffEx', flow.offEx+'%', (flow.offEx>45?'g':(flow.offEx<35?'r':'y')));
-  }
-  function renderBlindspots(b){
-    if(!b) return;
-    const w=document.getElementById('tileWeb'); if(w) w.textContent = b.web||'n/a';
-    const j=document.getElementById('tileJobs'); if(j) j.textContent = b.jobs||'n/a';
-    const a=document.getElementById('tileApp'); if(a) a.textContent = b.app||'n/a';
-    const d=document.getElementById('tileDP'); if(d) d.textContent = b.darkpool||'n/a';
-  }
-})();
 
-// ===== IR VERIFIER MODULE =====
-(function(){
-  const statusEl = document.getElementById('verifyStatus');
-  const endpoint = window.LPE_IR_VERIFY_ENDPOINT;
-  if(!endpoint){ statusEl.textContent = 'Not configured'; return; }
-  statusEl.textContent = 'Checking…';
-  fetch(endpoint, {cache:'no-store'})
-    .then(r=>r.json())
-    .then(data=>{
-      const events = Array.isArray(data.events) ? data.events : [];
-      let updates = 0, verified = 0;
-      const timeline = document.querySelectorAll('.card ul li');
-      events.forEach(ev=>{
-        const date = ev.date || '';
-        const ticker = (ev.ticker||'').toUpperCase();
-        let matched = false;
-        timeline.forEach(li=>{
-          const text = li.textContent || '';
-          if(text.toUpperCase().includes(ticker)){
-            matched = true;
-            if(date && text.includes(date)){ addBadge(li, '✓ Verified', '#0ea5e9'); verified++; }
-            else { addBadge(li, '⚠ Update avail: '+date, '#eab308'); updates++; }
-          }
-        });
-        if(!matched && date){
-          const lanes = document.querySelector('.lanes');
-          if(lanes){
-            const suggestion = document.createElement('div');
-            suggestion.className='note small';
-            suggestion.textContent = `New event from verifier → ${ticker}: ${ev.label} on ${date}${ev.session?(' ('+ev.session+')'):''}`;
-            lanes.appendChild(suggestion);
-            updates++;
-          }
-        }
-      });
-      statusEl.textContent = `Done — ${verified} verified, ${updates} update hint${updates!==1?'s':''}`;
-    })
-    .catch(err=>{ statusEl.textContent = 'Error fetching verifier JSON'; console.warn(err); });
-
-  function addBadge(li, txt, color){
-    const span = document.createElement('span');
-    span.className='tag';
-    span.textContent = txt;
-    span.style.background = '#0a1a2a';
-    span.style.border = '1px solid '+color;
-    span.style.color = color;
-    span.style.marginLeft = '8px';
-    li.appendChild(span);
+  function renderTimeline(cats){
+    const el=$('#timeline');
+    const list=[...(cats.company||[]),...(cats.macro||[])];
+    list.sort((a,b)=>String(a.date).localeCompare(b.date));
+    el.innerHTML=list.map(x=>`
+      <div class="item" data-color="${x.color||'y'}" data-date="${x.date}">
+        <span class="tag ${x.color||'y'}">${x.date||''}</span> <div>${x.ticker||''} ${x.label||''}</div>
+      </div>`).join('');
   }
+
+  function applyFocus(){
+    const today=(new Date()).toISOString().slice(0,10);
+    document.querySelectorAll("tr,[data-date]").forEach(el=>{
+      if(!focus){el.style.display='';return;}
+      const col=el.getAttribute('data-color');
+      const d=el.getAttribute('data-date')||'';
+      el.style.display=(col==='g'&&d.startsWith(today))?'':'none';
+    });
+    $('#focusBtn').textContent=focus?"[Focus Mode ON]":"[Focus Mode OFF]";
+  }
+
+  async function load(){
+    try{
+      const r=await fetch(ENDPOINT+'?cb='+Date.now(),{cache:'no-store'});
+      const j=await r.json();
+      $('#asof').textContent=nowStr();
+      renderCore(j.core||[]);
+      renderSwing(j.swing||[]);
+      renderSpec(j.spec||[]);
+      renderTimeline(j.catalysts||{});
+      applyFocus();
+    }catch(e){console.error(e);}
+  }
+  $('#focusBtn').onclick=()=>{focus=!focus;applyFocus()};
+  load(); setInterval(load,180000);
 })();
 </script>
 </body>
