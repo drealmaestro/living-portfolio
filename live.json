@@ -1,4 +1,5 @@
 {
+  "asof": "2025-08-28T19:45:00Z",
   "core": [
     {
       "ticker": "AAPL",
@@ -9,7 +10,7 @@
       "notes": "Ecosystem lock-in; services mix; on-device AI ramp (12M+)",
       "exits": "Thesis break: services MAU/ARPU decline; 50-WMA fail",
       "sector": "Technology",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "MSFT",
@@ -20,7 +21,7 @@
       "notes": "AI monetization across Azure/Copilot; durable enterprise demand",
       "exits": "Thesis break; 50-WMA fail",
       "sector": "Technology",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "AMZN",
@@ -31,7 +32,7 @@
       "notes": "Retail margin mix, ads, AWS GenAI attach",
       "exits": "Retail margin backslide; 50-WMA fail",
       "sector": "Consumer Discretionary",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "GOOGL",
@@ -42,7 +43,7 @@
       "notes": "Search/YouTube durability; cloud AI workloads",
       "exits": "Thesis break; 50-WMA fail",
       "sector": "Communication Services",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "META",
@@ -53,7 +54,7 @@
       "notes": "Ads recovery + AI infra leverage; Family MAU resilience",
       "exits": "Ads CPM/engagement deterioration; 50-WMA fail",
       "sector": "Communication Services",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "NVDA",
@@ -64,7 +65,7 @@
       "notes": "AI accelerator cadence; HBM/packaging capacity visibility",
       "exits": "Thesis break (datacenter orderbook); 50-WMA fail",
       "sector": "Technology",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "TSLA",
@@ -75,7 +76,29 @@
       "notes": "Energy/storage + software optionality vs. auto pricing risk",
       "exits": "Auto GM compression persists; 50-WMA fail",
       "sector": "Consumer Discretionary",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
+    },
+    {
+      "ticker": "WST",
+      "name": "West Pharmaceutical Services",
+      "weight": "3%",
+      "badge": "Tier 2 (LT) — Promoted",
+      "q": 8,
+      "notes": "EPS beat + raised FY EPS; range breakout on >1.5× vol",
+      "exits": "Event-day AVWAP fail; thesis break",
+      "sector": "Healthcare",
+      "updatedAt": "2025-08-28T19:45:00Z"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "weight": "3%",
+      "badge": "Tier 2 (LT) — Promoted",
+      "q": 7,
+      "notes": "Raised guidance + new gov contracts; price confirm",
+      "exits": "Event-day AVWAP fail; thesis break",
+      "sector": "Technology",
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "VOO",
@@ -84,9 +107,9 @@
       "badge": "Tier 1 ETF",
       "q": 8,
       "notes": "Core beta; risk anchor",
-      "exits": "Only if mandate shifts; trailing stop optional",
+      "exits": "Mandate shift; trailing stop optional",
       "sector": "ETFs",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "QQQ",
@@ -97,7 +120,7 @@
       "notes": "Large-cap growth tilt; AI beneficiaries",
       "exits": "Mandate shift; trailing stop optional",
       "sector": "ETFs",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "SMH",
@@ -108,7 +131,7 @@
       "notes": "Semi cycle participation without single-name risk",
       "exits": "Cycle turns; trailing stop",
       "sector": "ETFs",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "XLV",
@@ -119,7 +142,7 @@
       "notes": "Defensive/innovation barbell",
       "exits": "Mandate shift",
       "sector": "ETFs",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "RSP",
@@ -130,7 +153,7 @@
       "notes": "Breadth participation; factor balance",
       "exits": "Mandate shift",
       "sector": "ETFs",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "IWM",
@@ -141,7 +164,7 @@
       "notes": "Small-cap cyclicality (tactical)",
       "exits": "Credit spreads widen; 50-WMA fail",
       "sector": "ETFs",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     },
     {
       "ticker": "XLE",
@@ -150,9 +173,9 @@
       "badge": "Tier 3 ETF",
       "q": 6,
       "notes": "Energy beta; cash returns theme",
-      "exits": "Oil curve in contango + cracks compress",
+      "exits": "Oil curve in contango; cracks compress",
       "sector": "ETFs",
-      "updatedAt": "2025-08-28T08:20:00Z"
+      "updatedAt": "2025-08-28T19:45:00Z"
     }
   ],
   "swing": [
@@ -166,7 +189,7 @@
       "exits": "Lose event AVWAP on >1.5x vol; thesis break",
       "eventType": "Insider Buy",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Energy"
     },
     {
@@ -179,7 +202,7 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Technology"
     },
     {
@@ -192,7 +215,7 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Technology"
     },
     {
@@ -205,7 +228,7 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Consumer Staples"
     },
     {
@@ -218,21 +241,8 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Financials"
-    },
-    {
-      "ticker": "WST",
-      "name": "West Pharmaceutical",
-      "weight": "0.8%",
-      "signal": "Drug delivery mix; margin expansion — YELLOW",
-      "q": 7,
-      "notes": "Biologics launches; operating leverage",
-      "exits": "50-DMA fail; thesis break",
-      "eventType": "Company",
-      "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
-      "sector": "Healthcare"
     },
     {
       "ticker": "MCK",
@@ -244,21 +254,8 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Healthcare"
-    },
-    {
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "weight": "1.0%",
-      "signal": "AIP adoption + gov’t backlog — YELLOW",
-      "q": 6,
-      "notes": "Enterprise wins; margin trajectory",
-      "exits": "50-DMA fail; thesis break",
-      "eventType": "Company",
-      "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
-      "sector": "Technology"
     },
     {
       "ticker": "NVDA",
@@ -270,7 +267,7 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Technology"
     },
     {
@@ -283,7 +280,7 @@
       "exits": "Lose AVWAP from latest inflow day; macro risk-off spike",
       "eventType": "Crypto Flow",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Crypto"
     },
     {
@@ -292,11 +289,11 @@
       "weight": "2.0%",
       "signal": "Core-dev upgrade path stabilized; staking dynamics — GREEN",
       "q": 7,
-      "notes": "Track client releases & dev-call notes; L2 activity",
+      "notes": "Track client releases and dev-call notes; L2 activity",
       "exits": "Break of weekly 200-SMA; dev delay with risk-off",
       "eventType": "Crypto Dev",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Crypto"
     },
     {
@@ -309,20 +306,20 @@
       "exits": "Outage >1h or perf degradation; 50-DMA fail",
       "eventType": "Crypto Infra",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Crypto"
     },
     {
       "ticker": "RNDR",
       "name": "Render",
       "weight": "1.0%",
-      "signal": "AI-compute demand & network usage — GREEN",
+      "signal": "AI-compute demand and network usage — GREEN",
       "q": 7,
       "notes": "Track network utilization; partner activity",
       "exits": "Utilization drop 20% 4w; 50-DMA fail",
       "eventType": "Crypto Adoption",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Crypto"
     },
     {
@@ -335,7 +332,7 @@
       "exits": "TVL drop >15% 4w; thesis break",
       "eventType": "Crypto Adoption",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Crypto"
     }
   ],
@@ -348,11 +345,14 @@
       "q": 6,
       "notes": "Awaiting > event-day AVWAP or range-break on >1.5× vol",
       "graduation": "watch",
-      "graduationCriteria": ["Close > event AVWAP", "Vol > 1.5× 20d"],
+      "graduationCriteria": [
+        "Close > event AVWAP",
+        "Vol > 1.5× 20d"
+      ],
       "exits": "50-DMA fail or −20% stop",
       "eventType": "Insider Buy",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-28T08:05:00Z",
+      "updatedAt": "2025-08-28T19:45:00Z",
       "sector": "Technology"
     }
   ],
@@ -413,6 +413,20 @@
         "label": "RWA/TVL adoption updates",
         "color": "y",
         "impact": "Med"
+      },
+      {
+        "date": "2025-07-24",
+        "ticker": "WST",
+        "label": "EPS beat + raised FY EPS (event AVWAP anchor)",
+        "color": "g",
+        "impact": "High"
+      },
+      {
+        "date": "2025-08-20",
+        "ticker": "PLTR",
+        "label": "Raised guidance + new gov contracts",
+        "color": "g",
+        "impact": "High"
       }
     ],
     "macro": [
@@ -427,16 +441,28 @@
         "label": "Core PCE (Jul), Personal Income/Spending; U. Mich Sentiment (final)",
         "color": "y",
         "impact": "High"
+      },
+      {
+        "date": "2025-08-31",
+        "label": "Treasury bill auctions (check sizes/yields)",
+        "color": "y",
+        "impact": "Med"
+      },
+      {
+        "date": "2025-09-02",
+        "label": "ISM Manufacturing, Construction Spending (Aug)",
+        "color": "y",
+        "impact": "Med"
       }
     ]
   },
   "flow": {},
   "meta": {
     "today": {
-      "adds": 12,
-      "promotions": 0,
+      "adds": 14,
+      "promotions": 2,
       "exits": 0
     }
   },
-  "hash": "2025-08-28T08:20:00Z"
+  "hash": "2025-08-28T19:45:00Z"
 }
