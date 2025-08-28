@@ -1,27 +1,32 @@
 {
-  "lastCheck": "2025-08-28T19:45:00Z",
+  "lastCheck": "2025-08-28T21:45:00Z",
   "events": [
     { "ticker": "ET", "date": "2025-08-28", "label": "Insider Buy (cluster)" },
-    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider Buy (founder)" },
+    { "ticker": "GPRE", "date": "2025-08-28", "label": "Analyst upgrade to Outperform (PT $14)" },
+    { "ticker": "PSTG", "date": "2025-08-27", "label": "Earnings beat & raise; Meta revenue recognized; multi-analyst upgrades" },
+    { "ticker": "PSTG", "date": "2025-09-25", "label": "Investor event — Meta ramp commentary" },
     { "ticker": "BTC", "date": "2025-08-28", "label": "ETF net inflow shift" },
     { "ticker": "ETH", "date": "2025-08-28", "label": "Dev call/upgrade notes" },
     { "ticker": "SOL", "date": "2025-08-28", "label": "Uptime/ecosystem milestone" },
     { "ticker": "RNDR", "date": "2025-08-28", "label": "Network utilization up" },
     { "ticker": "ONDO", "date": "2025-08-28", "label": "RWA adoption uptick" },
     { "ticker": "WST", "date": "2025-07-24", "label": "EPS beat + raised FY EPS; price confirm" },
-    { "ticker": "PLTR", "date": "2025-08-20", "label": "Raised guidance + gov contracts; price confirm" }
+    { "ticker": "PLTR", "date": "2025-08-20", "label": "Raised guidance + gov contracts; price confirm" },
+    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buy; price-confirm breakout" }
   ],
   "graduations": [
     {
-      "ticker": "WST",
-      "proof": "EPS beat + raised FY EPS; range-high breakout >1.5× vol; AVWAP hold",
+      "ticker": "PSTG",
       "tier": "Tier 2 (3%)",
+      "proof": "Beat & raise; GM expansion; Meta deployment confirmed; multi-upgrades; price confirm vs event-day AVWAP",
+      "source": "Analyst roundups and earnings release",
       "date": "2025-08-28"
     },
     {
-      "ticker": "PLTR",
-      "proof": "Guidance raised + major gov wins; close > event-day AVWAP",
-      "tier": "Tier 2 (3%)",
+      "ticker": "ASAN",
+      "tier": "Tier 3 (1.5%)",
+      "proof": "Founder/insider buys; range-high breakout on >1.5× vol; close > event-day AVWAP",
+      "source": "SEC Form 4 filings and price/volume tape",
       "date": "2025-08-28"
     }
   ],
