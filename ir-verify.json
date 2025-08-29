@@ -1,33 +1,42 @@
 {
-  "lastCheck": "2025-08-28T21:45:00Z",
+  "lastCheck": "2025-08-29T09:45:00+02:00",
   "events": [
     { "ticker": "ET", "date": "2025-08-28", "label": "Insider Buy (cluster)" },
     { "ticker": "GPRE", "date": "2025-08-28", "label": "Analyst upgrade to Outperform (PT $14)" },
     { "ticker": "PSTG", "date": "2025-08-27", "label": "Earnings beat & raise; Meta revenue recognized; multi-analyst upgrades" },
     { "ticker": "PSTG", "date": "2025-09-25", "label": "Investor event — Meta ramp commentary" },
-    { "ticker": "BTC", "date": "2025-08-28", "label": "ETF net inflow shift" },
-    { "ticker": "ETH", "date": "2025-08-28", "label": "Dev call/upgrade notes" },
-    { "ticker": "SOL", "date": "2025-08-28", "label": "Uptime/ecosystem milestone" },
-    { "ticker": "RNDR", "date": "2025-08-28", "label": "Network utilization up" },
-    { "ticker": "ONDO", "date": "2025-08-28", "label": "RWA adoption uptick" },
+    { "ticker": "TSM", "date": "2025-08-28", "label": "Reports: early allocation of 2nm (N2) capacity to Apple; packaging capacity watch" },
+    { "ticker": "BTC", "date": "2025-08-29", "label": "ETF net inflow shift" },
+    { "ticker": "ETH", "date": "2025-08-29", "label": "Dev call/upgrade notes" },
+    { "ticker": "SOL", "date": "2025-08-29", "label": "Uptime/ecosystem milestone" },
+    { "ticker": "RNDR", "date": "2025-08-29", "label": "Network utilization up" },
+    { "ticker": "ONDO", "date": "2025-08-29", "label": "RWA adoption uptick" },
     { "ticker": "WST", "date": "2025-07-24", "label": "EPS beat + raised FY EPS; price confirm" },
     { "ticker": "PLTR", "date": "2025-08-20", "label": "Raised guidance + gov contracts; price confirm" },
-    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buy; price-confirm breakout" }
+    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buy; price-confirm breakout" },
+    { "ticker": "NVS", "date": "2025-07-17", "label": "EPS growth + margin expansion; FDA/clinical wins" }
   ],
   "graduations": [
     {
       "ticker": "PSTG",
       "tier": "Tier 2 (3%)",
       "proof": "Beat & raise; GM expansion; Meta deployment confirmed; multi-upgrades; price confirm vs event-day AVWAP",
-      "source": "Analyst roundups and earnings release",
+      "source": "Earnings release + analyst roundups",
       "date": "2025-08-28"
     },
     {
       "ticker": "ASAN",
       "tier": "Tier 3 (1.5%)",
-      "proof": "Founder/insider buys; range-high breakout on >1.5× vol; close > event-day AVWAP",
-      "source": "SEC Form 4 filings and price/volume tape",
+      "proof": "Founder/insider buys; range-high breakout on >1.5× volume; close > event-day AVWAP",
+      "source": "SEC Form 4 + price/volume tape",
       "date": "2025-08-28"
+    },
+    {
+      "ticker": "NVS",
+      "tier": "Tier 2 (3%)",
+      "proof": "Core EPS +24% YoY; core OI margin +340 bps; multiple approvals/readouts indicating moat",
+      "source": "Company results + regulatory disclosures",
+      "date": "2025-08-29"
     }
   ],
   "alerts": []
