@@ -1,28 +1,6 @@
 {
-  "asof": "2025-08-29T09:45:00+02:00",
+  "asof": "2025-08-30T10:22:00+02:00",
   "core": [
-    {
-      "ticker": "TSM",
-      "name": "Taiwan Semiconductor",
-      "weight": "5%",
-      "badge": "Tier 1 (LT)",
-      "q": 9,
-      "notes": "2nm (N2) ramp late-2025; AI/CoWoS demand; Apple & NVDA anchors; US/JP fab diversification",
-      "exits": "N2 delay >2Q; GM <45%; 50-WMA fail",
-      "sector": "Technology",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
-    },
-    {
-      "ticker": "AAPL",
-      "name": "Apple",
-      "weight": "3%",
-      "badge": "Tier 3 (LT — ballast)",
-      "q": 8,
-      "notes": "Ecosystem moat + FCF; AI on-device cycle optionality",
-      "exits": "Services MAU/ARPU decline; 50-WMA fail",
-      "sector": "Technology",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
-    },
     {
       "ticker": "MSFT",
       "name": "Microsoft",
@@ -32,7 +10,18 @@
       "notes": "Azure/Copilot monetization; enterprise durability",
       "exits": "Thesis break; 50-WMA fail",
       "sector": "Technology",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
+    },
+    {
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor",
+      "weight": "5%",
+      "badge": "Tier 1 (LT)",
+      "q": 9,
+      "notes": "2nm (N2) ramp late-2025; AI/CoWoS demand; Apple & NVDA anchors; US/JP fab diversification",
+      "exits": "N2 delay >2Q; GM <45%; 50-WMA fail",
+      "sector": "Technology",
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "AMZN",
@@ -43,7 +32,7 @@
       "notes": "Retail margin mix + Ads + AWS GenAI attach",
       "exits": "Retail margin backslide; 50-WMA fail",
       "sector": "Consumer Discretionary",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "GOOGL",
@@ -54,7 +43,7 @@
       "notes": "Search/YouTube durability; Cloud AI workloads",
       "exits": "Thesis break; 50-WMA fail",
       "sector": "Communication Services",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "META",
@@ -65,7 +54,7 @@
       "notes": "Ads recovery + AI infra leverage",
       "exits": "Ads CPM/engagement deterioration; 50-WMA fail",
       "sector": "Communication Services",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "NVDA",
@@ -76,7 +65,18 @@
       "notes": "AI accelerator cadence; HBM/packaging capacity",
       "exits": "Datacenter orderbook cracks; 50-WMA fail",
       "sector": "Technology",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "weight": "3%",
+      "badge": "Tier 3 (LT — ballast)",
+      "q": 8,
+      "notes": "Ecosystem moat + FCF; AI on-device cycle optionality",
+      "exits": "Services MAU/ARPU decline; 50-WMA fail",
+      "sector": "Technology",
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "TSLA",
@@ -87,7 +87,7 @@
       "notes": "Energy/storage + software optionality vs auto pricing risk",
       "exits": "Sustained auto GM compression; 50-WMA fail",
       "sector": "Consumer Discretionary",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "WST",
@@ -98,7 +98,7 @@
       "notes": "EPS beat + raised FY; price confirm",
       "exits": "Event-day AVWAP fail; thesis break",
       "sector": "Healthcare",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "PLTR",
@@ -109,7 +109,7 @@
       "notes": "Raised guidance + new gov contracts; price confirm",
       "exits": "Event-day AVWAP fail; thesis break",
       "sector": "Technology",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "PSTG",
@@ -120,7 +120,7 @@
       "notes": "Beat & raise; Meta deployment confirmed; margins expanding (50% swing into 9/25, 50% LT)",
       "exits": "Event-day AVWAP fail; Meta delay/margin reversal",
       "sector": "Technology",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "ASAN",
@@ -131,7 +131,7 @@
       "notes": "Founder/insider cluster buys; price-confirm breakout",
       "exits": "Event-day AVWAP fail; thesis break",
       "sector": "Technology",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "NVS",
@@ -142,7 +142,18 @@
       "notes": "EPS growth + margin expansion; recent approvals/trial wins (moat)",
       "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break",
       "sector": "Healthcare",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "weight": "3%",
+      "badge": "Tier 2 (LT) — Graduated",
+      "q": 7,
+      "notes": "EPS positive; net margin improving; strategic U.S. gov stake creates capacity/geo moat; price confirm",
+      "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break",
+      "sector": "Technology",
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "VOO",
@@ -153,7 +164,7 @@
       "notes": "Core beta; risk anchor",
       "exits": "Mandate shift",
       "sector": "ETFs",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "QQQ",
@@ -164,7 +175,7 @@
       "notes": "Large-cap growth tilt; AI beneficiaries",
       "exits": "Mandate shift",
       "sector": "ETFs",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     },
     {
       "ticker": "SMH",
@@ -175,7 +186,7 @@
       "notes": "Semi cycle participation without single-name risk",
       "exits": "Cycle turns; trailing stop",
       "sector": "ETFs",
-      "updatedAt": "2025-08-29T09:45:00+02:00"
+      "updatedAt": "2025-08-30T10:22:00+02:00"
     }
   ],
   "swing": [
@@ -189,7 +200,7 @@
       "exits": "Lose event AVWAP on >1.5x vol; thesis break",
       "eventType": "Insider Buy",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Energy"
     },
     {
@@ -202,7 +213,7 @@
       "exits": "Event-day AVWAP fail; policy reversal; margin backslide",
       "eventType": "Analyst Upgrade",
       "eventDate": "2025-08-28",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Energy"
     },
     {
@@ -215,7 +226,7 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-29",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Technology"
     },
     {
@@ -228,7 +239,7 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-29",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Consumer Staples"
     },
     {
@@ -241,7 +252,7 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-29",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Financials"
     },
     {
@@ -254,7 +265,7 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-29",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Healthcare"
     },
     {
@@ -267,7 +278,7 @@
       "exits": "50-DMA fail; thesis break",
       "eventType": "Company",
       "eventDate": "2025-08-29",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Technology"
     },
     {
@@ -280,7 +291,7 @@
       "exits": "Lose AVWAP from latest inflow day; macro risk-off spike",
       "eventType": "Crypto Flow",
       "eventDate": "2025-08-29",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Crypto"
     },
     {
@@ -293,7 +304,7 @@
       "exits": "Break of weekly 200-SMA; dev delay with risk-off",
       "eventType": "Crypto Dev",
       "eventDate": "2025-08-29",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Crypto"
     },
     {
@@ -306,7 +317,7 @@
       "exits": "Outage >1h or perf degradation; 50-DMA fail",
       "eventType": "Crypto Infra",
       "eventDate": "2025-08-29",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Crypto"
     },
     {
@@ -319,7 +330,7 @@
       "exits": "Utilization drop 20% 4w; 50-DMA fail",
       "eventType": "Crypto Adoption",
       "eventDate": "2025-08-29",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Crypto"
     },
     {
@@ -332,7 +343,7 @@
       "exits": "TVL drop >15% 4w; thesis break",
       "eventType": "Crypto Adoption",
       "eventDate": "2025-08-29",
-      "updatedAt": "2025-08-29T09:45:00+02:00",
+      "updatedAt": "2025-08-30T10:22:00+02:00",
       "sector": "Crypto"
     }
   ],
@@ -394,30 +405,55 @@
         "label": "EPS growth + margin expansion; multiple approvals/readouts (moat)",
         "color": "g",
         "impact": "High"
+      },
+      {
+        "date": "2025-08-25",
+        "ticker": "INTC",
+        "label": "Strategic U.S. gov stake; capacity/geopolitical moat; price confirm",
+        "color": "g",
+        "impact": "High"
       }
     ],
     "macro": [
       {
-        "date": "2025-08-29",
-        "label": "Core PCE (Jul), Personal Income/Spending; U. Mich Sentiment (final)",
+        "date": "2025-09-02",
+        "label": "S&P CoreLogic Case-Shiller Home Price Index (Jul), FHFA HPI",
         "color": "y",
-        "impact": "High"
+        "impact": "Med"
+      },
+      {
+        "date": "2025-09-03",
+        "label": "Fed Beige Book",
+        "color": "y",
+        "impact": "Med"
       },
       {
         "date": "2025-09-04",
-        "label": "ADP Employment (Aug); Initial Jobless Claims (week of Aug 30)",
+        "label": "ADP Employment (Aug); Initial Jobless Claims (wk of Aug 30); Unit Labor Costs (Q2 rev)",
         "color": "y",
         "impact": "Med"
+      },
+      {
+        "date": "2025-09-05",
+        "label": "Nonfarm Payrolls/Unemployment Rate/AHE (Aug); Personal Income & Spending (Jul); Univ. of Michigan Sentiment (final Aug)",
+        "color": "y",
+        "impact": "High"
       }
     ]
   },
-  "flow": {},
+  "flow": {
+    "vgt_heartbeat_outflow_usd_mm": -3000,
+    "notes": "Tech sector ETF heartbeat outflow observed; monitor normalization over next 3–5 sessions."
+  },
+  "weekly": {
+    "blindspots_plan": "Risk rotation executed: trimmed Sector A –2ppt to 30%, Tier2 X –1ppt to 5%, Tier3 Y –1ppt to 2%, BTC –2ppt to 5%, SOL –1ppt to 3%; boosted ETH +1ppt to 5%. Total crypto now 15%, Spec at 5%. Freed capital redeployed to under-cap equity sectors / conservative sleeve. All caps respected."
+  },
   "meta": {
     "today": {
-      "adds": 3,
-      "promotions": 3,
+      "adds": 1,
+      "promotions": 1,
       "exits": 0
     }
   },
-  "hash": "2025-08-29T09:45:00+02:00"
+  "hash": "2025-08-30T10:22:00+02:00"
 }
