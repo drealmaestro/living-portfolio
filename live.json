@@ -1,197 +1,161 @@
 {
   "meta": {
-    "version": 4,
+    "version": 5,
     "lastCheck": "2025-08-31T10:45:00+02:00",
-    "hash": "c6a4f3e1",
-    "note": "Synced to latest laneChecks. Core reinforced (PSTG, PLTR, WST). NVS on tape-watch. Exceptions kept (INTC, ASAN, BTC, ETH, SOL, ONDO, RNDR)."
+    "hash": "merge-a1",
+    "mode": "merge",
+    "note": "Merge-style: preserves existing lanes and adds carryOver lanes so older opportunities never vanish."
   },
+
+  "limits": {
+    "sectorCapEquities": 0.30,
+    "cryptoTotalCap": 0.15,
+    "singleNameCaps": { "tier1": 0.07, "tier2": 0.05, "tier3": 0.02 },
+    "cryptoMajorsCaps": { "BTC": 0.05, "ETH": 0.05, "SOL": 0.03 },
+    "specMaxPct": 0.05,
+    "specMaxNames": 20
+  },
+
+  "gates": {
+    "foundation": {
+      "epsPositiveGrowing": true,
+      "netMarginExpanding3y": true,
+      "revenueOrganicGt10": true,
+      "roicGt15Rising": true,
+      "fcfPositive": true
+    },
+    "technical": {
+      "weekly200SMA": "soft"  /* soft = prefer but allow exceptions with catalyst */
+    },
+    "tape": {
+      "eventAVWAPHold": true,
+      "needVol1p5x": false    /* allow confirmations without strict 1.5x volume */
+    }
+  },
+
+  "ui": {
+    "focusMode": false,
+    "showNearMiss": true,
+    "showCarryTags": true
+  },
+
   "core": [
     {
-      "ticker": "PSTG",
-      "name": "Pure Storage",
-      "sector": "Technology",
-      "tier": 2,
-      "weight": "3%",
-      "badge": "Foundation",
-      "q": 9,
+      "ticker": "PSTG", "name": "Pure Storage", "sector": "Technology",
+      "tier": 2, "weight": "3%", "badge": "Foundation", "q": 9,
       "notes": "Beat/raise (2025-08-27); GM ~72% q/q up; FY26 raised.",
-      "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break"
+      "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break",
+      "carryOver": true
     },
     {
-      "ticker": "PLTR",
-      "name": "Palantir",
-      "sector": "Technology",
-      "tier": 2,
-      "weight": "3%",
-      "badge": "Foundation",
-      "q": 9,
+      "ticker": "PLTR", "name": "Palantir", "sector": "Technology",
+      "tier": 2, "weight": "3%", "badge": "Foundation", "q": 9,
       "notes": "Beat/raise; profitable; 10-yr Army program award.",
-      "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break"
+      "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break",
+      "carryOver": true
     },
     {
-      "ticker": "WST",
-      "name": "West Pharmaceutical",
-      "sector": "Healthcare",
-      "tier": 2,
-      "weight": "3%",
-      "badge": "Foundation",
-      "q": 9,
+      "ticker": "WST", "name": "West Pharmaceutical", "sector": "Healthcare",
+      "tier": 2, "weight": "3%", "badge": "Foundation", "q": 9,
       "notes": "ER beat/raise; margin expansion; >10% organic growth.",
-      "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break"
+      "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break",
+      "carryOver": true
     },
     {
-      "ticker": "NVS",
-      "name": "Novartis",
-      "sector": "Healthcare",
-      "tier": 2,
-      "weight": "3%",
-      "badge": "Foundation (Tape Watch)",
-      "q": 7,
-      "notes": "Recent EPS beat; high and expanding margins; needs volume >1.5x for confirm.",
-      "exits": "Event-day AVWAP fail; thesis break"
+      "ticker": "NVS", "name": "Novartis", "sector": "Healthcare",
+      "tier": 2, "weight": "3%", "badge": "Foundation (Tape Watch)", "q": 7,
+      "notes": "ER beat; high margins; waiting for >1.5x vol for full confirm.",
+      "exits": "Event-day AVWAP fail; thesis break",
+      "carryOver": true
     },
     {
-      "ticker": "INTC",
-      "name": "Intel",
-      "sector": "Technology",
-      "tier": 2,
-      "weight": "3%",
-      "badge": "Exception",
-      "q": 6,
-      "notes": "Policy support + strategic capacity build; ROIC and organic growth below gates.",
-      "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break"
+      "ticker": "INTC", "name": "Intel", "sector": "Technology",
+      "tier": 2, "weight": "3%", "badge": "Exception", "q": 6,
+      "notes": "Policy + strategic capacity build; ROIC/organic growth below gates.",
+      "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break",
+      "carryOver": true
     }
   ],
+
   "swing": [
     {
-      "ticker": "BTC",
-      "name": "Bitcoin",
-      "sector": "Crypto",
-      "tier": 1,
-      "weight": "2%",
-      "signal": "GREEN (flow-dependent)",
-      "q": 7,
-      "notes": "ETF net inflows primary driver; wk200 + AVWAP hold; watch flow streaks.",
-      "exits": "Inflow AVWAP lost; macro risk-off spike; thesis break"
+      "ticker": "BTC", "name": "Bitcoin", "sector": "Crypto",
+      "tier": 1, "weight": "2%", "signal": "GREEN (flow-dependent)", "q": 7,
+      "notes": "ETF net inflows as primary driver; wk200 + AVWAP hold.",
+      "exits": "Inflow AVWAP lost; macro risk-off; thesis break",
+      "carryOver": true
     },
     {
-      "ticker": "ETH",
-      "name": "Ethereum",
-      "sector": "Crypto",
-      "tier": 1,
-      "weight": "2%",
-      "signal": "YELLOW → GREEN on upgrade/vol confirm",
-      "q": 6,
-      "notes": "Upgrade/dev cadence supportive; waiting for >1.5x volume confirm.",
-      "exits": "Event-day AVWAP fail; thesis break"
+      "ticker": "ETH", "name": "Ethereum", "sector": "Crypto",
+      "tier": 1, "weight": "2%", "signal": "YELLOW → GREEN on upgrade/vol confirm", "q": 6,
+      "notes": "Upgrade/dev cadence supportive; wait for stronger tape.",
+      "exits": "Event-day AVWAP fail; thesis break",
+      "carryOver": true
     }
   ],
+
   "spec": [
     {
-      "ticker": "ASAN",
-      "name": "Asana",
-      "sector": "Technology",
-      "tier": 1,
-      "weight": "1%",
-      "signal": "SPEC GREEN (insider cluster)",
-      "q": 6,
+      "ticker": "ASAN", "name": "Asana", "sector": "Technology",
+      "tier": 1, "weight": "1%", "signal": "SPEC GREEN (insider cluster)", "q": 6,
       "notes": "Founder/insider cluster buys; category leadership; fundamentals developing.",
       "graduation": "watch",
-      "graduationCriteria": [
-        "EPS positive",
-        "FCF positive",
-        "ROIC > 15% rising"
-      ],
-      "exits": "50-DMA fail; insider-trend reversal; thesis break"
+      "graduationCriteria": ["EPS positive","FCF positive","ROIC > 15% rising"],
+      "exits": "50-DMA fail; insider-trend reversal; thesis break",
+      "carryOver": true
     },
     {
-      "ticker": "SOL",
-      "name": "Solana",
-      "sector": "Crypto",
-      "tier": 1,
-      "weight": "1%",
-      "signal": "YELLOW",
-      "q": 6,
+      "ticker": "SOL", "name": "Solana", "sector": "Crypto",
+      "tier": 1, "weight": "1%", "signal": "YELLOW", "q": 6,
       "notes": "Uptime/adoption momentum; waiting for volume confirmation.",
-      "exits": "Event-day AVWAP fail; thesis break"
+      "exits": "Event-day AVWAP fail; thesis break",
+      "carryOver": true
     },
     {
-      "ticker": "ONDO",
-      "name": "Ondo",
-      "sector": "Crypto",
-      "tier": 1,
-      "weight": "1%",
-      "signal": "YELLOW",
-      "q": 6,
+      "ticker": "ONDO", "name": "Ondo", "sector": "Crypto",
+      "tier": 1, "weight": "1%", "signal": "YELLOW", "q": 6,
       "notes": "RWA adoption; tape confirm pending.",
-      "exits": "Event-day AVWAP fail; thesis break"
+      "exits": "Event-day AVWAP fail; thesis break",
+      "carryOver": true
     },
     {
-      "ticker": "RNDR",
-      "name": "Render",
-      "sector": "Crypto",
-      "tier": 1,
-      "weight": "1%",
-      "signal": "YELLOW",
-      "q": 6,
+      "ticker": "RNDR", "name": "Render", "sector": "Crypto",
+      "tier": 1, "weight": "1%", "signal": "YELLOW", "q": 6,
       "notes": "AI-compute demand; waiting on >1.5x vol.",
-      "exits": "Event-day AVWAP fail; thesis break"
+      "exits": "Event-day AVWAP fail; thesis break",
+      "carryOver": true
     }
   ],
-  "cryptoCaps": {
-    "BTC": 0.05,
-    "ETH": 0.05,
-    "SOL": 0.03,
-    "TOTAL_CRYPTO_CAP": 0.15
-  },
+
+  "nearMiss": [
+    /* ⤵️ PASTE any older tickers you want to keep visible, along with 'why' and next step. */
+    /* Example:
+    {
+      "ticker": "OLD1",
+      "why": ["EPS positive but net margin flat", "No >1.5x volume on breakout"],
+      "nextStep": "Wait for next ER beat/raise or >1.5x volume on range break",
+      "reviewBy": "2025-09-15",
+      "carryOver": true
+    }
+    */
+  ],
+
+  "cryptoCaps": { "BTC": 0.05, "ETH": 0.05, "SOL": 0.03, "TOTAL_CRYPTO_CAP": 0.15 },
+
   "heatmapTags": {
-    "technology": ["PSTG", "PLTR", "INTC", "ASAN", "RNDR", "SOL", "ETH", "BTC"],
-    "healthcare": ["WST", "NVS"],
+    "technology": ["PSTG","PLTR","INTC","ASAN","RNDR","SOL","ETH","BTC"],
+    "healthcare": ["WST","NVS"],
     "cryptoRWA": ["ONDO"],
     "defenseAI": ["PLTR"]
   },
+
   "catalysts": {
     "company": [
-      {
-        "ticker": "PSTG",
-        "label": "Beat + Raise (FY26)",
-        "date": "2025-08-27",
-        "color": "g",
-        "impact": "High",
-        "proof": ["Company PR", "Analyst notes"]
-      },
-      {
-        "ticker": "PLTR",
-        "label": "10-yr Army Program Award",
-        "date": "2025-08-15",
-        "color": "g",
-        "impact": "High",
-        "proof": ["DoD contract note"]
-      },
-      {
-        "ticker": "WST",
-        "label": "ER beat/raise; margin expansion",
-        "date": "2025-08-20",
-        "color": "g",
-        "impact": "Med",
-        "proof": ["Earnings recap"]
-      },
-      {
-        "ticker": "NVS",
-        "label": "ER beat; high margins (tape watch)",
-        "date": "2025-08-22",
-        "color": "y",
-        "impact": "Med",
-        "proof": ["ER wrap"]
-      },
-      {
-        "ticker": "INTC",
-        "label": "Policy/fab build support (Exception)",
-        "date": "2025-08-21",
-        "color": "y",
-        "impact": "Med",
-        "proof": ["Policy/industry coverage"]
-      }
+      { "ticker": "PSTG","label": "Beat + Raise (FY26)","date": "2025-08-27","color": "g","impact": "High","proof": ["Company PR","Analyst notes"] },
+      { "ticker": "PLTR","label": "10-yr Army Program Award","date": "2025-08-15","color": "g","impact": "High","proof": ["DoD contract note"] },
+      { "ticker": "WST","label": "ER beat/raise; margin expansion","date": "2025-08-20","color": "g","impact": "Med","proof": ["Earnings recap"] },
+      { "ticker": "NVS","label": "ER beat; high margins (tape watch)","date": "2025-08-22","color": "y","impact": "Med","proof": ["ER wrap"] },
+      { "ticker": "INTC","label": "Policy/fab build support (Exception)","date": "2025-08-21","color": "y","impact": "Med","proof": ["Policy/industry coverage"] }
     ],
     "macro": [
       { "label": "Initial Jobless Claims", "date": "2025-08-28 08:30", "color": "y", "impact": "Med" },
@@ -201,15 +165,16 @@
       { "label": "Michigan Sentiment (Final Aug)", "date": "2025-08-29 10:00", "color": "y", "impact": "Low" }
     ]
   },
+
   "weeklyNote": {
     "blindspots": [
-      "NVS lacks volume confirmation >1.5x despite fundamentals.",
+      "We previously lost historical ideas on hard overrides. Merge mode + carryOver prevents that.",
       "Crypto exceptions rely on flows/volume; keep sizes disciplined."
     ],
     "plan": [
-      "Let winners run: PSTG/PLTR/WST as Core Tier 2 with AVWAP/50-DMA risk.",
-      "Re-check BTC/ETH ETF flow streaks; upgrade ETH to GREEN if volume confirms.",
-      "Track INTC quarterly for ROIC and organic growth inflection; keep Exception until gates met."
+      "Let winners run: PSTG/PLTR/WST Core Tier 2 with AVWAP/50-DMA risk.",
+      "Upgrade NVS on next >1.5x-volume confirm.",
+      "Paste any missing legacy names into 'nearMiss' with carryOver:true (or ask me to reconstruct from your last saved list)."
     ]
   }
 }
