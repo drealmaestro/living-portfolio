@@ -3,11 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Living Portfolio — v3.2 Clean + Crypto</title>
+<title>Living Portfolio — v3.3 Clean + Crypto Colors</title>
 <style>
 :root{
   --bg:#0b1220; --panel:#0f172a; --muted:#94a3b8; --text:#e2e8f0;
-  --g:#10b981; --y:#f59e0b; --r:#ef4444; --b:#38bdf8;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:15px;line-height:1.5}
@@ -38,7 +37,7 @@ input[type="search"]{padding:8px 12px;border-radius:10px;background:#0b1b2c;bord
 
   <div class="header">
     <div>
-      <div class="h1">⚡ Living Portfolio Dashboard — v3.2</div>
+      <div class="h1">⚡ Living Portfolio Dashboard — v3.3</div>
       <div class="sub">As-of <span id="asof">—</span></div>
     </div>
     <input id="q" type="search" placeholder="Search ticker…"/>
@@ -82,10 +81,22 @@ const ENDPOINT='https://drealmaestro.github.io/living-portfolio/live.json';
 const $=sel=>document.querySelector(sel);
 const $$=sel=>Array.from(document.querySelectorAll(sel));
 
-function renderTable(tbId, rows, cols){
+function colorTag(sig){
+  if(!sig) return '';
+  const s=sig.toLowerCase();
+  if(s.includes('buy')||s.includes('inflow')||s.includes('bull')) return `<span class="tag g">${sig}</span>`;
+  if(s.includes('neutral')||s.includes('watch')) return `<span class="tag y">${sig}</span>`;
+  if(s.includes('sell')||s.includes('outflow')||s.includes('bear')) return `<span class="tag r">${sig}</span>`;
+  return sig;
+}
+
+function renderTable(tbId, rows, cols, color=false){
   const tb=$(tbId+' tbody'); tb.innerHTML='';
   rows.forEach(r=>{
-    tb.innerHTML+=`<tr>${cols.map(c=>`<td>${r[c]||''}</td>`).join('')}</tr>`;
+    tb.innerHTML+=`<tr>${cols.map(c=>{
+      let v=r[c]||''; if(color&&c==='signal') v=colorTag(v);
+      return `<td>${v}</td>`;
+    }).join('')}</tr>`;
   });
 }
 function renderTimeline(cats){
@@ -111,7 +122,7 @@ function render(data){
   renderTable('#coreTable',data.core||[],['ticker','weight','q','notes','exits']);
   renderTable('#swingTable',data.swing||[],['ticker','weight','signal','notes']);
   renderTable('#specTable',data.spec||[],['ticker','weight','signal','notes']);
-  renderTable('#cryptoTable',data.crypto||[],['ticker','weight','signal','notes']);
+  renderTable('#cryptoTable',data.crypto||[],['ticker','weight','signal','notes'],true);
   renderTimeline(data.catalysts||{company:[],macro:[]});
   computeKPIs(data);
 }
