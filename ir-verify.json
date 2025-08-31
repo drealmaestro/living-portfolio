@@ -1,74 +1,59 @@
 {
-  "lastCheck": "2025-08-31T12:05:00+02:00",
+  "lastCheck": "2025-08-31T13:55:00+02:00",
   "events": [
-    { "ticker": "ET",   "date": "2025-08-28", "label": "Insider Buy (cluster)" },
-    { "ticker": "ET",   "date": "2025-08-28", "label": "Insider cluster buy (director repeat) — AVWAP hold monitor" },
-    { "ticker": "GPRE", "date": "2025-08-28", "label": "Analyst upgrade to Outperform (PT $14)" },
-    { "ticker": "GPRE", "date": "2025-08-28", "label": "Oppenheimer upgrade → Outperform (PT $14)" },
     { "ticker": "PSTG", "date": "2025-08-27", "label": "Earnings beat & raise; Meta revenue recognized; multi-analyst upgrades" },
-    { "ticker": "PSTG", "date": "2025-08-27", "label": "Beat & raise; META revenue recognized; multi-analyst upgrades" },
-    { "ticker": "PSTG", "date": "2025-09-25", "label": "Investor event — META ramp commentary" },
-    { "ticker": "TSM",  "date": "2025-08-28", "label": "Reports: early allocation of 2nm (N2) capacity to Apple; packaging capacity watch" },
-    { "ticker": "BTC",  "date": "2025-08-29", "label": "ETF net inflow shift" },
-    { "ticker": "BTC",  "date": "2025-08-29", "label": "Spot-ETF net inflow shift (20d trend watch)" },
-    { "ticker": "ETH",  "date": "2025-08-29", "label": "Dev call/upgrade notes" },
-    { "ticker": "ETH",  "date": "2025-08-29", "label": "Core-dev upgrade path steady; staking dynamics" },
-    { "ticker": "SOL",  "date": "2025-08-29", "label": "Uptime/ecosystem milestone" },
-    { "ticker": "SOL",  "date": "2025-08-29", "label": "Uptime sustained; ecosystem milestones" },
-    { "ticker": "RNDR", "date": "2025-08-29", "label": "Network utilization up" },
-    { "ticker": "RNDR", "date": "2025-08-29", "label": "AI-compute network utilization pickup" },
-    { "ticker": "ONDO", "date": "2025-08-29", "label": "RWA adoption uptick" },
-    { "ticker": "ONDO", "date": "2025-08-29", "label": "RWA adoption uptick (tokenized treasuries flows)" },
-    { "ticker": "WST",  "date": "2025-07-24", "label": "EPS beat + raised FY EPS; price confirm" },
-    { "ticker": "PLTR", "date": "2025-08-20", "label": "Raised guidance + gov contracts; price confirm" },
-    { "ticker": "PLTR", "date": "2025-08-20", "label": "Raised guidance + new gov contracts; price confirm" },
-    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buy; price-confirm breakout" },
-    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buys; breakout with >1.5× vol" },
-    { "ticker": "NVS",  "date": "2025-07-17", "label": "EPS growth + margin expansion; FDA/clinical wins" },
+    { "ticker": "PSTG", "date": "2025-09-25", "label": "Investor event — Meta ramp commentary" },
+
+    { "ticker": "ET",   "date": "2025-08-28", "label": "Insider cluster buy (director repeat) — AVWAP hold monitor" },
+    { "ticker": "GPRE", "date": "2025-08-28", "label": "Oppenheimer upgrade → Outperform (PT $14)" },
+
+    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buys; breakout with >1.5× volume; close > event-day AVWAP" },
+
     { "ticker": "NVS",  "date": "2025-07-17", "label": "EPS growth + margin expansion; approvals/readouts (moat)" },
-    { "ticker": "INTC", "date": "2025-08-25", "label": "Strategic US government stake; price confirm > event AVWAP" },
-    { "ticker": "VGT",  "date": "2025-08-29", "label": "Heartbeat outflow (~$3B) from ETF.com email" }
+    { "ticker": "INTC", "date": "2025-08-25", "label": "Strategic U.S. government stake; price confirm > event AVWAP" },
+
+    { "ticker": "TSM",  "date": "2025-08-28", "label": "Reports: early allocation of 2nm (N2) capacity to Apple; packaging capacity watch" },
+
+    { "ticker": "VGT",  "date": "2025-08-29", "label": "Heartbeat outflow (~$3B) — monitor 3–5 sessions" },
+
+    { "ticker": "BTC",  "date": "2025-08-29", "label": "Spot-ETF net inflow shift (20d trend watch)" },
+    { "ticker": "ETH",  "date": "2025-08-29", "label": "Core-dev upgrade path steady; staking dynamics" },
+    { "ticker": "SOL",  "date": "2025-08-29", "label": "Uptime sustained; ecosystem milestones" },
+    { "ticker": "RNDR","date": "2025-08-29", "label": "AI-compute network utilization pickup" },
+    { "ticker": "ONDO","date": "2025-08-29", "label": "RWA adoption uptick (tokenized treasuries flows)" }
   ],
   "graduations": [
     {
       "ticker": "PSTG",
       "tier": "Tier 2 (3%)",
-      "proof": "Beat & raise; GM expansion; META deployment confirmed; price confirm vs event-day AVWAP",
-      "source": "ER + analyst notes",
+      "proof": "Beat & raise; GM expansion (~72%); Meta deployment confirmed; multi-upgrades; price confirm vs event-day AVWAP",
+      "source": "Company ER + analyst notes",
       "date": "2025-08-28"
     },
     {
       "ticker": "ASAN",
       "tier": "Tier 3 (1.5%)",
-      "proof": "Founder/insider cluster buys; breakout >1.5× volume; close > event-day AVWAP",
-      "source": "SEC Form 4 + tape",
+      "proof": "Founder/insider buys; range-high breakout on >1.5× volume; close > event-day AVWAP",
+      "source": "SEC Form 4 + price/volume tape",
       "date": "2025-08-28"
     },
     {
       "ticker": "NVS",
       "tier": "Tier 2 (3%)",
-      "proof": "Core EPS growth; OI margin expansion; approvals/readouts",
+      "proof": "Core EPS growth; margin expansion; multiple approvals indicating moat",
       "source": "Company results + regulatory",
       "date": "2025-08-29"
     },
     {
       "ticker": "INTC",
       "tier": "Tier 2 (3–5%)",
-      "proof": "EPS positive; net margin improving; strategic US gov stake; price confirm",
-      "source": "Newswire coverage",
+      "proof": "EPS positive; net margin improvement; strategic U.S. government stake (moat); price confirm",
+      "source": "Major media + filings coverage",
       "date": "2025-08-25"
     }
   ],
   "alerts": [
-    {
-      "date": "2025-08-29T13:20:00+02:00",
-      "type": "flow",
-      "label": "VGT ~−$3B heartbeat outflow; monitor 3–5 sessions"
-    },
-    {
-      "date": "2025-08-30T10:22:00+02:00",
-      "type": "macro-refresh",
-      "label": "Catalysts.macro refreshed for next 10 days"
-    }
+    { "date": "2025-08-29T13:20:00+02:00", "type": "flow", "label": "VGT ~−$3B heartbeat outflow; monitor 3–5 sessions" },
+    { "date": "2025-08-30T10:22:00+02:00", "type": "macro-refresh", "label": "Catalysts.macro refreshed: Sep 2–5 (Case-Shiller, Beige Book, ADP/Claims/ULC, NFP/UR/AHE) — keep next 10 days only" }
   ]
 }
