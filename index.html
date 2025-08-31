@@ -1,139 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Living Portfolio — v2 Focus Mode</title>
-<style>
-:root{--bg:#0b1220;--panel:#0f172a;--muted:#94a3b8;--text:#e2e8f0;
---g:#10b981;--y:#f59e0b;--r:#ef4444;--b:#38bdf8;--card:#111827;--chip:#0b2538}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);
-font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
-.wrapper{max-width:1200px;margin:auto;padding:16px}
-.header{display:grid;gap:10px;grid-template-columns:1fr auto;align-items:center;margin-bottom:12px}
-.h1{font-size:20px;font-weight:700}.sub{color:var(--muted);font-size:12px}
-.row{display:flex;gap:10px;flex-wrap:wrap}
-.card{background:var(--panel);border:1px solid #0b2540;border-radius:14px;padding:12px}
-.h2{font-size:14px;text-transform:uppercase;color:#93c5fd;margin:4px 0 10px}
-.table{width:100%;border-collapse:collapse}
-.table th,.table td{font-size:12px;text-align:left;padding:6px;border-bottom:1px solid #0b2540}
-.table th{color:#a5b4fc;font-weight:600}
-.badge{padding:2px 8px;border-radius:999px;background:#0b1b2c;border:1px solid #1b3a5a;color:#7dd3fc;font-weight:600}
-.tag{padding:2px 6px;border-radius:999px;font-size:11px;margin-right:4px}
-.tag.g{background:rgba(16,185,129,.15);color:#34d399}
-.tag.y{background:rgba(245,158,11,.15);color:#fbbf24}
-.tag.r{background:rgba(239,68,68,.15);color:#f87171}
-.timeline{display:grid;gap:6px;max-height:420px;overflow:auto}
-.timeline .item{display:flex;gap:8px;align-items:center;background:#0b1b2c;border:1px solid #1b3a5a;border-radius:10px;padding:8px}
-.small{font-size:11px;color:var(--muted)}
-.focus-toggle{margin-left:12px;font-size:12px;color:#bae6fd;cursor:pointer}
-</style>
+  <meta charset="UTF-8" />
+  <title>Living Portfolio Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; background:#111; color:#eee; margin:0; padding:1rem; }
+    h2 { margin-top:2rem; border-bottom:1px solid #333; padding-bottom:0.3rem; }
+    table { width:100%; border-collapse:collapse; margin-top:1rem; }
+    th, td { padding:0.5rem; border-bottom:1px solid #333; text-align:left; }
+    th { background:#222; }
+    tr.crypto td { background:#1a1f2b; }
+    .tier { font-size:0.8rem; color:#bbb; }
+    .green { color:#4caf50; }
+    .yellow { color:#ffeb3b; }
+    .red { color:#f44336; }
+  </style>
 </head>
 <body>
-<div class="wrapper">
-  <div class="header">
-    <div>
-      <div class="h1">⚡ Living Portfolio Dashboard — v2 Focus Mode</div>
-      <div class="sub">As-of <span id="asof">—</span> <span class="focus-toggle" id="focusBtn">[Focus Mode OFF]</span></div>
-    </div>
-  </div>
+  <h1>📊 Living Portfolio Dashboard</h1>
 
-  <div class="card">
-    <div class="h2">Core Portfolio</div>
-    <table class="table" id="coreTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Notes</th></tr></thead><tbody></tbody></table>
-  </div>
+  <div id="core"></div>
+  <div id="swing"></div>
+  <div id="spec"></div>
+  <div id="catalysts"></div>
+  <div id="flow"></div>
+  <div id="weekly"></div>
 
-  <div class="card">
-    <div class="h2">Swing Plays (3–6M)</div>
-    <table class="table" id="swingTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Signal</th><th>Notes</th></tr></thead><tbody></tbody></table>
-  </div>
+  <script>
+    async function loadData() {
+      const live = await fetch("live.json").then(r=>r.json());
+      const ir   = await fetch("ir-verify.json").then(r=>r.json());
 
-  <div class="card">
-    <div class="h2">Speculative Sleeve</div>
-    <table class="table" id="specTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Notes</th></tr></thead><tbody></tbody></table>
-  </div>
+      renderTable("Core Portfolio", live.core, "core");
+      renderTable("Swing Sleeve (3–6M)", live.swing, "swing");
+      renderTable("Speculative Sleeve", live.spec, "spec");
 
-  <div class="card">
-    <div class="h2">Catalyst Timeline (Next 90d)</div>
-    <div class="timeline" id="timeline"></div>
-  </div>
-</div>
+      // catalysts
+      let chtml = `<h2>Upcoming Catalysts</h2><table><tr><th>Date</th><th>Ticker</th><th>Event</th></tr>`;
+      (live.catalysts.company || []).forEach(ev=>{
+        chtml += `<tr><td>${ev.date}</td><td>${ev.ticker||""}</td><td>${ev.label}</td></tr>`;
+      });
+      (live.catalysts.macro || []).forEach(ev=>{
+        chtml += `<tr><td>${ev.date}</td><td>Macro</td><td>${ev.label}</td></tr>`;
+      });
+      chtml += `</table>`;
+      document.getElementById("catalysts").innerHTML = chtml;
 
-<script>
-(() => {
-  const ENDPOINT = 'https://drealmaestro.github.io/living-portfolio/live.json';
-  let focus=false;
-  const $=s=>document.querySelector(s);
-  const asPercent=x=>parseFloat(String(x).replace('%',''))||0;
-  const nowStr=()=>{const d=new Date();return d.toISOString().slice(0,16).replace('T',' ')};
+      // flows
+      if(live.flow){
+        document.getElementById("flow").innerHTML = `<h2>Flows</h2><p>${live.flow.notes||""}</p>`;
+      }
 
-  function renderCore(core){
-    const tb=$('#coreTable tbody');
-    tb.innerHTML=core.map(it=>`
-      <tr data-color="${it.signal||'g'}" data-date="${it.meta?.date||''}">
-        <td><span class="badge">${it.ticker}</span></td>
-        <td>${it.weight||''}</td>
-        <td>${it.notes||''}</td>
-      </tr>`).join('');
-  }
+      // weekly
+      if(live.weekly){
+        document.getElementById("weekly").innerHTML = `<h2>Weekly Note</h2><p>${live.weekly.blindspots_plan||""}</p>`;
+      }
+    }
 
-  function renderSwing(rows){
-    const tb=$('#swingTable tbody');
-    tb.innerHTML=rows.map(r=>`
-      <tr data-color="${r.signal||'g'}" data-date="${r.meta?.date||''}">
-        <td><span class="badge">${r.ticker}</span></td>
-        <td>${r.weight||''}</td>
-        <td>${r.signal||''}</td>
-        <td>${r.notes||''}</td>
-      </tr>`).join('');
-  }
+    function renderTable(title, items, targetId){
+      let html = `<h2>${title}</h2><table><tr><th>Ticker</th><th>Weight</th><th>Notes</th><th>Exits</th></tr>`;
+      items.forEach(i=>{
+        const rowClass = (i.sector==="Crypto") ? "crypto" : "";
+        html += `<tr class="${rowClass}">
+          <td>${i.ticker} <span class="tier">${i.badge||""}</span></td>
+          <td>${i.weight||""}</td>
+          <td>${i.notes||""}</td>
+          <td>${i.exits||""}</td>
+        </tr>`;
+      });
+      html += `</table>`;
+      document.getElementById(targetId).innerHTML = html;
+    }
 
-  function renderSpec(rows){
-    const tb=$('#specTable tbody');
-    tb.innerHTML=rows.map(r=>`
-      <tr data-color="${r.signal||'y'}" data-date="${r.meta?.date||''}">
-        <td><span class="badge">${r.ticker}</span></td>
-        <td>${r.weight||''}</td>
-        <td>${r.notes||''}</td>
-      </tr>`).join('');
-  }
-
-  function renderTimeline(cats){
-    const el=$('#timeline');
-    const list=[...(cats.company||[]),...(cats.macro||[])];
-    list.sort((a,b)=>String(a.date).localeCompare(b.date));
-    el.innerHTML=list.map(x=>`
-      <div class="item" data-color="${x.color||'y'}" data-date="${x.date}">
-        <span class="tag ${x.color||'y'}">${x.date||''}</span> <div>${x.ticker||''} ${x.label||''}</div>
-      </div>`).join('');
-  }
-
-  function applyFocus(){
-    const today=(new Date()).toISOString().slice(0,10);
-    document.querySelectorAll("tr,[data-date]").forEach(el=>{
-      if(!focus){el.style.display='';return;}
-      const col=el.getAttribute('data-color');
-      const d=el.getAttribute('data-date')||'';
-      el.style.display=(col==='g'&&d.startsWith(today))?'':'none';
-    });
-    $('#focusBtn').textContent=focus?"[Focus Mode ON]":"[Focus Mode OFF]";
-  }
-
-  async function load(){
-    try{
-      const r=await fetch(ENDPOINT+'?cb='+Date.now(),{cache:'no-store'});
-      const j=await r.json();
-      $('#asof').textContent=nowStr();
-      renderCore(j.core||[]);
-      renderSwing(j.swing||[]);
-      renderSpec(j.spec||[]);
-      renderTimeline(j.catalysts||{});
-      applyFocus();
-    }catch(e){console.error(e);}
-  }
-  $('#focusBtn').onclick=()=>{focus=!focus;applyFocus()};
-  load(); setInterval(load,180000);
-})();
-</script>
+    loadData();
+  </script>
 </body>
 </html>
