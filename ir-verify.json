@@ -1,5 +1,6 @@
 {
   "updated": "2025-08-31T10:45:00+02:00",
+  "mergeMode": true,
   "laneChecks": [
     {
       "ticker": "PSTG",
@@ -126,5 +127,6 @@
     { "label": "Corporate Profits (Prelim Q2)", "date": "2025-08-28 12:30", "status": "queued" },
     { "label": "PCE Price Index (Jul)", "date": "2025-08-29 08:30", "status": "queued" },
     { "label": "Michigan Sentiment (Final Aug)", "date": "2025-08-29 10:00", "status": "queued" }
-  ]
+  ],
+  "carryNotes": "Add any older tickers you want to preserve to 'nearMiss' (with carryOver:true) or move into 'spec' with a small weight; they will persist across overrides."
 }
