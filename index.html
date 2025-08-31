@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Living Portfolio — v3.1 Clean Spacious</title>
+<title>Living Portfolio — v3.2 Clean + Crypto</title>
 <style>
 :root{
   --bg:#0b1220; --panel:#0f172a; --muted:#94a3b8; --text:#e2e8f0;
-  --g:#10b981; --y:#f59e0b; --r:#ef4444; --b:#38bdf8; --card:#111827;
+  --g:#10b981; --y:#f59e0b; --r:#ef4444; --b:#38bdf8;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:15px;line-height:1.5}
@@ -16,8 +16,8 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui
 .h1{font-size:22px;font-weight:700}
 .sub{color:var(--muted);font-size:14px}
 .row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-.card{background:var(--panel);border:1px solid #0b2540;border-radius:14px;padding:16px;box-shadow:0 0 0 1px rgba(59,130,246,0.06) inset;margin-bottom:14px}
-.h2{font-size:16px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:#93c5fd;margin:8px 0 12px}
+.card{background:var(--panel);border:1px solid #0b2540;border-radius:14px;padding:16px;margin-bottom:14px}
+.h2{font-size:16px;font-weight:600;text-transform:uppercase;color:#93c5fd;margin:8px 0 12px}
 .table{width:100%;border-collapse:collapse}
 .table th,.table td{font-size:14px;padding:8px;border-bottom:1px solid #0b2540}
 .table th{color:#a5b4fc;font-weight:600;text-align:left}
@@ -38,7 +38,7 @@ input[type="search"]{padding:8px 12px;border-radius:10px;background:#0b1b2c;bord
 
   <div class="header">
     <div>
-      <div class="h1">⚡ Living Portfolio Dashboard — v3.1</div>
+      <div class="h1">⚡ Living Portfolio Dashboard — v3.2</div>
       <div class="sub">As-of <span id="asof">—</span></div>
     </div>
     <input id="q" type="search" placeholder="Search ticker…"/>
@@ -50,20 +50,26 @@ input[type="search"]{padding:8px 12px;border-radius:10px;background:#0b1b2c;bord
     <div class="card"><strong>Flow snapshot:</strong> <span id="kpiFlow">—</span></div>
   </div>
 
-  <div class="card" id="coreCol">
-    <div class="h2">Core Portfolio (Fortress Compounding)</div>
-    <div id="coreGroups"></div>
+  <div class="card">
+    <div class="h2">Core Portfolio</div>
+    <table class="table" id="coreTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Q</th><th>Notes</th><th>Exits</th></tr></thead><tbody></tbody></table>
   </div>
 
   <div class="card">
     <div class="h2">Swing Plays (3–6M)</div>
     <table class="table" id="swingTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Signal</th><th>Notes</th></tr></thead><tbody></tbody></table>
-    <hr style="border:0;border-top:1px solid #0b2540;margin:12px 0"/>
-    <div class="h2">Speculative Sleeve (Graduation Watch)</div>
+  </div>
+
+  <div class="card">
+    <div class="h2">Speculative Sleeve</div>
     <table class="table" id="specTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Signal</th><th>Notes</th></tr></thead><tbody></tbody></table>
   </div>
 
-  <!-- TIMELINE AT BOTTOM -->
+  <div class="card">
+    <div class="h2">Crypto Sleeve</div>
+    <table class="table" id="cryptoTable"><thead><tr><th>Symbol</th><th>Weight</th><th>Signal</th><th>Notes</th></tr></thead><tbody></tbody></table>
+  </div>
+
   <div class="card">
     <div class="h2">Catalyst Timeline (Next 90 Days)</div>
     <div class="timeline" id="timeline"></div>
@@ -76,19 +82,11 @@ const ENDPOINT='https://drealmaestro.github.io/living-portfolio/live.json';
 const $=sel=>document.querySelector(sel);
 const $$=sel=>Array.from(document.querySelectorAll(sel));
 
-function renderCore(core){
-  const wrap=$('#coreGroups'); wrap.innerHTML='';
-  core.forEach(it=>{
-    wrap.innerHTML+=`<div style="margin-bottom:8px"><span class="badge">${it.ticker}</span> · ${it.weight||''} · ${it.notes||''}</div>`;
+function renderTable(tbId, rows, cols){
+  const tb=$(tbId+' tbody'); tb.innerHTML='';
+  rows.forEach(r=>{
+    tb.innerHTML+=`<tr>${cols.map(c=>`<td>${r[c]||''}</td>`).join('')}</tr>`;
   });
-}
-function renderSwing(rows){
-  const tb=$('#swingTable tbody'); tb.innerHTML='';
-  rows.forEach(r=>{tb.innerHTML+=`<tr><td><span class="badge">${r.ticker}</span></td><td>${r.weight||''}</td><td>${r.signal||''}</td><td>${r.notes||''}</td></tr>`;});
-}
-function renderSpec(rows){
-  const tb=$('#specTable tbody'); tb.innerHTML='';
-  rows.forEach(r=>{tb.innerHTML+=`<tr><td><span class="badge">${r.ticker}</span></td><td>${r.weight||''}</td><td>${r.signal||''}</td><td>${r.notes||''}</td></tr>`;});
 }
 function renderTimeline(cats){
   const el=$('#timeline'); el.innerHTML='';
@@ -110,9 +108,10 @@ function computeKPIs(data){
 }
 function render(data){
   $('#asof').textContent=new Date().toISOString().slice(0,16).replace('T',' ');
-  renderCore(data.core||[]);
-  renderSwing(data.swing||[]);
-  renderSpec(data.spec||[]);
+  renderTable('#coreTable',data.core||[],['ticker','weight','q','notes','exits']);
+  renderTable('#swingTable',data.swing||[],['ticker','weight','signal','notes']);
+  renderTable('#specTable',data.spec||[],['ticker','weight','signal','notes']);
+  renderTable('#cryptoTable',data.crypto||[],['ticker','weight','signal','notes']);
   renderTimeline(data.catalysts||{company:[],macro:[]});
   computeKPIs(data);
 }
@@ -121,7 +120,7 @@ async function load(){
 }
 $('#q').addEventListener('input',e=>{
   const q=e.target.value.toUpperCase();
-  $$('table tbody tr, #coreGroups div, #timeline .item').forEach(el=>{
+  $$('table tbody tr,#timeline .item').forEach(el=>{
     el.style.display=el.textContent.toUpperCase().includes(q)?'':'none';
   });
 });
