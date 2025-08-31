@@ -1,79 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Living Portfolio Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body { font-family: Arial, sans-serif; background:#111; color:#eee; margin:0; padding:1rem; }
-    h2 { margin-top:2rem; border-bottom:1px solid #333; padding-bottom:0.3rem; }
-    table { width:100%; border-collapse:collapse; margin-top:1rem; }
-    th, td { padding:0.5rem; border-bottom:1px solid #333; text-align:left; }
-    th { background:#222; }
-    tr.crypto td { background:#1a1f2b; }
-    .tier { font-size:0.8rem; color:#bbb; }
-    .green { color:#4caf50; }
-    .yellow { color:#ffeb3b; }
-    .red { color:#f44336; }
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>⚡ Living Portfolio Dashboard</title>
+<style>
+:root{
+  --bg:#0b1220; --panel:#0f172a; --muted:#94a3b8; --text:#e2e8f0;
+  --g:#10b981; --y:#f59e0b; --r:#ef4444; --b:#38bdf8; --card:#111827;
+}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.wrapper{max-width:1200px;margin:auto;padding:16px}
+h1{font-size:20px;font-weight:700;margin:0}
+.sub{color:var(--muted);font-size:12px;margin-bottom:16px}
+.table{width:100%;border-collapse:collapse;margin-bottom:12px}
+.table th,.table td{font-size:12px;text-align:left;padding:6px;border-bottom:1px solid #1e293b}
+.table th{color:#93c5fd;font-weight:600;text-transform:uppercase;font-size:11px}
+.badge{display:inline-block;padding:2px 6px;border-radius:6px;background:#1e293b;color:#7dd3fc}
+.tag{display:inline-block;padding:2px 6px;border-radius:6px;font-size:11px}
+.tag.g{background:rgba(16,185,129,.15);color:#34d399}
+.tag.y{background:rgba(245,158,11,.15);color:#fbbf24}
+.tag.r{background:rgba(239,68,68,.15);color:#f87171}
+.note{font-size:12px;color:var(--muted);margin:8px 0}
+.section{background:var(--panel);border:1px solid #1e293b;border-radius:12px;padding:12px;margin-bottom:14px}
+</style>
 </head>
 <body>
-  <h1>📊 Living Portfolio Dashboard</h1>
+<div class="wrapper">
+  <h1>⚡ Living Portfolio Dashboard</h1>
+  <div class="sub">As of <span id="asof">—</span> · Status <span id="status">loading…</span></div>
 
-  <div id="core"></div>
-  <div id="swing"></div>
-  <div id="spec"></div>
-  <div id="catalysts"></div>
-  <div id="flow"></div>
-  <div id="weekly"></div>
+  <div class="section">
+    <h2>Core Portfolio</h2>
+    <table class="table" id="core">
+      <thead><tr><th>Ticker</th><th>Name</th><th>Weight</th><th>Badge</th><th>Q</th><th>Notes</th><th>Exits</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
-  <script>
-    async function loadData() {
-      const live = await fetch("live.json").then(r=>r.json());
-      const ir   = await fetch("ir-verify.json").then(r=>r.json());
+  <div class="section">
+    <h2>Swing Plays (3–6M)</h2>
+    <table class="table" id="swing">
+      <thead><tr><th>Ticker</th><th>Weight</th><th>Signal</th><th>Q</th><th>Notes</th><th>Exit</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
-      renderTable("Core Portfolio", live.core, "core");
-      renderTable("Swing Sleeve (3–6M)", live.swing, "swing");
-      renderTable("Speculative Sleeve", live.spec, "spec");
+  <div class="section">
+    <h2>Speculative Sleeve</h2>
+    <table class="table" id="spec">
+      <thead><tr><th>Ticker</th><th>Weight</th><th>Notes</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
-      // catalysts
-      let chtml = `<h2>Upcoming Catalysts</h2><table><tr><th>Date</th><th>Ticker</th><th>Event</th></tr>`;
-      (live.catalysts.company || []).forEach(ev=>{
-        chtml += `<tr><td>${ev.date}</td><td>${ev.ticker||""}</td><td>${ev.label}</td></tr>`;
-      });
-      (live.catalysts.macro || []).forEach(ev=>{
-        chtml += `<tr><td>${ev.date}</td><td>Macro</td><td>${ev.label}</td></tr>`;
-      });
-      chtml += `</table>`;
-      document.getElementById("catalysts").innerHTML = chtml;
+  <div class="section">
+    <h2>Catalyst Timeline (Next 90 Days)</h2>
+    <div id="timeline" class="note">Loading…</div>
+  </div>
+</div>
 
-      // flows
-      if(live.flow){
-        document.getElementById("flow").innerHTML = `<h2>Flows</h2><p>${live.flow.notes||""}</p>`;
-      }
+<script>
+const ENDPOINT = './live.json';
 
-      // weekly
-      if(live.weekly){
-        document.getElementById("weekly").innerHTML = `<h2>Weekly Note</h2><p>${live.weekly.blindspots_plan||""}</p>`;
-      }
-    }
+function tagQ(q){
+  if(q==null) return '';
+  if(q>=9) return `<span class="tag g">Q${q}</span>`;
+  if(q>=6) return `<span class="tag y">Q${q}</span>`;
+  return `<span class="tag r">Q${q}</span>`;
+}
 
-    function renderTable(title, items, targetId){
-      let html = `<h2>${title}</h2><table><tr><th>Ticker</th><th>Weight</th><th>Notes</th><th>Exits</th></tr>`;
-      items.forEach(i=>{
-        const rowClass = (i.sector==="Crypto") ? "crypto" : "";
-        html += `<tr class="${rowClass}">
-          <td>${i.ticker} <span class="tier">${i.badge||""}</span></td>
-          <td>${i.weight||""}</td>
-          <td>${i.notes||""}</td>
-          <td>${i.exits||""}</td>
-        </tr>`;
-      });
-      html += `</table>`;
-      document.getElementById(targetId).innerHTML = html;
-    }
+function renderTable(id, rows, cols){
+  const tb=document.querySelector(id+' tbody');
+  if(!rows || rows.length===0){ tb.innerHTML='<tr><td colspan="'+cols+'" class="note">—</td></tr>'; return; }
+  tb.innerHTML=rows.map(r=>`
+    <tr>
+      <td><span class="badge">${r.ticker||''}</span></td>
+      ${r.name?`<td>${r.name}</td>`:''}
+      ${r.weight?`<td>${r.weight}</td>`:(cols>2?'<td></td>':'')}
+      ${r.badge?`<td>${r.badge}</td>`:''}
+      ${r.q?`<td>${tagQ(r.q)}</td>`:''}
+      ${r.notes?`<td>${r.notes}</td>`:''}
+      ${r.exits?`<td>${r.exits}</td>`:''}
+    </tr>`).join('');
+}
 
-    loadData();
-  </script>
+function renderTimeline(items){
+  const el=document.getElementById('timeline');
+  if(!items||items.length===0){el.textContent='—';return;}
+  el.innerHTML=items.map(x=>`
+    <div><span class="tag y">${x.date||''}</span> ${x.ticker?x.ticker+' — ':''}${x.label||''}</div>
+  `).join('');
+}
+
+async function load(){
+  try{
+    const r=await fetch(ENDPOINT+'?cb='+Date.now(),{cache:'no-store'});
+    const j=await r.json();
+    document.getElementById('asof').textContent=new Date().toISOString().slice(0,16).replace('T',' ');
+    document.getElementById('status').textContent='OK';
+    renderTable('#core', j.core, 7);
+    renderTable('#swing', j.swing, 6);
+    renderTable('#spec', j.spec, 3);
+    renderTimeline(j.catalysts?.company||[]);
+  }catch(e){
+    document.getElementById('status').textContent='⚠️ Error';
+    document.querySelector('#core tbody').innerHTML='<tr><td colspan="7" class="note">live.json missing or invalid</td></tr>';
+    console.error(e);
+  }
+}
+load();
+</script>
 </body>
 </html>
