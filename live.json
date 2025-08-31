@@ -1,59 +1,81 @@
 {
-  "lastCheck": "2025-08-31T13:55:00+02:00",
-  "events": [
-    { "ticker": "PSTG", "date": "2025-08-27", "label": "Earnings beat & raise; Meta revenue recognized; multi-analyst upgrades" },
-    { "ticker": "PSTG", "date": "2025-09-25", "label": "Investor event — Meta ramp commentary" },
+  "asof": "2025-08-31T13:55:00+02:00",
 
-    { "ticker": "ET",   "date": "2025-08-28", "label": "Insider cluster buy (director repeat) — AVWAP hold monitor" },
-    { "ticker": "GPRE", "date": "2025-08-28", "label": "Oppenheimer upgrade → Outperform (PT $14)" },
+  "core": [
+    { "ticker": "TSM",  "name": "Taiwan Semiconductor", "weight": "5%",  "badge": "Tier 1 (LT)", "q": 9, "notes": "2nm (N2) ramp late-2025; AI/CoWoS demand; Apple & NVDA anchors; US/JP fab diversification", "exits": "N2 delay >2Q; GM <45%; 50-WMA fail", "sector": "Technology", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "NVDA", "name": "NVIDIA",               "weight": "5%",  "badge": "Tier 1 (LT)", "q": 9, "notes": "AI accelerator cadence; HBM/packaging capacity; DC momentum", "exits": "Datacenter orderbook cracks; 50-WMA fail", "sector": "Technology", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "MSFT", "name": "Microsoft",            "weight": "5%",  "badge": "Tier 1 (LT)", "q": 9, "notes": "Azure/Copilot monetization; enterprise durability", "exits": "Thesis break; 50-WMA fail", "sector": "Technology", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "AMZN", "name": "Amazon",               "weight": "4%",  "badge": "Tier 1 (LT)", "q": 8, "notes": "Retail mix + Ads + AWS GenAI attach", "exits": "Retail margin backslide; 50-WMA fail", "sector": "Consumer Discretionary", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "GOOGL","name": "Alphabet",             "weight": "4%",  "badge": "Tier 1 (LT)", "q": 8, "notes": "Search/YouTube durability; Cloud AI workloads", "exits": "Thesis break; 50-WMA fail", "sector": "Communication Services", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "META", "name": "Meta Platforms",       "weight": "4%",  "badge": "Tier 1 (LT)", "q": 8, "notes": "Ads recovery + AI infra leverage", "exits": "CPM/engagement deterioration; 50-WMA fail", "sector": "Communication Services", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "TSLA", "name": "Tesla",                "weight": "3%",  "badge": "Tier 2 (LT)", "q": 7, "notes": "Energy/storage + software optionality vs auto pricing risk", "exits": "Sustained auto GM compression; 50-WMA fail", "sector": "Consumer Discretionary", "updatedAt": "2025-08-31T13:55:00+02:00" },
 
-    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buys; breakout with >1.5× volume; close > event-day AVWAP" },
+    { "ticker": "WST",  "name": "West Pharmaceutical",  "weight": "3%",  "badge": "Tier 2 (LT)", "q": 8, "notes": "EPS beat + raised FY; price confirm", "exits": "Event-day AVWAP fail; thesis break", "sector": "Healthcare", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "PLTR", "name": "Palantir",             "weight": "3%",  "badge": "Tier 2 (LT)", "q": 7, "notes": "Raised guidance + new gov contracts; price confirm", "exits": "Event-day AVWAP fail; thesis break", "sector": "Technology", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "PSTG", "name": "Pure Storage",         "weight": "3%",  "badge": "Tier 2 (LT/Swing split 50/50)", "q": 8, "notes": "Beat & raise; Meta deployment confirmed; margins expanding; 9/25 event next", "exits": "Event-day AVWAP fail; Meta delay/margin reversal", "sector": "Technology", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "NVS",  "name": "Novartis",             "weight": "3%",  "badge": "Tier 2 (LT)", "q": 8, "notes": "EPS growth + margin expansion; recent approvals/trial wins (moat)", "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break", "sector": "Healthcare", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "INTC", "name": "Intel",                "weight": "3%",  "badge": "Tier 2 (LT) — Graduated", "q": 7, "notes": "EPS positive; net margin improving; strategic U.S. gov stake; price confirm", "exits": "Event-day AVWAP fail; 50-DMA fail; thesis break", "sector": "Technology", "updatedAt": "2025-08-31T13:55:00+02:00" },
 
-    { "ticker": "NVS",  "date": "2025-07-17", "label": "EPS growth + margin expansion; approvals/readouts (moat)" },
-    { "ticker": "INTC", "date": "2025-08-25", "label": "Strategic U.S. government stake; price confirm > event AVWAP" },
+    { "ticker": "AAPL", "name": "Apple",                "weight": "3%",  "badge": "Tier 3 (LT — ballast)", "q": 8, "notes": "Ecosystem moat + FCF; on-device AI cycle optionality", "exits": "Services MAU/ARPU decline; 50-WMA fail", "sector": "Technology", "updatedAt": "2025-08-31T13:55:00+02:00" },
 
-    { "ticker": "TSM",  "date": "2025-08-28", "label": "Reports: early allocation of 2nm (N2) capacity to Apple; packaging capacity watch" },
-
-    { "ticker": "VGT",  "date": "2025-08-29", "label": "Heartbeat outflow (~$3B) — monitor 3–5 sessions" },
-
-    { "ticker": "BTC",  "date": "2025-08-29", "label": "Spot-ETF net inflow shift (20d trend watch)" },
-    { "ticker": "ETH",  "date": "2025-08-29", "label": "Core-dev upgrade path steady; staking dynamics" },
-    { "ticker": "SOL",  "date": "2025-08-29", "label": "Uptime sustained; ecosystem milestones" },
-    { "ticker": "RNDR","date": "2025-08-29", "label": "AI-compute network utilization pickup" },
-    { "ticker": "ONDO","date": "2025-08-29", "label": "RWA adoption uptick (tokenized treasuries flows)" }
+    { "ticker": "VOO",  "name": "Vanguard S&P 500 ETF", "weight": "3%",  "badge": "Tier 3 (ETF core)", "q": 7, "notes": "Core beta; risk anchor", "exits": "Mandate shift", "sector": "ETFs", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "QQQ",  "name": "Invesco QQQ",          "weight": "2%",  "badge": "Tier 3 (ETF growth)", "q": 7, "notes": "Large-cap growth tilt; AI beneficiaries", "exits": "Mandate shift", "sector": "ETFs", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "SMH",  "name": "VanEck Semiconductor", "weight": "2%",  "badge": "Tier 3 (ETF semi)", "q": 7, "notes": "Semi cycle participation without single-name risk", "exits": "Cycle turns; trailing stop", "sector": "ETFs", "updatedAt": "2025-08-31T13:55:00+02:00" }
   ],
-  "graduations": [
-    {
-      "ticker": "PSTG",
-      "tier": "Tier 2 (3%)",
-      "proof": "Beat & raise; GM expansion (~72%); Meta deployment confirmed; multi-upgrades; price confirm vs event-day AVWAP",
-      "source": "Company ER + analyst notes",
-      "date": "2025-08-28"
-    },
-    {
-      "ticker": "ASAN",
-      "tier": "Tier 3 (1.5%)",
-      "proof": "Founder/insider buys; range-high breakout on >1.5× volume; close > event-day AVWAP",
-      "source": "SEC Form 4 + price/volume tape",
-      "date": "2025-08-28"
-    },
-    {
-      "ticker": "NVS",
-      "tier": "Tier 2 (3%)",
-      "proof": "Core EPS growth; margin expansion; multiple approvals indicating moat",
-      "source": "Company results + regulatory",
-      "date": "2025-08-29"
-    },
-    {
-      "ticker": "INTC",
-      "tier": "Tier 2 (3–5%)",
-      "proof": "EPS positive; net margin improvement; strategic U.S. government stake (moat); price confirm",
-      "source": "Major media + filings coverage",
-      "date": "2025-08-25"
-    }
+
+  "swing": [
+    { "ticker": "ET",   "name": "Energy Transfer",       "weight": "1.2%", "signal": "🟢", "q": 7, "notes": "Insider cluster buy; AVWAP hold monitor", "exits": "Lose event AVWAP on >1.5× vol; thesis break", "eventType": "Insider Buy", "eventDate": "2025-08-28", "sector": "Energy", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "GPRE", "name": "Green Plains",          "weight": "1.0%", "signal": "🟢", "q": 6, "notes": "Upgrade to Outperform (PT $14); balance-sheet de-risk; policy tailwinds", "exits": "Event-day AVWAP fail; policy reversal; margin backslide", "eventType": "Analyst Upgrade", "eventDate": "2025-08-28", "sector": "Energy", "updatedAt": "2025-08-31T13:55:00+02:00" },
+
+    { "ticker": "WMT",  "name": "Walmart",               "weight": "1.0%", "signal": "🟡", "q": 6, "notes": "Staples + ads mix; steady comps; defensiveness into macro prints", "exits": "50-DMA fail; thesis break", "eventType": "Company", "eventDate": "2025-08-29", "sector": "Consumer Staples", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "MSCI", "name": "MSCI Inc.",             "weight": "0.8%", "signal": "🟡", "q": 6, "notes": "Indexing/data resilience; watch issuance/flows", "exits": "50-DMA fail; thesis break", "eventType": "Company", "eventDate": "2025-08-29", "sector": "Financials", "updatedAt": "2025-08-31T13:55:00+02:00" },
+
+    { "ticker": "PSTG", "name": "Pure Storage",          "weight": "1.5%", "signal": "🟢", "q": 8, "notes": "Beat/raise; Meta deployment; 9/25 event — swing leg is 50% of total position", "exits": "Event-day AVWAP fail; margin reversal", "eventType": "Company", "eventDate": "2025-08-27", "sector": "Technology", "updatedAt": "2025-08-31T13:55:00+02:00" },
+
+    { "ticker": "BTC",  "name": "Bitcoin (via spot-ETF)", "weight": "1.0%", "signal": "🟡", "q": 6, "notes": "Spot-ETF 5d net inflow improving; risk-on sensitivity", "exits": "Lose AVWAP from latest inflow day; macro risk-off spike", "eventType": "Crypto Flow", "eventDate": "2025-08-29", "sector": "Crypto", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "ETH",  "name": "Ethereum",               "weight": "0.8%", "signal": "🟡", "q": 6, "notes": "Core-dev cadence; upgrade path steady", "exits": "Break of weekly 200-SMA; dev delay + risk-off", "eventType": "Crypto Dev", "eventDate": "2025-08-29", "sector": "Crypto", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "SOL",  "name": "Solana",                 "weight": "0.6%", "signal": "🟡", "q": 6, "notes": "Uptime + ecosystem milestones", "exits": "Outage >1h or perf degradation; 50-DMA fail", "eventType": "Crypto Infra", "eventDate": "2025-08-29", "sector": "Crypto", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "RNDR", "name": "Render",                 "weight": "0.6%", "signal": "🟡", "q": 6, "notes": "AI-compute network utilization pickup", "exits": "Utilization drop 20%/4w; 50-DMA fail", "eventType": "Crypto Adoption", "eventDate": "2025-08-29", "sector": "Crypto", "updatedAt": "2025-08-31T13:55:00+02:00" },
+    { "ticker": "ONDO", "name": "Ondo Finance",           "weight": "0.5%", "signal": "🟡", "q": 6, "notes": "RWA adoption (tokenized treasuries flows)", "exits": "TVL drop >15%/4w; thesis break", "eventType": "Crypto Adoption", "eventDate": "2025-08-29", "sector": "Crypto", "updatedAt": "2025-08-31T13:55:00+02:00" }
   ],
-  "alerts": [
-    { "date": "2025-08-29T13:20:00+02:00", "type": "flow", "label": "VGT ~−$3B heartbeat outflow; monitor 3–5 sessions" },
-    { "date": "2025-08-30T10:22:00+02:00", "type": "macro-refresh", "label": "Catalysts.macro refreshed: Sep 2–5 (Case-Shiller, Beige Book, ADP/Claims/ULC, NFP/UR/AHE) — keep next 10 days only" }
-  ]
+
+  "spec": [
+    { "ticker": "ASAN", "name": "Asana", "weight": "1.5%", "signal": "🟢", "q": 6, "notes": "Founder/insider cluster buys; price-confirm breakout", "graduation": "watch", "graduationCriteria": ["Sustain > event-day AVWAP", "EPS trajectory to positive", "Net margin expansion"], "sector": "Technology", "updatedAt": "2025-08-31T13:55:00+02:00" }
+  ],
+
+  "catalysts": {
+    "company": [
+      { "date": "2025-08-27", "ticker": "PSTG", "label": "Beat & raise; Meta revenue recognized", "color": "g", "impact": "High" },
+      { "date": "2025-09-25", "ticker": "PSTG", "label": "Investor event — Meta ramp commentary", "color": "y", "impact": "Med" },
+
+      { "date": "2025-08-28", "ticker": "ET",   "label": "Insider cluster buy — confirmation watch", "color": "g", "impact": "Med" },
+      { "date": "2025-08-28", "ticker": "GPRE", "label": "Upgrade to Outperform (PT $14)", "color": "g", "impact": "Med" },
+
+      { "date": "2025-08-25", "ticker": "INTC", "label": "Strategic U.S. gov stake; price confirm", "color": "g", "impact": "High" },
+      { "date": "2025-07-17", "ticker": "NVS",  "label": "EPS growth + margin expansion; approvals/readouts", "color": "g", "impact": "High" },
+
+      { "date": "2025-08-28", "ticker": "TSM",  "label": "Reports: early N2 allocation to Apple; packaging capacity watch", "color": "y", "impact": "Med" }
+    ],
+    "macro": [
+      { "date": "2025-09-02", "label": "Case-Shiller (Jul); FHFA HPI", "color": "y", "impact": "Med" },
+      { "date": "2025-09-03", "label": "Fed Beige Book", "color": "y", "impact": "Med" },
+      { "date": "2025-09-04", "label": "ADP (Aug); Initial Claims (wk of Aug 30); Unit Labor Costs (Q2 rev)", "color": "y", "impact": "Med" },
+      { "date": "2025-09-05", "label": "Nonfarm Payrolls/Unemployment Rate/AHE (Aug)", "color": "y", "impact": "High" }
+    ]
+  },
+
+  "flow": {
+    "vgt_heartbeat_outflow_usd_mm": -3000,
+    "notes": "Tech sector ETF heartbeat outflow observed; monitor normalization over next 3–5 sessions."
+  },
+
+  "weekly": {
+    "blindspots_plan": "Risk rotation executed: trimmed Sector A −2ppt to 30%, Tier2 X −1ppt to 5%, Tier3 Y −1ppt to 2%, BTC −2ppt to 5%, SOL −1ppt to 3%; boosted ETH +1ppt to 5%. Total crypto now 15%, Spec at 5%. All caps respected."
+  },
+
+  "meta": {
+    "today": { "adds": 2, "promotions": 1, "exits": 0 }
+  },
+
+  "hash": "2025-08-31T13:55:00+02:00"
 }
