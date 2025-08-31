@@ -1,62 +1,133 @@
 {
-  "lastCheck": "2025-08-31T12:05:00+02:00",
-  "events": [
-    { "ticker": "ET",   "date": "2025-08-28", "label": "Insider cluster buy (director repeat) — AVWAP hold monitor" },
-    { "ticker": "GPRE", "date": "2025-08-28", "label": "Oppenheimer upgrade → Outperform (PT $14)" },
-    { "ticker": "PSTG", "date": "2025-08-27", "label": "Beat & raise; Meta revenue recognized; multi-analyst upgrades" },
-    { "ticker": "PSTG", "date": "2025-09-25", "label": "Investor event — Meta ramp commentary" },
-    { "ticker": "TSM",  "date": "2025-08-28", "label": "Reports: early allocation of 2nm (N2) capacity to Apple; packaging capacity watch" },
-    { "ticker": "BTC",  "date": "2025-08-29", "label": "Spot-ETF net inflow shift (trend watch)" },
-    { "ticker": "ETH",  "date": "2025-08-29", "label": "Core-dev upgrade cadence; staking dynamics" },
-    { "ticker": "SOL",  "date": "2025-08-29", "label": "Uptime sustained; ecosystem milestones" },
-    { "ticker": "RNDR", "date": "2025-08-29", "label": "AI-compute network utilization pickup" },
-    { "ticker": "ONDO", "date": "2025-08-29", "label": "RWA adoption uptick (tokenized treasuries flows)" },
-    { "ticker": "WST",  "date": "2025-07-24", "label": "EPS beat + raised FY EPS; price confirm" },
-    { "ticker": "PLTR", "date": "2025-08-20", "label": "Raised guidance + new gov contracts; price confirm" },
-    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buys; breakout with >1.5× volume" },
-    { "ticker": "NVS",  "date": "2025-07-17", "label": "EPS growth + margin expansion; approvals/readouts (moat)" },
-    { "ticker": "VGT",  "date": "2025-08-29", "label": "Heartbeat outflow (~$3B) from ETF.com email" }
-  ],
-  "graduations": [
+  "asof": "2025-08-31T07:46:00Z",
+  "core": [
     {
-      "ticker": "PSTG",
-      "tier": "Tier 2 (3%)",
-      "proof": "Beat & raise; GM expansion; Meta deployment confirmed; multi-upgrades; price confirm vs event-day AVWAP",
-      "source": "Company ER + analyst notes",
-      "date": "2025-08-28"
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor",
+      "weight": "5%",
+      "badge": "Tier 1 (LT)",
+      "q": 9,
+      "notes": "N2 (2nm) ramp late-2025; AI/CoWoS demand; Apple & NVDA anchors; US/JP fab diversification",
+      "exits": "N2 delay >2Q; GM <45%; 50-WMA fail",
+      "sector": "Technology",
+      "updatedAt": "2025-08-31T07:46:00Z"
     },
     {
-      "ticker": "ASAN",
-      "tier": "Tier 3 (1.5%)",
-      "proof": "Founder/insider buys; range-high breakout on >1.5× volume; close > event-day AVWAP",
-      "source": "SEC Form 4 + tape",
-      "date": "2025-08-28"
+      "ticker": "NVDA",
+      "name": "Nvidia",
+      "weight": "5%",
+      "badge": "Tier 1 (LT)",
+      "q": 9,
+      "notes": "AI accelerator cadence; HBM/packaging capacity",
+      "exits": "Datacenter orderbook cracks; 50-WMA fail",
+      "sector": "Technology",
+      "updatedAt": "2025-08-31T07:46:00Z"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "weight": "4%",
+      "badge": "Tier 1 (LT)",
+      "q": 8,
+      "notes": "Azure/Copilot monetization",
+      "exits": "Thesis break; 50-WMA fail",
+      "sector": "Technology",
+      "updatedAt": "2025-08-31T07:46:00Z"
+    },
+    {
+      "ticker": "WST",
+      "name": "West Pharmaceutical",
+      "weight": "3%",
+      "badge": "Tier 2 (LT)",
+      "q": 8,
+      "notes": "EPS beat + raised FY; price confirm",
+      "exits": "Event-day AVWAP fail; thesis break",
+      "sector": "Healthcare",
+      "updatedAt": "2025-08-31T07:46:00Z"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "weight": "3%",
+      "badge": "Tier 2 (LT)",
+      "q": 7,
+      "notes": "Raised guidance + new gov contracts; price confirm",
+      "exits": "Event-day AVWAP fail; thesis break",
+      "sector": "Technology",
+      "updatedAt": "2025-08-31T07:46:00Z"
+    },
+    {
+      "ticker": "PSTG",
+      "name": "Pure Storage",
+      "weight": "3%",
+      "badge": "Tier 2 (Split swing/LT)",
+      "q": 7,
+      "notes": "Beat & raise; Meta deployment confirmed; GM expansion",
+      "exits": "AVWAP fail; Meta delay/margin reversal",
+      "sector": "Technology",
+      "updatedAt": "2025-08-31T07:46:00Z"
     },
     {
       "ticker": "NVS",
-      "tier": "Tier 2 (3%)",
-      "proof": "Core EPS growth; margin expansion; multiple approvals indicating moat",
-      "source": "Company results + regulatory",
-      "date": "2025-08-29"
-    },
-    {
-      "ticker": "INTC",
-      "tier": "Tier 2 (3–5%)",
-      "proof": "EPS positive; net margin improvement; strategic US government stake (moat); price confirm",
-      "source": "Major media + filings summary",
-      "date": "2025-08-25"
+      "name": "Novartis",
+      "weight": "3%",
+      "badge": "Tier 2 (LT)",
+      "q": 7,
+      "notes": "EPS growth + margin expansion; recent approvals",
+      "exits": "AVWAP fail; 50-DMA fail; thesis break",
+      "sector": "Healthcare",
+      "updatedAt": "2025-08-31T07:46:00Z"
     }
   ],
-  "alerts": [
+  "swing": [
     {
-      "date": "2025-08-29T13:20:00+02:00",
-      "type": "flow",
-      "label": "VGT ~−$3B heartbeat outflow; monitor 3–5 sessions"
+      "ticker": "ET",
+      "weight": "1.5%",
+      "signal": "Insider cluster buy (director repeat); AVWAP hold",
+      "q": 7,
+      "notes": "Close > event AVWAP; propose Swing Tier 1–1.5%",
+      "exits": "Lose event AVWAP on >1.5x vol; thesis break",
+      "eventType": "Insider Buy",
+      "eventDate": "2025-08-28",
+      "sector": "Energy",
+      "updatedAt": "2025-08-31T07:46:00Z"
     },
     {
-      "date": "2025-08-30T10:22:00+02:00",
-      "type": "macro-refresh",
-      "label": "Catalysts.macro refreshed: next 10 days (Case-Shiller, Beige Book, ADP/Claims/ULC, NFP/UR/AHE)"
+      "ticker": "GPRE",
+      "weight": "1.0%",
+      "signal": "Oppenheimer upgrade → Outperform (PT $14)",
+      "q": 6,
+      "notes": "De-levered balance sheet; policy support",
+      "exits": "AVWAP fail; policy reversal",
+      "eventType": "Analyst Upgrade",
+      "eventDate": "2025-08-28",
+      "sector": "Energy",
+      "updatedAt": "2025-08-31T07:46:00Z"
     }
-  ]
+  ],
+  "spec": [
+    {
+      "ticker": "ASAN",
+      "weight": "1.5%",
+      "signal": "Founder/insider cluster buys; breakout > range highs",
+      "q": 6,
+      "notes": "Close > event AVWAP; graduation watch",
+      "graduation": "watch",
+      "graduationCriteria": ["EPS positive", "Net margin expansion", "Moat signal (contract/approval)"],
+      "sector": "Technology",
+      "updatedAt": "2025-08-31T07:46:00Z"
+    }
+  ],
+  "catalysts": {
+    "company": [
+      { "date": "2025-09-25", "ticker": "PSTG", "label": "Investor event — Meta ramp commentary", "color": "y", "impact": "Med" },
+      { "date": "2025-08-28", "ticker": "GPRE", "label": "Upgrade → Outperform (PT $14)", "color": "g", "impact": "Med" },
+      { "date": "2025-08-28", "ticker": "ET",   "label": "Insider cluster buy — monitor AVWAP", "color": "g", "impact": "Med" }
+    ],
+    "macro": [
+      { "date": "2025-08-29", "label": "Core PCE (Jul)", "color": "y", "impact": "High" },
+      { "date": "2025-09-03", "label": "Fed Beige Book", "color": "y", "impact": "Med" }
+    ]
+  },
+  "hash": "2025-08-31T07:46:00Z"
 }
