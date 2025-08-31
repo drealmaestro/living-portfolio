@@ -1,132 +1,82 @@
 {
-  "updated": "2025-08-31T10:45:00+02:00",
-  "mergeMode": true,
-  "laneChecks": [
+  "lastCheck": "2025-08-29T09:45:00+02:00",
+  "lastCheck": "2025-08-30T10:22:00+02:00",
+  "events": [
+    { "ticker": "ET", "date": "2025-08-28", "label": "Insider Buy (cluster)" },
+    { "ticker": "GPRE", "date": "2025-08-28", "label": "Analyst upgrade to Outperform (PT $14)" },
+    { "ticker": "PSTG", "date": "2025-08-27", "label": "Earnings beat & raise; Meta revenue recognized; multi-analyst upgrades" },
+    { "ticker": "ET",   "date": "2025-08-28", "label": "Insider cluster buy (director repeat) — AVWAP hold monitor" },
+    { "ticker": "GPRE", "date": "2025-08-28", "label": "Oppenheimer upgrade → Outperform (PT $14)" },
+    { "ticker": "PSTG", "date": "2025-08-27", "label": "Beat & raise; Meta revenue recognized; multi-analyst upgrades" },
+    { "ticker": "PSTG", "date": "2025-09-25", "label": "Investor event — Meta ramp commentary" },
+    { "ticker": "TSM", "date": "2025-08-28", "label": "Reports: early allocation of 2nm (N2) capacity to Apple; packaging capacity watch" },
+    { "ticker": "BTC", "date": "2025-08-29", "label": "ETF net inflow shift" },
+    { "ticker": "ETH", "date": "2025-08-29", "label": "Dev call/upgrade notes" },
+    { "ticker": "SOL", "date": "2025-08-29", "label": "Uptime/ecosystem milestone" },
+    { "ticker": "RNDR", "date": "2025-08-29", "label": "Network utilization up" },
+    { "ticker": "ONDO", "date": "2025-08-29", "label": "RWA adoption uptick" },
+    { "ticker": "WST", "date": "2025-07-24", "label": "EPS beat + raised FY EPS; price confirm" },
+    { "ticker": "PLTR", "date": "2025-08-20", "label": "Raised guidance + gov contracts; price confirm" },
+    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buy; price-confirm breakout" },
+    { "ticker": "NVS", "date": "2025-07-17", "label": "EPS growth + margin expansion; FDA/clinical wins" }
+    { "ticker": "TSM",  "date": "2025-08-28", "label": "Reports: early allocation of 2nm (N2) capacity to Apple; pkg capacity watch" },
+    { "ticker": "INTC", "date": "2025-08-25", "label": "Strategic U.S. government stake; price confirm > event AVWAP" },
+    { "ticker": "BTC",  "date": "2025-08-29", "label": "Spot-ETF net inflow shift (20d trend watch)" },
+    { "ticker": "ETH",  "date": "2025-08-29", "label": "Core-dev upgrade path steady; staking dynamics" },
+    { "ticker": "SOL",  "date": "2025-08-29", "label": "Uptime sustained; ecosystem milestones" },
+    { "ticker": "RNDR", "date": "2025-08-29", "label": "AI-compute network utilization pickup" },
+    { "ticker": "ONDO", "date": "2025-08-29", "label": "RWA adoption uptick (tokenized treasuries flows)" },
+    { "ticker": "WST",  "date": "2025-07-24", "label": "EPS beat + raised FY EPS; price confirm" },
+    { "ticker": "PLTR", "date": "2025-08-20", "label": "Raised guidance + new gov contracts; price confirm" },
+    { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buys; breakout with >1.5× vol" },
+    { "ticker": "NVS",  "date": "2025-07-17", "label": "EPS growth + margin expansion; approvals/readouts (moat)" },
+    { "ticker": "VGT",  "date": "2025-08-29", "label": "Heartbeat outflow (~$3B) from ETF.com email" }
+  ],
+  "graduations": [
     {
       "ticker": "PSTG",
-      "lane": "Foundation",
-      "foundationProof": {
-        "eps": "ER beat/raise 2025-08-27",
-        "margin": "GM ~72% q/q up",
-        "revenue": ">10% organic trajectory; FY26 raised",
-        "roic": "Mgmt >15% target; trend improving",
-        "fcf": "Positive TTM"
-      },
-      "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": true },
-      "source": ["Open in Gmail", "Company PR", "Analyst notes"]
-    },
-    {
-      "ticker": "WST",
-      "lane": "Foundation",
-      "foundationProof": {
-        "eps": "ER beat/raise recent",
-        "margin": "Expanding; scale benefits",
-        "revenue": ">10% organic",
-        "roic": ">15% rising",
-        "fcf": "Positive"
-      },
-      "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": true },
-      "source": ["Open in Gmail", "Earnings recap"]
-    },
-    {
-      "ticker": "PLTR",
-      "lane": "Foundation",
-      "foundationProof": {
-        "eps": "Beat/raise; profitable",
-        "margin": "Improving net margin",
-        "revenue": ">10% organic",
-        "roic": ">15% rising",
-        "fcf": "Positive"
-      },
-      "eventProof": { "contract": "10-yr Army program award" },
-      "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": true },
-      "source": ["Open in Gmail", "DoD contract note"]
-    },
-    {
-      "ticker": "INTC",
-      "lane": "Exception",
-      "exceptionProof": {
-        "reasons": ["Strategic capacity build; policy support"],
-        "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": true }
-      },
-      "foundationMiss": ["ROIC >15% rising", "Revenue >10% organic"],
-      "source": ["Open in Gmail", "Policy/industry coverage"]
-    },
-    {
-      "ticker": "NVS",
-      "lane": "Foundation",
-      "foundationProof": {
-        "eps": "Recent beat",
-        "margin": "High, expanding",
-        "revenue": ">10% organic segments",
-        "roic": ">15% rising",
-        "fcf": "Positive"
-      },
-      "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": false },
-      "source": ["Open in Gmail", "ER wrap"]
+      "tier": "Tier 2 (3%)",
+      "proof": "Beat & raise; GM expansion; Meta deployment confirmed; multi-upgrades; price confirm vs event-day AVWAP",
+      "source": "Earnings release + analyst roundups",
+      "source": "Company ER + analyst notes",
+      "date": "2025-08-28"
     },
     {
       "ticker": "ASAN",
-      "lane": "Exception",
-      "exceptionProof": {
-        "reasons": ["Founder/insider cluster buys; category leadership"],
-        "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": true }
-      },
-      "foundationMiss": ["EPS positive", "ROIC >15%", "FCF positive"],
-      "source": ["Open in Gmail", "SEC Form 4 digest"]
+      "tier": "Tier 3 (1.5%)",
+      "proof": "Founder/insider buys; range-high breakout on >1.5× volume; close > event-day AVWAP",
+      "source": "SEC Form 4 + price/volume tape",
+      "source": "SEC Form 4 + tape",
+      "date": "2025-08-28"
     },
     {
-      "ticker": "BTC",
-      "lane": "Exception",
-      "exceptionProof": {
-        "reasons": ["Non-equity; ETF net flows signal"],
-        "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": false }
-      },
-      "source": ["Open in Gmail", "ETF flow email"]
+      "ticker": "NVS",
+      "tier": "Tier 2 (3%)",
+      "proof": "Core EPS +24% YoY; core OI margin +340 bps; multiple approvals/readouts indicating moat",
+      "source": "Company results + regulatory disclosures",
+      "proof": "Core EPS growth; margin expansion; multiple approvals indicating moat",
+      "source": "Company results + regulatory",
+      "date": "2025-08-29"
     },
     {
-      "ticker": "ETH",
-      "lane": "Exception",
-      "exceptionProof": {
-        "reasons": ["Upgrade/dev-call cadence"],
-        "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": false }
-      },
-      "source": ["Open in Gmail", "Dev-call notes"]
-    },
-    {
-      "ticker": "SOL",
-      "lane": "Exception",
-      "exceptionProof": {
-        "reasons": ["Uptime/adoption momentum"],
-        "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": false }
-      },
-      "source": ["Open in Gmail", "Ecosystem update"]
-    },
-    {
-      "ticker": "ONDO",
-      "lane": "Exception",
-      "exceptionProof": {
-        "reasons": ["RWA adoption"],
-        "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": false }
-      },
-      "source": ["Open in Gmail", "RWA newsletter"]
-    },
-    {
-      "ticker": "RNDR",
-      "lane": "Exception",
-      "exceptionProof": {
-        "reasons": ["AI-compute demand"],
-        "tapeConfirm": { "wk200SMA": true, "eventAVWAPHold": true, "vol1p5x": false }
-      },
-      "source": ["Open in Gmail", "AI infra brief"]
+      "ticker": "INTC",
+      "tier": "Tier 2 (3–5%)",
+      "proof": "EPS positive; net margin improvement; strategic U.S. government stake (moat); price confirm",
+      "source": "Reuters/WSB coverage",
+      "date": "2025-08-25"
     }
   ],
-  "macroChecks": [
-    { "label": "Initial Jobless Claims", "date": "2025-08-28 08:30", "status": "queued" },
-    { "label": "US GDP (Q2 2nd est.)", "date": "2025-08-28 12:30", "status": "queued" },
-    { "label": "Corporate Profits (Prelim Q2)", "date": "2025-08-28 12:30", "status": "queued" },
-    { "label": "PCE Price Index (Jul)", "date": "2025-08-29 08:30", "status": "queued" },
-    { "label": "Michigan Sentiment (Final Aug)", "date": "2025-08-29 10:00", "status": "queued" }
-  ],
-  "carryNotes": "Add any older tickers you want to preserve to 'nearMiss' (with carryOver:true) or move into 'spec' with a small weight; they will persist across overrides."
+  "alerts": []
+  "alerts": [
+    {
+      "date": "2025-08-29T13:20:00+02:00",
+      "type": "flow",
+      "label": "VGT ~−$3B heartbeat outflow; monitor 3–5 sessions"
+    },
+    {
+      "date": "2025-08-30T10:22:00+02:00",
+      "type": "macro-refresh",
+      "label": "Catalysts.macro refreshed: Sep 2–5 (Case-Shiller, Beige Book, ADP/Claims/ULC, NFP/UR/AHE, PCE) — keep next 10 days only"
+    }
+  ]
 }
