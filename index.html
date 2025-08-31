@@ -3,33 +3,34 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Living Portfolio — v3 Clean Briefing</title>
+<title>Living Portfolio — v3.1 Clean Spacious</title>
 <style>
 :root{
   --bg:#0b1220; --panel:#0f172a; --muted:#94a3b8; --text:#e2e8f0;
   --g:#10b981; --y:#f59e0b; --r:#ef4444; --b:#38bdf8; --card:#111827;
-  --chip:#0b2538;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
-.wrapper{max-width:1200px;margin:auto;padding:16px}
-.header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;margin-bottom:12px}
-.h1{font-size:20px;font-weight:700}
-.sub{color:var(--muted);font-size:12px}
-.row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
-.card{background:var(--panel);border:1px solid #0b2540;border-radius:14px;padding:12px;box-shadow:0 0 0 1px rgba(59,130,246,0.06) inset}
-.h2{font-size:14px;letter-spacing:.02em;text-transform:uppercase;color:#93c5fd;margin:4px 0 10px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:15px;line-height:1.5}
+.wrapper{max-width:1280px;margin:auto;padding:20px}
+.header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;margin-bottom:16px}
+.h1{font-size:22px;font-weight:700}
+.sub{color:var(--muted);font-size:14px}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.card{background:var(--panel);border:1px solid #0b2540;border-radius:14px;padding:16px;box-shadow:0 0 0 1px rgba(59,130,246,0.06) inset;margin-bottom:14px}
+.h2{font-size:16px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:#93c5fd;margin:8px 0 12px}
 .table{width:100%;border-collapse:collapse}
-.table th,.table td{font-size:12px;padding:6px;border-bottom:1px solid #0b2540}
+.table th,.table td{font-size:14px;padding:8px;border-bottom:1px solid #0b2540}
 .table th{color:#a5b4fc;font-weight:600;text-align:left}
-.badge{padding:2px 8px;border-radius:999px;background:#0b1b2c;border:1px solid #1b3a5a;color:#7dd3fc;font-weight:600}
-.tag{padding:2px 8px;border-radius:999px;font-size:11px;margin-right:4px}
+.badge{padding:4px 10px;border-radius:999px;background:#0b1b2c;border:1px solid #1b3a5a;color:#7dd3fc;font-weight:600;font-size:13px}
+.tag{padding:3px 8px;border-radius:999px;font-size:12px;margin-right:4px}
 .tag.g{background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.35)}
 .tag.y{background:rgba(245,158,11,.15);color:#fbbf24;border:1px solid rgba(245,158,11,.35)}
 .tag.r{background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.35)}
-.timeline{display:grid;gap:6px;max-height:420px;overflow:auto}
-.timeline .item{display:flex;gap:8px;align-items:center;background:#0b1b2c;border:1px solid #1b3a5a;border-radius:10px;padding:8px}
-.small{font-size:11px;color:var(--muted)}
+.timeline{display:grid;gap:8px;max-height:500px;overflow:auto}
+.timeline .item{display:flex;gap:12px;align-items:center;background:#0b1b2c;border:1px solid #1b3a5a;border-radius:10px;padding:10px;font-size:14px}
+.flag{font-size:18px}
+.small{font-size:13px;color:var(--muted)}
+input[type="search"]{padding:8px 12px;border-radius:10px;background:#0b1b2c;border:1px solid #1b3a5a;color:var(--text);font-size:14px}
 </style>
 </head>
 <body>
@@ -37,10 +38,10 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui
 
   <div class="header">
     <div>
-      <div class="h1">⚡ Living Portfolio Dashboard — v3 Clean Briefing</div>
+      <div class="h1">⚡ Living Portfolio Dashboard — v3.1</div>
       <div class="sub">As-of <span id="asof">—</span></div>
     </div>
-    <input id="q" type="search" placeholder="Search ticker…" style="background:#0b1b2c;border:1px solid #1b3a5a;color:var(--text);padding:6px 10px;border-radius:10px"/>
+    <input id="q" type="search" placeholder="Search ticker…"/>
   </div>
 
   <div class="row" id="topKPIs">
@@ -57,7 +58,7 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui
   <div class="card">
     <div class="h2">Swing Plays (3–6M)</div>
     <table class="table" id="swingTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Signal</th><th>Notes</th></tr></thead><tbody></tbody></table>
-    <hr style="border:0;border-top:1px solid #0b2540;margin:8px 0"/>
+    <hr style="border:0;border-top:1px solid #0b2540;margin:12px 0"/>
     <div class="h2">Speculative Sleeve (Graduation Watch)</div>
     <table class="table" id="specTable"><thead><tr><th>Ticker</th><th>Weight</th><th>Signal</th><th>Notes</th></tr></thead><tbody></tbody></table>
   </div>
@@ -71,7 +72,60 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui
 </div>
 
 <script>
-// placeholder: your render/load functions go here, unchanged from v2/v3
+const ENDPOINT='https://drealmaestro.github.io/living-portfolio/live.json';
+const $=sel=>document.querySelector(sel);
+const $$=sel=>Array.from(document.querySelectorAll(sel));
+
+function renderCore(core){
+  const wrap=$('#coreGroups'); wrap.innerHTML='';
+  core.forEach(it=>{
+    wrap.innerHTML+=`<div style="margin-bottom:8px"><span class="badge">${it.ticker}</span> · ${it.weight||''} · ${it.notes||''}</div>`;
+  });
+}
+function renderSwing(rows){
+  const tb=$('#swingTable tbody'); tb.innerHTML='';
+  rows.forEach(r=>{tb.innerHTML+=`<tr><td><span class="badge">${r.ticker}</span></td><td>${r.weight||''}</td><td>${r.signal||''}</td><td>${r.notes||''}</td></tr>`;});
+}
+function renderSpec(rows){
+  const tb=$('#specTable tbody'); tb.innerHTML='';
+  rows.forEach(r=>{tb.innerHTML+=`<tr><td><span class="badge">${r.ticker}</span></td><td>${r.weight||''}</td><td>${r.signal||''}</td><td>${r.notes||''}</td></tr>`;});
+}
+function renderTimeline(cats){
+  const el=$('#timeline'); el.innerHTML='';
+  (cats.company||[]).forEach(x=>{
+    const flag=x.impact==='High'?'🟢':x.impact==='Med'?'🟡':'🔴';
+    el.innerHTML+=`<div class="item"><span class="flag">${flag}</span><div>${x.date} — ${x.ticker||''} ${x.label}</div></div>`;
+  });
+  (cats.macro||[]).forEach(x=>{
+    const flag=x.impact==='High'?'🟢':x.impact==='Med'?'🟡':'🔴';
+    el.innerHTML+=`<div class="item"><span class="flag">${flag}</span><div>${x.date} — ${x.label}</div></div>`;
+  });
+}
+function computeKPIs(data){
+  const sectors={}; (data.core||[]).forEach(it=>{sectors[it.sector||'Other']=(sectors[it.sector||'Other']||0)+parseFloat(it.weight)||0;});
+  $('#kpiSectors').textContent=Object.entries(sectors).map(([k,v])=>`${k} ${v.toFixed(0)}%`).join(' · ');
+  const specPct=(data.spec||[]).reduce((s,x)=>s+(parseFloat(x.weight)||0),0);
+  $('#kpiSpec').textContent=`${specPct.toFixed(1)}%`;
+  $('#kpiFlow').textContent=data.flow?.notes||'—';
+}
+function render(data){
+  $('#asof').textContent=new Date().toISOString().slice(0,16).replace('T',' ');
+  renderCore(data.core||[]);
+  renderSwing(data.swing||[]);
+  renderSpec(data.spec||[]);
+  renderTimeline(data.catalysts||{company:[],macro:[]});
+  computeKPIs(data);
+}
+async function load(){
+  try{const r=await fetch(ENDPOINT+'?cb='+Date.now()); const j=await r.json(); render(j);}catch(e){console.error(e);}
+}
+$('#q').addEventListener('input',e=>{
+  const q=e.target.value.toUpperCase();
+  $$('table tbody tr, #coreGroups div, #timeline .item').forEach(el=>{
+    el.style.display=el.textContent.toUpperCase().includes(q)?'':'none';
+  });
+});
+load(); setInterval(load,180000);
 </script>
 </body>
 </html>
