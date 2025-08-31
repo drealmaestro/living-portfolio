@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>⚡ Living Portfolio Dashboard</title>
 <style>
 :root{
   --bg:#0b1220; --panel:#0f172a; --muted:#94a3b8; --text:#e2e8f0;
-  --g:#10b981; --y:#f59e0b; --r:#ef4444; --b:#38bdf8; --card:#111827;
+  --g:#10b981; --y:#f59e0b; --r:#ef4444; --b:#38bdf8;
 }
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);
+font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
 .wrapper{max-width:1200px;margin:auto;padding:16px}
-h1{font-size:20px;font-weight:700;margin:0}
-.sub{color:var(--muted);font-size:12px;margin-bottom:16px}
-.table{width:100%;border-collapse:collapse;margin-bottom:12px}
+h1{margin:0 0 6px;font-size:22px}
+.sub{color:var(--muted);font-size:12px;margin:0 0 12px}
+.section{background:var(--panel);border:1px solid #1e293b;border-radius:12px;padding:12px;margin:10px 0}
+.table{width:100%;border-collapse:collapse}
 .table th,.table td{font-size:12px;text-align:left;padding:6px;border-bottom:1px solid #1e293b}
 .table th{color:#93c5fd;font-weight:600;text-transform:uppercase;font-size:11px}
 .badge{display:inline-block;padding:2px 6px;border-radius:6px;background:#1e293b;color:#7dd3fc}
@@ -21,20 +23,22 @@ h1{font-size:20px;font-weight:700;margin:0}
 .tag.g{background:rgba(16,185,129,.15);color:#34d399}
 .tag.y{background:rgba(245,158,11,.15);color:#fbbf24}
 .tag.r{background:rgba(239,68,68,.15);color:#f87171}
-.note{font-size:12px;color:var(--muted);margin:8px 0}
-.section{background:var(--panel);border:1px solid #1e293b;border-radius:12px;padding:12px;margin-bottom:14px}
+.note{color:var(--muted);font-size:12px}
+.banner{background:#2b0d12;border:1px solid #7f1d1d;color:#fecaca;padding:8px;border-radius:8px;margin:10px 0;font-size:12px;white-space:pre-wrap}
+.small{font-size:11px;color:var(--muted)}
 </style>
 </head>
 <body>
 <div class="wrapper">
   <h1>⚡ Living Portfolio Dashboard</h1>
-  <div class="sub">As of <span id="asof">—</span> · Status <span id="status">loading…</span></div>
+  <p class="sub">As of <span id="asof">—</span> · Data source: <code id="src">./live.json</code></p>
+  <div id="banner" class="banner" style="display:none"></div>
 
   <div class="section">
     <h2>Core Portfolio</h2>
     <table class="table" id="core">
       <thead><tr><th>Ticker</th><th>Name</th><th>Weight</th><th>Badge</th><th>Q</th><th>Notes</th><th>Exits</th></tr></thead>
-      <tbody></tbody>
+      <tbody><tr><td colspan="7" class="small">Loading…</td></tr></tbody>
     </table>
   </div>
 
@@ -42,7 +46,7 @@ h1{font-size:20px;font-weight:700;margin:0}
     <h2>Swing Plays (3–6M)</h2>
     <table class="table" id="swing">
       <thead><tr><th>Ticker</th><th>Weight</th><th>Signal</th><th>Q</th><th>Notes</th><th>Exit</th></tr></thead>
-      <tbody></tbody>
+      <tbody><tr><td colspan="6" class="small">Loading…</td></tr></tbody>
     </table>
   </div>
 
@@ -50,63 +54,74 @@ h1{font-size:20px;font-weight:700;margin:0}
     <h2>Speculative Sleeve</h2>
     <table class="table" id="spec">
       <thead><tr><th>Ticker</th><th>Weight</th><th>Notes</th></tr></thead>
-      <tbody></tbody>
+      <tbody><tr><td colspan="3" class="small">Loading…</td></tr></tbody>
     </table>
   </div>
 
   <div class="section">
-    <h2>Catalyst Timeline (Next 90 Days)</h2>
+    <h2>Catalyst Timeline (Next 90D)</h2>
     <div id="timeline" class="note">Loading…</div>
   </div>
+
+  <p class="small">If you see an error banner above, confirm that <code>live.json</code> exists in the same folder & branch as this file and that the filename is exactly <b>live.json</b> (case-sensitive).</p>
 </div>
 
 <script>
-const ENDPOINT = './live.json';
+const ENDPOINT = './live.json'; // <- same folder as index.html
+document.getElementById('src').textContent = ENDPOINT;
 
-function tagQ(q){
-  if(q==null) return '';
-  if(q>=9) return `<span class="tag g">Q${q}</span>`;
-  if(q>=6) return `<span class="tag y">Q${q}</span>`;
-  return `<span class="tag r">Q${q}</span>`;
-}
+const tagQ = q => q==null?'':(q>=9?`<span class="tag g">Q${q}</span>`:q>=6?`<span class="tag y">Q${q}</span>`:`<span class="tag r">Q${q}</span>`);
 
-function renderTable(id, rows, cols){
-  const tb=document.querySelector(id+' tbody');
-  if(!rows || rows.length===0){ tb.innerHTML='<tr><td colspan="'+cols+'" class="note">—</td></tr>'; return; }
-  tb.innerHTML=rows.map(r=>`
+function fillTable(id, rows, cols){
+  const tb = document.querySelector(id+' tbody');
+  if(!rows || rows.length===0){ tb.innerHTML = `<tr><td colspan="${cols}" class="small">—</td></tr>`; return; }
+  tb.innerHTML = rows.map(r=>`
     <tr>
       <td><span class="badge">${r.ticker||''}</span></td>
-      ${r.name?`<td>${r.name}</td>`:''}
-      ${r.weight?`<td>${r.weight}</td>`:(cols>2?'<td></td>':'')}
-      ${r.badge?`<td>${r.badge}</td>`:''}
-      ${r.q?`<td>${tagQ(r.q)}</td>`:''}
-      ${r.notes?`<td>${r.notes}</td>`:''}
-      ${r.exits?`<td>${r.exits}</td>`:''}
+      ${id==='#core'?`<td>${r.name||''}</td>`:''}
+      <td>${r.weight||''}</td>
+      ${id==='#core'?`<td>${r.badge||''}</td>`:''}
+      ${id==='#core' || id==='#swing'?`<td>${tagQ(r.q)}</td>`:''}
+      <td>${r.notes || r.signal || ''}</td>
+      ${id==='#core'||id==='#swing'?`<td>${r.exits||''}</td>`:''}
     </tr>`).join('');
 }
 
-function renderTimeline(items){
-  const el=document.getElementById('timeline');
-  if(!items||items.length===0){el.textContent='—';return;}
-  el.innerHTML=items.map(x=>`
-    <div><span class="tag y">${x.date||''}</span> ${x.ticker?x.ticker+' — ':''}${x.label||''}</div>
-  `).join('');
+function fillTimeline(items){
+  const el = document.getElementById('timeline');
+  if(!items || items.length===0){ el.textContent='—'; return; }
+  el.innerHTML = items.map(x=>`<div><span class="tag y">${x.date||''}</span> ${x.ticker?x.ticker+' — ':''}${x.label||''}</div>`).join('');
+}
+
+function banner(msg){
+  const b = document.getElementById('banner');
+  b.style.display='block'; b.textContent = msg;
+}
+
+function render(data){
+  document.getElementById('asof').textContent = new Date().toISOString().slice(0,16).replace('T',' ');
+  fillTable('#core',  data.core, 7);
+  fillTable('#swing', data.swing, 6);
+  fillTable('#spec',  data.spec, 3);
+  fillTimeline(data.catalysts?.company);
 }
 
 async function load(){
   try{
-    const r=await fetch(ENDPOINT+'?cb='+Date.now(),{cache:'no-store'});
-    const j=await r.json();
-    document.getElementById('asof').textContent=new Date().toISOString().slice(0,16).replace('T',' ');
-    document.getElementById('status').textContent='OK';
-    renderTable('#core', j.core, 7);
-    renderTable('#swing', j.swing, 6);
-    renderTable('#spec', j.spec, 3);
-    renderTimeline(j.catalysts?.company||[]);
+    const r = await fetch(ENDPOINT+'?cb='+Date.now(), {cache:'no-store'});
+    if(!r.ok){
+      banner(`Fetch error: HTTP ${r.status} ${r.statusText}\nPath tried: ${ENDPOINT}\nTip: File must exist at the same path and branch as index.html.`);
+      // render sample so the page is never blank
+      render({core:[{ticker:'SAMPLE',name:'Sample Co',weight:'1%',badge:'Tier 3',q:6,notes:'Sample row (live.json not found)',exits:'—'}], swing:[], spec:[], catalysts:{company:[]}});
+      return;
+    }
+    let j;
+    try{ j = await r.json(); }
+    catch(e){ banner('JSON parse error in live.json: '+e.message); render({core:[],swing:[],spec:[],catalysts:{company:[]}}); return; }
+    render(j);
   }catch(e){
-    document.getElementById('status').textContent='⚠️ Error';
-    document.querySelector('#core tbody').innerHTML='<tr><td colspan="7" class="note">live.json missing or invalid</td></tr>';
-    console.error(e);
+    banner('Unexpected error: '+(e.message||e));
+    render({core:[],swing:[],spec:[],catalysts:{company:[]}});
   }
 }
 load();
