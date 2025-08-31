@@ -2,88 +2,101 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Living Portfolio — v2</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Living Portfolio — Clean Briefing</title>
 <style>
-:root{--bg:#0b1220;--panel:#0f172a;--muted:#94a3b8;--text:#e2e8f0;--g:#10b981;--y:#f59e0b;--r:#ef4444;--b:#38bdf8;--card:#111827;--chip:#0b2538;}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
-.wrapper{max-width:1200px;margin:auto;padding:16px}
-.header{display:grid;gap:10px;grid-template-columns:1fr auto;align-items:center;margin-bottom:12px}
-.h1{font-size:20px;font-weight:700}.sub{color:var(--muted);font-size:12px}
-.row{display:flex;gap:10px;flex-wrap:wrap}
-.card{background:var(--panel);border:1px solid #0b2540;border-radius:14px;padding:12px;box-shadow:0 0 0 1px rgba(59,130,246,.06) inset}
-.kpi{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid #0b2540;border-radius:12px;padding:10px 12px}
-.kpi strong{font-size:14px}.pill{padding:4px 10px;border-radius:999px;font-size:12px;border:1px solid #0b2540;background:var(--chip)}
-.pill.ok{color:#0ea5e9;border-color:#0ea5e9}.pill.warn{color:var(--y);border-color:var(--y)}.pill.danger{color:var(--r);border-color:var(--r)}
-.search{display:flex;gap:8px;align-items:center}
-input[type="search"]{width:260px;max-width:100%;background:#0b1b2c;border:1px solid #13314f;color:var(--text);padding:8px 10px;border-radius:10px}
-button{background:#0b1b2c;border:1px solid #1b3a5a;color:#bae6fd;border-radius:10px;padding:8px 10px;cursor:pointer}button:hover{background:#0a1930}
-.h2{font-size:14px;letter-spacing:.02em;text-transform:uppercase;color:#93c5fd;margin:4px 0 10px}
-.section{display:grid;gap:10px}.grid{display:grid;gap:10px}
-@media(min-width:960px){.grid{grid-template-columns:1.2fr .9fr .9fr}}
-.table{width:100%;border-collapse:collapse}
-.table th,.table td{font-size:12px;text-align:left;padding:6px;border-bottom:1px solid #0b2540;vertical-align:top}
-.table th{color:#a5b4fc;font-weight:600}
-.badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#0b1b2c;border:1px solid #1b3a5a;color:#7dd3fc;font-weight:600}
-.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;margin-right:4px}
-.tag.g{background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.35)}
-.tag.y{background:rgba(245,158,11,.15);color:#fbbf24;border:1px solid rgba(245,158,11,.35)}
-.tag.r{background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.35)}
-.small{font-size:11px;color:var(--muted)}
-.group{border:1px dashed #123456;border-radius:12px;padding:8px;margin-bottom:8px}
-.group h3{margin:0 0 6px;font-size:13px;color:#c7d2fe}
-.timeline{display:grid;gap:6px;max-height:420px;overflow:auto}
-.timeline .item{display:flex;gap:8px;align-items:center;background:#0b1b2c;border:1px solid #1b3a5a;border-radius:10px;padding:8px}
-.footer{margin-top:10px;color:var(--muted);font-size:11px}
-hr{border:0;border-top:1px solid #0b2540;margin:6px 0}
+  :root{
+    --bg:#0b1020; --panel:#0f1526; --card:#121a2c; --ink:#e6edf6; --muted:#95a3b8;
+    --line:#1c2a44; --g:#10b981; --y:#f59e0b; --r:#ef4444; --b:#60a5fa;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+  .wrap{max-width:1120px;margin:0 auto;padding:16px}
+  header{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:12px}
+  h1{margin:0;font-size:18px;font-weight:700}
+  .sub{color:var(--muted);font-size:12px}
+  .row{display:flex;gap:10px;flex-wrap:wrap}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px}
+  .kpi{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-height:42px}
+  .kpi strong{font-size:13px}
+  .pill{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:#0b1a2e;font-size:12px}
+  .pill.ok{color:#7dd3fc;border-color:#164a70}
+  .pill.warn{color:var(--y);border-color:#5b3c08}
+  .pill.bad{color:var(--r);border-color:#5b1f25}
+  .searchbar{display:flex;gap:8px}
+  input[type="search"]{width:260px;max-width:100%;background:#0b1a2e;border:1px solid var(--line);color:var(--ink);padding:8px 10px;border-radius:10px}
+  button{background:#0b1a2e;border:1px solid var(--line);color:#bfe1ff;border-radius:10px;padding:8px 12px;cursor:pointer}
+  button:hover{background:#0a1729}
+  h2{margin:8px 0 10px;font-size:13px;letter-spacing:.02em;color:#bcd7ff;text-transform:uppercase}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;color:#a8b6d0;text-align:left}
+  td{font-size:13px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:#0b1a2e;border:1px solid var(--line);color:#99d6ff;font-weight:600}
+  .q{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--line);font-size:11px}
+  .q.g{background:rgba(16,185,129,.12);color:#34d399;border-color:rgba(16,185,129,.35)}
+  .q.y{background:rgba(245,158,11,.12);color:#fbbf24;border-color:rgba(245,158,11,.35)}
+  .q.r{background:rgba(239,68,68,.12);color:#f87171;border-color:rgba(239,68,68,.35)}
+  .small{font-size:11px;color:var(--muted)}
+  .legend{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:11px}
+  .dot{width:10px;height:10px;border-radius:50%}
+  .g{background:var(--g)} .y{background:var(--y)} .r{background:var(--r)}
+  .grid{display:grid;gap:10px}
+  @media(min-width:980px){.grid{grid-template-columns:1.2fr .9fr .9fr}}
+  .tl{max-height:420px;overflow:auto}
+  .tli{display:flex;gap:8px;align-items:center;background:#0b1a2e;border:1px solid var(--line);border-radius:10px;padding:8px;margin-bottom:6px}
+  .tag{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--line);font-size:11px}
+  .tag.g{background:rgba(16,185,129,.12);color:#34d399}
+  .tag.y{background:rgba(245,158,11,.12);color:#fbbf24}
+  .tag.r{background:rgba(239,68,68,.12);color:#f87171}
+  .empty{padding:10px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:12px}
+  footer{margin-top:12px;color:var(--muted);font-size:11px}
 </style>
 </head>
 <body>
-<div class="wrapper">
-  <div class="header">
+<div class="wrap">
+  <header>
     <div>
-      <div class="h1">⚡ Living Portfolio Dashboard — v2</div>
-      <div class="sub">As-of <span id="asof">—</span> · Status <span id="statusPill" class="pill">Loading…</span></div>
+      <h1>⚡ Living Portfolio — Clean Briefing</h1>
+      <div class="sub">As-of <span id="asof">—</span> · Status <span id="status" class="pill">Loading…</span></div>
     </div>
-    <div class="search">
-      <input id="q" type="search" placeholder="Search ticker… (e.g., NVDA)"/>
-      <button id="btnRefresh">Refresh</button>
+    <div class="searchbar">
+      <input id="q" type="search" placeholder="Find a ticker (e.g., NVDA)"/>
+      <button id="reload">Refresh</button>
     </div>
+  </header>
+
+  <div class="row">
+    <div class="kpi"><strong>Sector exposure</strong>&nbsp;<span id="kpiSectors" class="small">—</span></div>
+    <div class="kpi"><strong>Spec sleeve</strong>&nbsp;<span id="kpiSpec" class="pill">—</span></div>
+    <div class="kpi"><strong>Flow</strong>&nbsp;<span id="kpiFlow" class="small">—</span></div>
   </div>
 
-  <div class="row" id="topKPIs">
-    <div class="kpi"><strong>Sector exposure</strong> <span id="kpiSectors" class="small">—</span></div>
-    <div class="kpi"><strong>Spec sleeve</strong> <span id="kpiSpec" class="pill">—</span></div>
-    <div class="kpi"><strong>Flow snapshot</strong> <span id="kpiFlow" class="small">—</span></div>
+  <div class="legend" style="margin:8px 2px 4px">
+    <span class="dot g"></span> strong &nbsp; <span class="dot y"></span> watch &nbsp; <span class="dot r"></span> risk
+    <span style="margin-left:12px">· “Q” bubble = quick quality score</span>
   </div>
 
-  <div class="grid">
-    <div class="section card" id="coreCol">
-      <div class="h2">Core Portfolio (grouped by sector)</div>
-      <div id="coreGroups"></div>
-    </div>
+  <div class="grid" style="margin-top:8px">
+    <section class="card">
+      <h2>Core</h2>
+      <div id="coreWrap"></div>
+    </section>
 
-    <div class="section card">
-      <div class="h2">Swing Plays (3–6M)</div>
-      <table class="table" id="swingTable">
-        <thead><tr><th>Ticker</th><th>Weight</th><th>Signal</th><th>Q</th><th>Notes</th><th>Exit</th></tr></thead>
-        <tbody></tbody>
-      </table>
-      <hr/>
-      <div class="h2">Speculative Sleeve (Graduation Watch)</div>
-      <table class="table" id="specTable">
-        <thead><tr><th>Ticker</th><th>Weight</th><th>Signal</th><th>Q</th><th>Notes</th><th>Graduation</th></tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
+    <section class="card">
+      <h2>Swing (3–6M)</h2>
+      <div id="swingWrap"></div>
+      <h2 style="margin-top:14px">Spec (Graduation Watch)</h2>
+      <div id="specWrap"></div>
+    </section>
 
-    <div class="section card">
-      <div class="h2">Catalyst Timeline (Next 90 Days)</div>
-      <div class="timeline" id="timeline"></div>
-    </div>
+    <section class="card">
+      <h2>Catalyst Timeline (Next 90d)</h2>
+      <div id="tl" class="tl"></div>
+    </section>
   </div>
 
-  <div class="footer">v2 UI · loads <code>live.json</code> · caches busted · mobile friendly · auto-refresh every 3 min</div>
+  <footer>v3 · minimal & readable · uses your existing <code>live.json</code> · auto-refresh every 3 min</footer>
 </div>
 
 <script>
@@ -91,108 +104,152 @@ hr{border:0;border-top:1px solid #0b2540;margin:6px 0}
   const ENDPOINT = 'https://drealmaestro.github.io/living-portfolio/live.json';
   const $ = s => document.querySelector(s);
   const $$ = s => Array.from(document.querySelectorAll(s));
-  const asPct = x => { if(x==null) return 0; const s=String(x).trim(); if(s.endsWith('%')) return parseFloat(s); const n=parseFloat(s); return Number.isFinite(n)?n:0; };
-  const groupBy = (a,k) => a.reduce((m,it)=>{const key=k(it)||'Other';(m[key]||(m[key]=[])).push(it);return m;}, {});
-  const pad = n=>String(n).padStart(2,'0');
-  const nowStr = ()=>{const d=new Date();return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`};
+  const pad = n => String(n).padStart(2,'0');
+  const nowStr = () => { const d=new Date(); return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`; };
+  const asPct = v => { if(v==null) return 0; const s=String(v).trim(); if(s.endsWith('%')) return parseFloat(s); const n=parseFloat(s); return Number.isFinite(n)?n:0; };
+  const qClass = q => q>=9?'g':q>=6?'y':'r';
+  const bySector = arr => arr.reduce((m,it)=>{const k=it.sector||'Other'; (m[k]||(m[k]=[])).push(it); return m;}, {});
+  const safeArr = v => Array.isArray(v)?v:[];
+  const text = v => (v==null?'':String(v));
 
-  function setStatus(ok){ const pill=$('#statusPill'); pill.textContent = ok ? '🟢 OK' : '🔴 Check'; pill.className = 'pill '+(ok?'ok':'danger'); }
-
-  function renderCore(list){
-    const wrap = $('#coreGroups'); wrap.innerHTML='';
-    const groups = groupBy(list, it => it.sector || (String(it.name||'').includes('ETF') ? 'ETFs' : 'Other'));
-    Object.entries(groups).forEach(([sector,items])=>{
-      const box = document.createElement('div'); box.className='group';
-      box.innerHTML = `<h3>${sector}</h3>
-        <table class="table"><thead><tr><th>Ticker</th><th>Name</th><th>Weight</th><th>Badge</th><th>Q</th><th>Notes</th><th>Exit</th></tr></thead>
-        <tbody>${items.map(it=>`
-          <tr>
-            <td><span class="badge">${it.ticker}</span></td>
-            <td>${it.name||''}</td>
-            <td>${it.weight||''}</td>
-            <td>${it.badge||''}</td>
-            <td>${it.q!=null?`<span class="tag ${it.q>=9?'g':it.q>=6?'y':'r'}">Q ${it.q}</span>`:''}</td>
-            <td>${it.notes||''}</td>
-            <td class="small">${it.exits||''}</td>
-          </tr>`).join('')}</tbody></table>`;
-      wrap.appendChild(box);
-    });
+  function setStatus(ok){
+    const el = $('#status');
+    el.textContent = ok ? '🟢 Compliant' : '🔴 Check caps';
+    el.className = 'pill '+(ok?'ok':'bad');
   }
 
-  function renderRows(id, rows){
-    const tb = $(id); tb.innerHTML = rows.map(r=>`
-      <tr>
-        <td><span class="badge">${r.ticker}</span></td>
-        <td>${r.weight||''}</td>
-        <td>${r.signal||''}</td>
-        <td>${r.q!=null?`<span class="tag ${r.q>=9?'g':r.q>=6?'y':'r'}">${r.q}</span>`:''}</td>
-        <td>${r.notes||''}</td>
-        <td class="small">${r.exits||''}</td>
-      </tr>`).join('');
-  }
-
-  function renderTimeline(cats){
-    const el = $('#timeline');
-    const list = [];
-    (cats.company||[]).forEach(x=>list.push({date:x.date,label:`${x.ticker||''} ${x.ticker? '— ':''}${x.label}`,color:x.color||'y',impact:x.impact||'Med'}));
-    (cats.macro||[]).forEach(x=>list.push({date:x.date,label:x.label,color:x.color||'y',impact:x.impact||'Med'}));
-    list.sort((a,b)=>String(a.date).localeCompare(String(b.date)));
-    el.innerHTML = list.map(x=>`
-      <div class="item">
-        <span class="tag ${x.color}">${x.date||''}</span>
-        <div>${x.label}</div>
-        <span class="tag ${x.impact==='High'?'g':x.impact==='Med'?'y':'r'}">${x.impact}</span>
-      </div>`).join('');
-  }
-
-  function computeKPIs(data){
-    const sectors={}; (data.core||[]).forEach(it=>{const s=it.sector||'Other'; sectors[s]=(sectors[s]||0)+asPct(it.weight);});
+  function kpis(data){
+    // Sectors from core
+    const sectors = {};
+    safeArr(data.core).forEach(it => { const s=it.sector||'Other'; sectors[s]=(sectors[s]||0)+asPct(it.weight); });
     const top = Object.entries(sectors).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([k,v])=>`${k} ${v.toFixed(0)}%`).join(' · ');
     $('#kpiSectors').textContent = top || '—';
 
-    const specPct = (data.spec||[]).reduce((s,x)=>s+asPct(x.weight),0);
-    const pill = $('#kpiSpec'); pill.textContent = `${specPct.toFixed(1)}% of portfolio`;
-    pill.className = 'pill ' + (specPct<=5?'ok':specPct<=7?'warn':'danger');
+    // Spec sleeve %
+    const specPct = safeArr(data.spec).reduce((s,it)=>s+asPct(it.weight),0);
+    const specEl = $('#kpiSpec');
+    specEl.textContent = `${specPct.toFixed(1)}%`;
+    specEl.className = 'pill ' + (specPct<=5?'ok':specPct<=7?'warn':'bad');
 
-    const f=data.flow||{}; const bits=[];
-    if(typeof f.vgt_heartbeat_outflow_usd_mm==='number') bits.push(`VGT outflow ${f.vgt_heartbeat_outflow_usd_mm}`);
+    // Flow snapshot (very minimal)
+    const f = data.flow || {};
+    const bits = [];
+    if (typeof f.vgt_heartbeat_outflow_usd_mm === 'number') bits.push(`VGT flow ${f.vgt_heartbeat_outflow_usd_mm}`);
     $('#kpiFlow').textContent = bits.join(' · ') || '—';
 
-    const tech = (sectors['Technology']||0);
-    const ok = (tech<=30) && (specPct<=5);
-    setStatus(ok);
+    // Simple compliance: Technology ≤30% and Spec ≤5%
+    const techPct = sectors['Technology']||0;
+    setStatus(techPct<=30 && specPct<=5);
+  }
+
+  function renderCore(core){
+    const wrap = $('#coreWrap'); wrap.innerHTML='';
+    const g = bySector(core);
+    const tbl = document.createElement('table');
+    tbl.innerHTML = `<thead><tr>
+      <th>Ticker</th><th>Name</th><th>Weight</th><th>Q</th><th>Notes</th><th>Exit</th><th class="small">Sector</th>
+    </tr></thead><tbody></tbody>`;
+    const tb = tbl.querySelector('tbody');
+
+    Object.entries(g).forEach(([sector,items]) => {
+      // sector header row
+      const trh = document.createElement('tr');
+      trh.innerHTML = `<td colspan="7" class="small" style="color:#bcd7ff;padding-top:10px">${sector}</td>`;
+      tb.appendChild(trh);
+
+      items.forEach(it=>{
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><span class="badge">${text(it.ticker)}</span></td>
+          <td>${text(it.name)}</td>
+          <td>${text(it.weight)}</td>
+          <td>${it.q!=null?`<span class="q ${qClass(it.q)}">Q ${it.q}</span>`:''}</td>
+          <td>${text(it.notes)}</td>
+          <td class="small">${text(it.exits)}</td>
+          <td class="small">${text(it.sector)}</td>`;
+        tb.appendChild(tr);
+      });
+    });
+
+    if (safeArr(core).length===0){
+      wrap.innerHTML = `<div class="empty">No Core positions loaded.</div>`;
+    }else{
+      wrap.appendChild(tbl);
+    }
+  }
+
+  function renderSimpleTable(elId, rows){
+    const el = $(elId); el.innerHTML='';
+    if (safeArr(rows).length===0){
+      el.innerHTML = `<div class="empty">Nothing here yet.</div>`;
+      return;
+    }
+    const tbl = document.createElement('table');
+    tbl.innerHTML = `<thead><tr>
+      <th>Ticker</th><th>Weight</th><th>Signal</th><th>Q</th><th>Notes</th><th>Exit</th>
+    </tr></thead><tbody>${rows.map(r=>`
+      <tr>
+        <td><span class="badge">${text(r.ticker)}</span></td>
+        <td>${text(r.weight)}</td>
+        <td>${text(r.signal||r.eventType||'')}</td>
+        <td>${r.q!=null?`<span class="q ${qClass(r.q)}">${r.q}</span>`:''}</td>
+        <td>${text(r.notes)}</td>
+        <td class="small">${text(r.exits)}</td>
+      </tr>`).join('')}</tbody>`;
+    el.appendChild(tbl);
+  }
+
+  function renderTimeline(cats){
+    const el = $('#tl'); el.innerHTML='';
+    const list = [];
+    safeArr(cats.company).forEach(x => list.push({date:x.date,label:`${x.ticker?x.ticker+' — ':''}${x.label}`,color:x.color||'y',impact:x.impact||'Med'}));
+    safeArr(cats.macro).forEach(x => list.push({date:x.date,label:x.label,color:x.color||'y',impact:x.impact||'Med'}));
+    list.sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+    if(list.length===0){ el.innerHTML = `<div class="empty">No upcoming catalysts found.</div>`; return; }
+    list.forEach(x=>{
+      const div = document.createElement('div'); div.className='tli';
+      div.innerHTML = `
+        <span class="tag ${x.color}">${text(x.date)}</span>
+        <div>${text(x.label)}</div>
+        <span class="tag ${x.impact==='High'?'g':x.impact==='Med'?'y':'r'}" style="margin-left:auto">${x.impact}</span>
+      `;
+      el.appendChild(div);
+    });
   }
 
   function filterAll(q){
     q=(q||'').trim().toUpperCase();
-    const show = el => { if(!el) return; el.style.display=''; };
-    const hide = el => { if(!el) return; el.style.display='none'; };
-    if(!q){ $$('.group tr, #swingTable tbody tr, #specTable tbody tr, #timeline .item').forEach(show); return; }
-    const match = tr => (tr.textContent||'').toUpperCase().includes(q);
-    $$('.group tr').forEach(tr=> match(tr)?show(tr):hide(tr));
-    $$('#swingTable tbody tr').forEach(tr=> match(tr)?show(tr):hide(tr));
-    $$('#specTable tbody tr').forEach(tr=> match(tr)?show(tr):hide(tr));
-    $$('#timeline .item').forEach(div=> (div.textContent||'').toUpperCase().includes(q)?show(div):hide(div));
+    const rows = $$('table tbody tr');
+    if(!q){ rows.forEach(r=>r.style.display=''); return; }
+    rows.forEach(r => {
+      const hit = (r.textContent||'').toUpperCase().includes(q);
+      r.style.display = hit ? '' : 'none';
+    });
   }
 
   function render(data){
-    $('#asof').textContent = nowStr();
-    renderCore(data.core||[]);
-    renderRows('#swingTable tbody', data.swing||[]);
-    renderRows('#specTable tbody', data.spec||[]);
-    renderTimeline(data.catalysts||{company:[],macro:[]});
-    computeKPIs(data);
+    $('#asof').textContent = (data.asof || nowStr());
+    kpis(data);
+    renderCore(safeArr(data.core));
+    renderSimpleTable('#swingWrap', safeArr(data.swing));
+    renderSimpleTable('#specWrap', safeArr(data.spec));
+    renderTimeline(data.catalysts || {company:[], macro:[]});
   }
 
   async function load(){
     try{
       const url = ENDPOINT + (ENDPOINT.includes('?')?'&':'?') + 'cb=' + Date.now();
-      const r = await fetch(url, {cache:'no-store'}); const j = await r.json(); render(j);
-    }catch(e){ console.warn('Fetch fail', e); setStatus(false); }
+      const r = await fetch(url, {cache:'no-store'});
+      const j = await r.json();
+      render(j);
+    }catch(e){
+      console.warn('Live load failed', e);
+      $('#status').textContent = '⚠️ Load error'; $('#status').className='pill bad';
+    }
   }
 
   $('#q').addEventListener('input', e=>filterAll(e.target.value));
-  $('#btnRefresh').addEventListener('click', load);
+  $('#reload').addEventListener('click', load);
 
   load(); setInterval(load, 180000);
 })();
