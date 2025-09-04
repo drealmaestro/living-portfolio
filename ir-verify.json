@@ -1,21 +1,27 @@
 {
-  "lastCheck": "2025-09-03T10:45:00Z",
+  "lastCheck": "2025-09-01T07:55:00Z",
   "events": [
-    { "ticker": "ET", "date": "2025-08-28", "label": "Insider cluster buy (director repeat) — AVWAP hold monitor" },
+    { "ticker": "EMN", "date": "2025-08-31", "label": "Insider Buy — clustered director purchases (Perplexity digest)" },
+    { "ticker": "SNV", "date": "2025-08-31", "label": "Insider Buy — large C-suite/director accumulation (Perplexity digest)" },
+    { "ticker": "COTY", "date": "2025-08-31", "label": "Insider Buy — CEO purchase (Form 4 roundup)" },
+    { "ticker": "MYSE", "date": "2025-08-31", "label": "Insider Buy — director purchase (Form 4 roundup)" },
+    { "ticker": "CRM", "date": "2025-08-31", "label": "Earnings — beat with modest raise; post-print tape check pending" },
+
+    { "ticker": "ET",   "date": "2025-08-28", "label": "Insider cluster buy (director repeat) — AVWAP hold monitor" },
     { "ticker": "GPRE", "date": "2025-08-28", "label": "Oppenheimer upgrade → Outperform (PT $14)" },
-    { "ticker": "PSTG", "date": "2025-08-27", "label": "Earnings beat & raise; Meta revenue recognized; multi-analyst upgrades" },
+    { "ticker": "PSTG", "date": "2025-08-27", "label": "Beat & raise; Meta revenue recognized; multi-analyst upgrades" },
     { "ticker": "PSTG", "date": "2025-09-25", "label": "Investor event — Meta ramp commentary" },
-    { "ticker": "TSM", "date": "2025-08-28", "label": "Reports: early allocation of N2 (2nm) capacity to Apple; packaging capacity watch" },
-    { "ticker": "BTC", "date": "2025-08-29", "label": "Spot-ETF net inflow shift (20d trend watch)" },
-    { "ticker": "ETH", "date": "2025-08-29", "label": "Core-dev upgrade path steady; staking dynamics" },
-    { "ticker": "SOL", "date": "2025-08-29", "label": "Uptime sustained; ecosystem milestones" },
+    { "ticker": "TSM",  "date": "2025-08-28", "label": "Reports: early allocation of 2nm (N2) capacity to Apple; pkg capacity watch" },
+    { "ticker": "BTC",  "date": "2025-08-29", "label": "Spot-ETF net inflow shift (20d trend watch)" },
+    { "ticker": "ETH",  "date": "2025-08-29", "label": "Core-dev upgrade cadence; staking dynamics" },
+    { "ticker": "SOL",  "date": "2025-08-29", "label": "Uptime sustained; ecosystem milestones" },
     { "ticker": "RNDR", "date": "2025-08-29", "label": "AI-compute network utilization pickup" },
     { "ticker": "ONDO", "date": "2025-08-29", "label": "RWA adoption uptick (tokenized treasuries flows)" },
-    { "ticker": "WST", "date": "2025-07-24", "label": "EPS beat + raised FY EPS; price confirm" },
+    { "ticker": "WST",  "date": "2025-07-24", "label": "EPS beat + raised FY EPS; price confirm" },
     { "ticker": "PLTR", "date": "2025-08-20", "label": "Raised guidance + new gov contracts; price confirm" },
     { "ticker": "ASAN", "date": "2025-08-28", "label": "Insider cluster buys; breakout with >1.5× vol" },
-    { "ticker": "NVS", "date": "2025-08-24", "label": "EPS growth + margin expansion; approvals/readouts (moat)" },
-    { "ticker": "INTC", "date": "2025-08-25", "label": "Strategic U.S. gov stake; price confirm > event AVWAP" }
+    { "ticker": "NVS",  "date": "2025-07-17", "label": "EPS growth + margin expansion; approvals/readouts (moat)" },
+    { "ticker": "VGT",  "date": "2025-08-29", "label": "Heartbeat outflow (~$3B) — monitor normalization 3–5 sessions" }
   ],
   "graduations": [
     {
@@ -23,6 +29,13 @@
       "tier": "Tier 2 (3%)",
       "proof": "Beat & raise; GM expansion; Meta deployment confirmed; multi-upgrades; price confirm vs event-day AVWAP",
       "source": "Company ER + analyst notes",
+      "date": "2025-08-28"
+    },
+    {
+      "ticker": "ASAN",
+      "tier": "Tier 3 (1.5%)",
+      "proof": "Founder/insider buys; range-high breakout on >1.5× vol; close > event-day AVWAP",
+      "source": "SEC Form 4 + tape",
       "date": "2025-08-28"
     },
     {
@@ -36,7 +49,7 @@
       "ticker": "INTC",
       "tier": "Tier 2 (3–5%)",
       "proof": "EPS positive; net margin improvement; strategic U.S. government stake (moat); price confirm",
-      "source": "Major media + price tape",
+      "source": "Press coverage",
       "date": "2025-08-25"
     }
   ],
@@ -44,12 +57,7 @@
     {
       "date": "2025-08-30T10:22:00Z",
       "type": "macro-refresh",
-      "label": "Catalysts.macro refreshed: Sep 3–10 (Beige Book; ADP/Claims/ULC; NFP; CPI) — keeping next 10 days only"
-    },
-    {
-      "date": "2025-08-29T11:20:00Z",
-      "type": "flow",
-      "label": "VGT ~−$3B heartbeat outflow; monitor 3–5 sessions"
+      "label": "Catalysts.macro refreshed — keep next 10 days only"
     }
   ]
 }
